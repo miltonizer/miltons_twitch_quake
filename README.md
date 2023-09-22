@@ -5,7 +5,7 @@ This is Milton's (https://www.quakeworld.nu/wiki/Milton) portable standalone Qua
 ## How to use
 1. Make a clone of this repository
 2. Find textures from the amazing Quake Retexturing Project (use your favorite search engine) and add them to the quake package cloned in section #1. I've converted mine from .tga to .jpg to make map load time shorter. I also made a .pk3 file out (QRP_map_textures_v.1.00_jpg.pk3) of the QRP textures to keep everything neat and simple in my Quake folder. Put that pk3 file in your ezquake folder or the textures in qw/textures folder.
-3. Add pak1.pak and maps to folders id1 and qw/maps respectively.
+3. Add pak1.pak and maps to folders id1 and qw/maps respectively. Instead of pak1.pak it's possible to use GPL alternatives for dmX maps that are downloadable here: https://github.com/nQuake/distfiles/tree/master/sv-gpl/qw/maps.
 4. Profit or ask for help at Quake.World Discord.
 
 ## Licenses and thanks
