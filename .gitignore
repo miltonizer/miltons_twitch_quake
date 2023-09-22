@@ -208,6 +208,7 @@ qw/*.mvd
 qw/*.qwd
 qw/*.kmap
 qw/*.pcx
+qw/*.png
 qw/demos
 qw/fragfile_backup.dat
 qw/frost_textures_backup
