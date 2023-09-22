@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-opengl-rendering by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: OpenGL Rendering Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: OpenGL Rendering Variables</h1>
+
+
+<h2 class="variable" id="gl_affinemodels">gl_affinemodels&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Makes texture rendering quality better if set to 1.
+Note: 3dfx thing, not sure. //fuh check this.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_buildingsparks">gl_buildingsparks&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Buildings that are destroyed in TF will continue to throw sparks until they disapear.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_clear">gl_clear&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable will toggle the clearing of the screen between each frame. This
+can be helpful when specing a game and flying out of the map or during map 
+development when the map maker must fly outside of the map to look has his map
+from the outside. Enabling this command will clear the areas which are not 
+rendered outside of the map thus preventing the flickering effect when images 
+repeat themselves repeatedly. However it causes problems when playing and 
+going through the surfaces of a liquid (for example when diving into liquid), as
+you will see a red flash where the liquid texture would normally be repeated.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="gl_clearColor">gl_clearColor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets clear color (gl_clear 1)</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0 0 0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_cull">gl_cull&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable toggles the use of internal OpenGL functions for removing covered 
+objects. When this variable is set to &quot;1&quot; the game will depend on the OpenGL 
+driver to use it's culling functions to remove certain objects from the 
+calculations because they are covered up and would not be seen anyways. It is a 
+good idea to leave this toggle enabled because it will increase rendering 
+performance.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Use the OpenGL driver's culling functions.</td></tr><tr><td>0</td><td>Do not use culling to increase rendering performance.</td></tr></tbody></table></div><h2 class="variable" id="gl_cutf_tesla_effect">gl_cutf_tesla_effect&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When a shambler is preparing to throw lightning, or a tesla coil (TF) is charging to fire, a particle effect is generated.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_detpacklights">gl_detpacklights&nbsp;</h2>
+<div><h3>Description</h3><p class="description">A little green light appears on the detpack, and when the timer reaches 5, the light changes to red. gl_coronas must be turned on for this to work.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_extratrails">gl_extratrails&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Misc trails that appear on objects that frequently move, such as TF grenades, caltrops, etc.
+Railguns in TF also leave behind unique trails.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_finish">gl_finish&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable toggles the calling of the gl_finish() OpenGL function after each 
+rendered frame.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Call the gl_finish() function after each frame.</td></tr><tr><td>0</td><td>Do not call the gl_finish() function after each frame.</td></tr></tbody></table></div><h2 class="variable" id="gl_inferno_speed">gl_inferno_speed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes speed of gl_inferno missile trail.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_inferno_trail">gl_inferno_trail&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes type of gl_inferno missile trail.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_lightning">gl_lightning&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Turns off coronas on lightning beams</td></tr><tr><td>1</td><td>Turns on coronas on lightning beams.</td></tr></tbody></table></div><h2 class="variable" id="gl_lightning_size">gl_lightning_size&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adjusts size of ligtning particle beam.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_lightning_sparks">gl_lightning_sparks&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sparks fly from walls when hit by lightning gun.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">Enabled only for viewing demos and observing games.</p></div><h2 class="variable" id="gl_motiontrails">gl_motiontrails&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When enabled, flags and keys leave behind a kind of after-image.
+Fiends also leave trails when they pounce.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_motiontrails_wtf">gl_motiontrails_wtf&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Same as gl_motiontrails but works for all players and creatures.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_nailtrail">gl_nailtrail&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adds a white trail onto nails as they fly around.
+This feature wont work on servers not running with sv_nailhack set to 1.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable nail trails.</td></tr><tr><td>0</td><td>Disable nail trails.</td></tr></tbody></table></div><h2 class="variable" id="gl_nailtrail_plasma">gl_nailtrail_plasma&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adds plasma trail to nails.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Blue plasma trail.</td></tr><tr><td>0</td><td>No plasma trail.</td></tr></tbody></table>
+<p class="remarks">Need gl_nailtrail 1.</p></div><h2 class="variable" id="gl_nailtrail_turb">gl_nailtrail_turb&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Switches between two type of bubbles nails leave behind in water.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Smaller bubbles</td></tr><tr><td>1</td><td>Larger bubbles</td></tr></tbody></table>
+<p class="remarks">gl_turb_trails 1 needs to be set.</p></div><h2 class="variable" id="gl_nocolors">gl_nocolors&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Don't use top/bottom colors.</td></tr><tr><td>0</td><td>Normal.</td></tr></tbody></table></div><h2 class="variable" id="gl_smoothmodels">gl_smoothmodels&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Smooth the textures on models.</td></tr><tr><td>0</td><td>Do not smooth the textures on models.</td></tr></tbody></table></div><h2 class="variable" id="gl_triplebuffer">gl_triplebuffer&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Triple buffering of head up display graphics. If you have problems with screen graphics, turn this on.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table>
+<p class="remarks">This has nothing to do with 3D rendering, it will not increase graphics &quot;lag&quot; or anything like that. It only affects 2D head up display graphics.</p></div><h2 class="variable" id="gl_ztrick">gl_ztrick&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variables toggles the use of a trick to prevent the clearning of the 
+z-buffer between frames. When this variable is set to &quot;1&quot;, the game will not 
+clear the z-buffer between frames. This will result in increased performance 
+but might cause problems for some display hardware.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Use the z-buffer trick.</td></tr><tr><td>0</td><td>Do not use the z-buffer trick.</td></tr></tbody></table></div><h2 class="variable" id="r_farclip">r_farclip&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Can be used to overcome vision being limited to 4096 units in GL clients (good for xpress2 etc).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4096</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-opengl-rendering by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?faq by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Frequently Asked Questions</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Frequently Asked Questions</h1>
+
+
+<h3>How do I find the command for something?</h3>
+<p>In ezQuake, we have tried hard to make commands and variables intuitive so it's easy to locate. However, if you can't find the command for something, we have made the <code>cvarlist</code> command which lists commands related to an item. For example, if you are looking for a command related to the mouse, type <code>cvarlist *mouse*</code> (stars are needed).</p>
+
+<h3>Demo player menu entry is gone</h3>
+<p>You've most probably downloaded an alpha build and now you need to add <a href="../../ezquake.svn.sourceforge.net/viewvc/_checkout_/ezquake/trunk/media/game/gfx/mcharset.png">mcharset.png</a> file to your Quake installation. Download it and put it into quake/qw/gfx/ directory.</p>
+
+<h3>When on server I get Info string length exceeded</h3>
+<p>You've hit the limitation of the QuakeWorld protocol. You need to clear values of some variables that are sent to the server. For example type <code>setinfo pmodel ""</code> or <code>setinfo emodel ""</code> or <code>setinfo b_switch ""</code> or <code>setinfo w_switch ""</code>. To see full list of variables you can try to make empty, type <code>localinfo</code>.</p>
+
+<h3>Couldn't load gfx/palette.lmp error message in linux</h3>
+<p>Make sure following files/directories have lower-case names: quake/id1, quake/id1/pak0.pak, quake/id1/pak1.pak</p>
+
+<h3>Couldn't set fullscreen DIB mode error message</h3>
+<p>Try using different display frequency and resolution. Use e.g. "<code>+set vid_displayfrequency 60 -width 640</code>" as a command line options. If everything fails try "<code>-current</code>" as a command line option.</p>
+
+<h3>Cannot find gfx.wad error message</h3>
+<p>There are several things that can cause this:</p>
+
+<ol>
+  <li>You don't have c:\quake\id1\pak0.pak</li>
+  <li>You have opened c:\quake\id1\pak0.pak in some program, i.e. Pak Explorer (hence you need to close that program)</li>
+  <li>You have unzipped the ezquake package into the wrong directory (ezquake.exe and ezquake-gl.exe should be in c:\quake\)</li>
+  <li>You have created a shortcut with the wrong "Start in" directory</li>
+</ol>
+
+<h3>Why do I get an error message about glide*.dll or opengl.dll when trying to start ezquake</h3>
+<p>This is caused by some out-dated unofficial Quake installation packs. To get rid of such errors you have to remove opengl.dll and glide.dll from your Quake directory.</p>
+
+<h3>I use Intel graphics card and my screen or console flickers</h3>
+<p>This has been fixed in ezQuake versions 1.8.2 and 1.9 and higher. If you are using an old ezquake, try the following: type <code>scr_conalpha 0</code> in the console. Use 16bit color depth (-bpp 16 command line option in older builds.)</p>
+
+<h3>My keyboard and mouse input get frozen in Windows</h3>
+<p>Try changing client priority by <code>sys_highpriority -1</code> or <code>0</code> or <code>1</code>.</p>
+
+<h3>I'm capped to 77 fps, vertical synchronization is on</h3>
+<p>Use <code>vid_vsync 0.0</code>. To make sure this gets saved in your config use "0.0", not just "0".</p>
+
+<h3>How do I get rid of the radar when watching demos?</h3>
+<p>By default in build 1754 the var <code>mvd_autohud</code> is set to 1. Which means a special cfg is loaded when you play a demo. To get rid of this behaviour completly, do the following: <code>disconnect; cfg_load your config; mvd_autohud 0; cfg_save your_config</code></p>
+
+<h3>What is clean Quake install and why do I need it?</h3>
+<p>Most of the problems starts with wrong files placement before the installation of the client. Check the <a href="index19ad.html?install#clean-quake-install">Clean Quake Install</a> section in the Installation chapter.</p>
+
+<h3>Can I play Quake Single Player using this client?</h3>
+<p>Yes, the package allows you to play Single player missions. But note that the physics differ from original Quake. We recommend using another client for Quake Single player, e.g. DarkPlaces.</p>
+
+<h3>Why was fakeshaft allowed in Smackdown ruleset?</h3>
+<p>Fakeshaft wasn't allowed. We've only removed it's auto-prohibition but leagues can now still disallow it explicitly in rules and players can use "f_fakeshaft" to check opponent's settings. We've done this step because all leagues that used smackdown ruleset in that time voted for this change, it wasn't ezQuake team's decision.</p>
+
+<h3>Error while loading shared libraries: libpcre.so.0</h3>
+<p>Make symlink from /usr/lib/libpcre.so to /usr/lib/libpcre.so.0 or other libraries the client requires</p>
+<pre><code>ln -s /usr/lib/libpcre.so /usr/lib/libpcre.so.0
+ln -s /usr/lib/libpcre.so /usr/lib/libpcre.so.1</code></pre>
+
+<h3>Some of graphics effects have disappeared in 1727</h3>
+<p>Grab <a href="../../ezquake.cvs.sourceforge.net/_checkout_/ezquake/ezquake/misc/media/textures/zing1.png">this file</a> and place it into your &lt;quake&gt;/ezquake/textures directory.</p>
+
+<h3>Can't write jpg screenshots or they are zero size</h3>
+<p>That's an issue with libjpeg.dll in early 1318 windows .zip
+and .exe distributions.
+You can download 1318 windows distribution packs again or use a newer version of this client.</p>
+
+<h3>Can't get more than 60 FPS in software version</h3>
+<p>If you use laptop and your screen refresh rate is locked to 60 Hz, your FPS might get also locked to 60 FPS.<br />
+In that case use -dibonly command line option.</p>
+
+<h3>Cannot find WDIRxxF.dll error message</h3>
+<p>You need to download <a href="http://zquake.frag.ru/files/mgl_redist.zip">mgl_redist.zip</a> and unzip it into your Quake root (c:\quake\)</p>
+
+<h3>Cannot download flame0.mdl error message</h3>
+<p>You've downloaded some unofficial build which has been missing required files. (Unofficial builds don't come with these files.) Go get some <a href="http://ezquake.sf.net/build/">official build</a> and use it or place unofficial build over it's files then.</p>
+
+<h3>Can someone help me with something else?</h3>
+<p>Sure. Ask your question at <a href="irc://irc.quakenet.org/ezQuake" title="QuakeNet - #ezQuake">ezQuake IRC channel</a> or visit <a href="http://sourceforge.net/tracker/?group_id=117445&amp;atid=678560">The Support page</a> or ask other users on <a href="http://ezquake.sourceforge.net/forum/">the forum</a>.</p>
+
+
+<p id="last-update">Last update: 23.12.2007 06:17 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?faq by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-texture-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Texture Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Texture Settings Variables</h1>
+
+
+<h2 class="variable" id="d_mipcap">d_mipcap&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>High texture detail.</td></tr><tr><td>1</td><td>Medium texture detail.</td></tr><tr><td>2</td><td>Low texture detail.</td></tr><tr><td>3</td><td>Minimum texture detail.</td></tr></tbody></table></div><h2 class="variable" id="d_mipscale">d_mipscale&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Full object detail</td></tr><tr><td>1</td><td>Some object detail</td></tr><tr><td>2</td><td>Medium object detail</td></tr><tr><td>3</td><td>Low object detail</td></tr></tbody></table></div><h2 class="variable" id="d_subdiv16">d_subdiv16&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Perspective correction only every 16 pixels (faster, less accurate).</td></tr><tr><td>0</td><td>Precise texture mapping (slower, more accurate).</td></tr></tbody></table></div><h2 class="variable" id="gl_anisotropy">gl_anisotropy&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Anisotropic filtering. Basically improved texture quality.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>integer</strong>.<br />0 and 1 means turned off, 16 is usually the highest quality</p>
+<p class="remarks">Depends on your Graphics card capabilities and settings. Make sure you have enabled &quot;Application controled&quot; in your Graphics card settings for Anisotropic filtering option.</p></div><h2 class="variable" id="gl_externalTextures_bmodels">gl_externalTextures_bmodels&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable</td></tr><tr><td>0</td><td>Disable loading of external 24bit textures for</td></tr></tbody></table>
+<p class="remarks">non-world .bsp models (any .bsp that isn't the actual map.  Ex. health and ammo boxes).</p></div><h2 class="variable" id="gl_externalTextures_world">gl_externalTextures_world&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable.</td></tr><tr><td>0</td><td>Disable loading of external 24bit textures for the</td></tr></tbody></table>
+<p class="remarks">world .bsp model (i.e. the actual map).</p></div><h2 class="variable" id="gl_ext_texture_compression">gl_ext_texture_compression&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Enable reducing memory held by textures on cards that support it (but textures loaded slower and may have less quality).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enabled</td></tr><tr><td>0</td><td>Disabled</td></tr></tbody></table></div><h2 class="variable" id="gl_lerpimages">gl_lerpimages&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Better texture quality.</td></tr><tr><td>0</td><td>Faster loading maps (not more fps).</td></tr></tbody></table></div><h2 class="variable" id="gl_lumaTextures">gl_lumaTextures&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Turns using of luma textures (named *_luma) ON when set to 1 and allowed by server.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_max_size">gl_max_size&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable determines the detail level for loaded textures. When set to &quot;1&quot;,
+the objects and walls will be textured with 1x1 pixel textures.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2048</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_miptexLevel">gl_miptexLevel&nbsp;</h2>
+<div><h3>Description</h3><p class="description">It is essentially a GL 'equivalent'
+to d_mipcap in software.  It has no affect when loading external 24bit textures.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_no24bit">gl_no24bit&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Disables support of alternate 24bit textures</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Allow custom textures</td></tr><tr><td>0</td><td>Do not use alternate 24 bit textures</td></tr></tbody></table></div><h2 class="variable" id="gl_picmip">gl_picmip&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable determines the the level of detail for textures used on walls. You
+can use this variable to lower the texture detail used on walls thus increasing
+the game's performance.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Original size.</td></tr><tr><td>1</td><td>Half the dimensions.</td></tr><tr><td>2</td><td>One-fourth the dimensions.</td></tr></tbody></table>
+<p class="remarks">X = etc..</p></div><h2 class="variable" id="gl_playermip">gl_playermip&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the level of detail of player models. This variable is useful if you are 
+experience game slowdown during multiplayer games when there are lots of players on 
+your screen by shrinking the texture detail, but this will make the player models more blurry.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Full detail.</td></tr><tr><td>1</td><td>Medium detail.</td></tr><tr><td>2</td><td>Low detail.</td></tr></tbody></table>
+<p class="remarks">X = etc.</p></div><h2 class="variable" id="gl_scaleModelTextures">gl_scaleModelTextures&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable</td></tr><tr><td>0</td><td>Disable scale model textures.</td></tr></tbody></table></div><h2 class="variable" id="gl_scaleTurbTextures">gl_scaleTurbTextures&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable.</td></tr><tr><td>0</td><td>Disable gl_picmip/gl_max_size/gl_miptexLevel affect turb textures (lava, water, slime, teleports).</td></tr></tbody></table></div><h2 class="variable" id="gl_subdivide_size">gl_subdivide_size&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets the division value for the sky brushes. The higher the value 
+the better the performance, but the smoothness of the sky suffers.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>64</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_textureless">gl_textureless&nbsp;</h2>
+<div><h3>Description</h3><p class="description">True textureless map textures, but preserving original colors.
+For custom colors - look for r_drawflat.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Textureless world</td></tr><tr><td>0</td><td>Normal textures</td></tr></tbody></table>
+<p class="remarks">The beauty of this is that u can toggle in realtime for any map.
+Same as with r_drawflat.</p></div><h2 class="variable" id="gl_texturemode">gl_texturemode&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>GL_LINEAR_MIPMAP_NEAREST</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>GL_NEAREST</td><td>Point sampled (software-like). Lowest quality, highest performance.</td></tr><tr><td>GL_NEAREST_MIPMAP_NEAREST</td><td>GL_NEAREST but with a bit more quality for far objects.</td></tr><tr><td>GL_NEAREST_MIPMAP_LINEAR</td><td>GL_NEAREST but with even more quality for far objects.</td></tr><tr><td>GL_LINEAR</td><td>No blending.</td></tr><tr><td>GL_LINEAR_MIPMAP_NEAREST</td><td>Bilinear interpolation.</td></tr><tr><td>GL_LINEAR_MIPMAP_LINEAR</td><td>Trilinear interpolation. Highest quality, lowest performance.</td></tr></tbody></table>
+<p class="remarks">GL_NEAREST* modes are often used with gl_miptexlevel 3</p></div><h2 class="variable" id="r_drawflat">r_drawflat&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Disables textures and walls and floors them with a solid color (/r_wallcolor or /r_floorcolor) depending on the angle.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Use a solid color for walls and floors</td></tr><tr><td>0</td><td>Use textures for walls and floors.</td></tr></tbody></table>
+<p class="remarks">Usually used for performance improvements at the expense of eyecandy. See r_wallcolor and r_floorcolor.</p></div><h2 class="variable" id="r_floorcolor">r_floorcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes color of floors and ceilings when r_drawflat is set to 1.
+Enter RGB value here, e.g. r_floorcolor &quot;128 128 128&quot; goes for gray floor.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>50 100 150</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_max_size_1">r_max_size_1&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Off.</td></tr><tr><td>1</td><td>Blend map textures.</td></tr><tr><td>2</td><td>Blend map textures and bsp entities (ammo, health etc.)</td></tr></tbody></table></div><h2 class="variable" id="r_wallcolor">r_wallcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes color of walls when r_drawflat is set to 1.
+Enter RGB value here, e.g. r_wallcolor &quot;128 128 128&quot; goes for gray walls.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>255 255 255</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="skin_browser_democolor">skin_browser_democolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Color of the demo entries in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>255 255 255 255</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="skin_browser_dircolor">skin_browser_dircolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Color of the dir entries in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>170 80 0 255</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="skin_browser_interline">skin_browser_interline&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Size of the space between entries in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>integer</strong>.<br /></p></div><h2 class="variable" id="skin_browser_scrollnames">skin_browser_scrollnames&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle scrolling of the filenames in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_selectedcolor">skin_browser_selectedcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Color of the selected entries in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0 150 235 255</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="skin_browser_showdate">skin_browser_showdate&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle the date column in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_showsize">skin_browser_showsize&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle the file size column in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_showstatus">skin_browser_showstatus&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle the display of the status bar in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_showtime">skin_browser_showtime&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle the time column in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_sortmode">skin_browser_sortmode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sorting mode in the skin browser. Each number represents one column. Their order represents the priority of the sorting.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="skin_browser_stripnames">skin_browser_stripnames&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle stripping of the filenames in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="skin_browser_zipcolor">skin_browser_zipcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Color of the zip entries in the skin browser</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>255 170 0 255</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-texture-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

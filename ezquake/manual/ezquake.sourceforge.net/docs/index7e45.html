@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?particles by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Particle effects</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Particle effects</h1>
+
+
+<p>This feature and manual page has been inherited from the <a href="http://www.fuhquake.net/">FuhQuake</a> client 
+made by A Nourai aka 'fuh' (#fuhquake on Quakenet irc).</p>
+
+<h2>Introduction</h2>
+
+<p>This client has the option of using visually
+enhanced particle effects for explosions, rocket trails, teleport splashes,
+gunshot effects and more.</p>
+
+<p>The new effects are visually superior to the old effects but may have an impact
+on FPS (especially on lower end systems).</p>
+
+<p>The new effects are off by default.  You can turn them on by setting the
+variables below to 1.  Use cfg_save (read config_manager.txt) to save/load
+your settings.</p>
+
+
+<h2>Customising Particles</h2>
+<p>The following variables use the new visually enhanced particles when set to 1
+and use the old system when set to 0.  All of them default to 0.</p>
+
+<table>
+  <tr><td>gl_part_explosions</td><td>determines particles used for explosions.</td></tr>
+  <tr><td>gl_part_trails</td><td>determines particles used for (rocket etc) trails.</td></tr>
+  <tr><td>gl_part_spikes</td><td>determines particles used for spikes (nailgun etc).</td></tr>
+  <tr><td>gl_part_gunshots</td><td>determines particles used for gunshot (etc) effects.</td></tr>
+  <tr><td>gl_part_blood</td><td>determines particles used for blood effects.</td></tr>
+  <tr><td>gl_part_telesplash</td><td>determines particles used for teleport splashes.</td></tr>
+  <tr><td>gl_part_blobs</td><td>determines particles used for blob explosions (EMP's).</td></tr>
+  <tr><td>gl_part_lavasplash</td><td>determines particles used for lava splashes (Spy Gren).</td></tr>
+  <tr><td>gl_part_inferno</td><td>determines particles used for pyro flames in TF.</td></tr>
+</table>
+
+<h2>Fps Variables</h2>
+
+<p>The following variables control the behaviour of the new particle effects.
+They do not effect the old particle effects.</p>
+<dl>
+<dt>gl_bounceparticles</dt><dd>Controls whether sparks rebound off walls.  Bouncing
+                        particles look nicer, but may eat up CPU.</dd>
+
+<dt>gl_clipparticles</dt><dd>Setting this to 1 will limit the number of blended particles
+                        close to you.  This gives a big FPS increase when blended
+                        particles take up a big proportion of your screen and
+                        challenge your video card's fillrate.
+                        </dd>
+</dl>
+
+<h2>Credits</h2>
+<p>The particle engine has evolved from the QMB particle engine.
+QMB is a quakenet (not quakeworld) quake engine developed by DrLabMan.
+Feel free to check it out at http://qmb.quakepit.com/ .</p>
+
+
+<h2>FAQ</h2>
+<dl>
+<dt>Q1. What are Blop Explosions and Lava Splash?</dt>
+<dd>A1. These are really only used in teamfortress.  Blob explosions are what
+happens when an EMP grenade explodes (and when a spy grenade first explodes).
+LavaSplash is the red stuff a spy's gas grenade creates.  LavaSplash also
+happens sometimes in dm when the map ends.</dd>
+
+<dt>Q2. I lose a lot of FPS with when using the new QMB effects.  WTF?</dt>
+<dd>A2. Tough.  Good things come at a price.</dd>
+
+<dt>Q3. The new effects don't look so good. WTF?</dt>
+<dd>A3. Make sure you have ezquake/pak0.pak (should have been installed when you
+installed the .exe's).</dd>
+
+<dt>Q4. What about axe effects ?</dt>
+<dd>A4. There's a lot of effects in quakeworld, especially when you consider custom
+mods like teamfortress.  Hence it is impossible to have a variable for every
+effect.  Things which do not have variable (like axe effects) are controlled by
+the gl_part_gunshots variable.</dd>
+
+<dt>Q5. I have set the gl_part_* variables to 1 but I still get the old particles. WTF?</dt>
+<dd>A5. Make sure you've installed ezquake/pak0.pak from the zip file/installer you
+downloaded from the web.  Inside that pak file are some particle textures that are
+important.</dd>
+
+</dl>
+
+
+
+<p id="last-update">Last update: 31.12.1969 16:00 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?particles by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

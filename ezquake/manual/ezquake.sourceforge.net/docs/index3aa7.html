@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-multiview-demos by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: MultiView Demos Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: MultiView Demos Variables</h1>
+
+
+<h2 class="variable" id="mvd_autohud">mvd_autohud&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will load different Head Up Display settings when watching MultiView Demos.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Won't do anything</td></tr><tr><td>1</td><td>Will load appropriate config according to current match type. Possible types: 1on1, 4on4, custom. Config is like cfg/mvdhud_4on4.cfg</td></tr><tr><td>2</td><td>Will always load cfg/mvdhud_custom.cfg</td></tr></tbody></table></div><h2 class="variable" id="mvd_autotrack">mvd_autotrack&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Turns auto-tracking function ON / OFF. This feature can be used while watching MultiView Demo. The client will choose and switch to the best player point of view using appropriate algorithm.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Off</td></tr><tr><td>1</td><td>Autodetect current gametype and use the appropriate xonx settings</td></tr><tr><td>2</td><td>Force the use of mvd_autotrack_custom* settings</td></tr><tr><td>3</td><td>Enables the use of mvd_multitrack_1 - 4 allowing to set seperate algorthms for every window with cl_muiltiview 2-4</td></tr><tr><td>4</td><td>Simple algorithm which prefers pent+rl over quad+rl, quad+rl over pent, quad over noquad, weapon over no weapon player; cannot be customized</td></tr></tbody></table>
+<p class="remarks">You can change the switching algorithm properties using mvd_autotrack_1on1, mvd_autotrack_2on2, etc. variables. The setting no. 4. cannot be customized and is independent on other autotrack client settings, except of mvd_autotrack_lockteam</p></div><h2 class="variable" id="mvd_autotrack_1on1">mvd_autotrack_1on1&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 1 and a 1on1 game is played. Its an algorythm for selecting the best player.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%a * %A + 50 * %W + %p + %f</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_autotrack_1on1_values">mvd_autotrack_1on1_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 0 0 0</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_autotrack_2on2">mvd_autotrack_2on2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 1 and a 2on2 game is played. Its an algorythm for selecting the best player.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%a * %A + 50 * %W + %p + %f</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_autotrack_2on2_values">mvd_autotrack_2on2_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 500 900 10</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_autotrack_4on4">mvd_autotrack_4on4&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 1 and a 4on4 game is played. Its an algorythm for selecting the best player.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%a * %A + 50 * %W + %p + %f</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_autotrack_4on4_values">mvd_autotrack_4on4_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 4 2 4 6 10 10 1 2 3 500 900</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_autotrack_custom">mvd_autotrack_custom&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 2.
+ Its an algorythm for selecting the best player.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%a * %A + 50 * %W + %p + %f</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_autotrack_custom_values">mvd_autotrack_custom_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 6 6 1 2 3 500 900 1000</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_autotrack_instant">mvd_autotrack_instant&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Makes mvd_autotrack always find the best player and switch to him instantly.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>player change will happen more often</td></tr><tr><td>0</td><td>mvd_autotrack will work more like ktpro autotrack</td></tr></tbody></table>
+<p class="remarks">In KTPro autotrack tracked player is changed only when some events happen. In instant mvd_autotrack tracked player is changed everytime a better player is found.</p></div><h2 class="variable" id="mvd_autotrack_lockteam">mvd_autotrack_lockteam&nbsp;</h2>
+<div><h3>Description</h3><p class="description">If set to 1, autotrack will keep switching POVs only from players within the same team.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Autotrack will stay within one team.</td></tr><tr><td>0</td><td>Autotrack will switch between all players.</td></tr></tbody></table></div><h2 class="variable" id="mvd_info">mvd_info&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When watching Multi View Demo (.mvd) you can show a table on the screen with full info about players' status.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Turned ON</td></tr><tr><td>0</td><td>Turned OFF</td></tr></tbody></table>
+<p class="remarks">See mvd_info_setup for setting up displayed informations.</p></div><h2 class="variable" id="mvd_info_setup">mvd_info_setup&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been updated</p><h3>Description</h3><p class="description">You can change the informations contained in Players' info table. Use following strings in format string:</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%p%n %l %h/%a %w</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>%a</td><td>Armor</td></tr><tr><td>%f</td><td>Frags</td></tr><tr><td>%h</td><td>Health</td></tr><tr><td>%l</td><td>Location</td></tr><tr><td>%n</td><td>Nickname</td></tr><tr><td>%p</td><td>Powerups</td></tr><tr><td>%P</td><td>Ping</td></tr><tr><td>%v</td><td>Value (value calculated by mvd_autotrack)</td></tr><tr><td>%w</td><td>Best Weapon:ammo</td></tr></tbody></table>
+<p class="remarks">Example: &quot;%p %f %n %l %h&quot; will display powerup, frags, nickname, location and health of each player.
+See scr_mvdinfo and scr_mvdinfo_setup description for more details.</p></div><h2 class="variable" id="mvd_info_show_header">mvd_info_show_header&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will show a line above the mvd_info table telling you wich column is armor/health/location etc.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Turned ON</td></tr><tr><td>0</td><td>Turn Off</td></tr></tbody></table></div><h2 class="variable" id="mvd_info_x">mvd_info_x&nbsp;</h2>
+<div><h3>Description</h3><p class="description">You can adjust horizontal placement of Players' info table</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">See scr_mvdinfo and scr_mvdinfo_setup description for more details.</p></div><h2 class="variable" id="mvd_info_y">mvd_info_y&nbsp;</h2>
+<div><h3>Description</h3><p class="description">You can adjust vertical placement of Players' info table</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">See scr_mvdinfo and scr_mvdinfo_setup description for more details.</p></div><h2 class="variable" id="mvd_moreinfo">mvd_moreinfo&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When playing MultiView Demo (MVD), you can turn on more messages printed in the console, like those you might know from moreinfo command in ktpro. E.g.: Nabbe picked up quad.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On</td></tr><tr><td>0</td><td>Off</td></tr></tbody></table></div><h2 class="variable" id="mvd_multitrack_1">mvd_multitrack_1&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 3 and cl_multiview is enabled.
+Its an algorythm for selecting the best player on viewport 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%f</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_multitrack_1_values">mvd_multitrack_1_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 0 0 0</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_multitrack_2">mvd_multitrack_2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 3 and cl_multiview is enabled.
+Its an algorythm for selecting the best player on viewport 2</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%W</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_multitrack_2_values">mvd_multitrack_2_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 0 0 0</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_multitrack_3">mvd_multitrack_3&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 3 and cl_multiview is enabled.
+Its an algorythm for selecting the best player on viewport 3</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%h</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_multitrack_3_values">mvd_multitrack_3_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 0 0 0</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_multitrack_4">mvd_multitrack_4&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will be used if mvd_autotrack = 3 and cl_multiview is enabled.
+Its an algorythm for selecting the best player on viewport 4</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>%A</span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">For a full description read the manual.</p></div><h2 class="variable" id="mvd_multitrack_4_values">mvd_multitrack_4_values&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to customize autotrack algoritm. See autotrack manual page for more info.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1 2 3 2 3 5 8 8 1 2 3 0 0 0</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_pent_1">mvd_pc_pent_1&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the p1 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1010 -300 150 13 135</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_pent_2">mvd_pc_pent_2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the p2 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1010 -300 150 13 135</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_pent_3">mvd_pc_pent_3&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the p3 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1010 -300 150 13 135</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_quad_1">mvd_pc_quad_1&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the q1 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1010 -300 150 13 135</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_quad_2">mvd_pc_quad_2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the q2 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>350 -20 157 34 360</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_quad_3">mvd_pc_quad_3&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Describes the position and viewing angles of the q3 cam.
+x y z rot_x rot_y</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>595 360 130 17 360</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="mvd_pc_view_1">mvd_pc_view_1&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the powerup camera for viewport 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>p1</td><td>mvd_pc_pent_1</td></tr><tr><td>p2</td><td>mvd_pc_pent_2</td></tr><tr><td>p3</td><td>mvd_pc_pent_3</td></tr><tr><td>q1</td><td>mvd_pc_quad_1</td></tr><tr><td>q2</td><td>mvd_pc_quad_2</td></tr><tr><td>q3</td><td>mvd_pc_quad_3</td></tr></tbody></table></div><h2 class="variable" id="mvd_pc_view_2">mvd_pc_view_2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the powerup camera for viewport 2</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>p1</td><td>mvd_pc_pent_1</td></tr><tr><td>p2</td><td>mvd_pc_pent_2</td></tr><tr><td>p3</td><td>mvd_pc_pent_3</td></tr><tr><td>q1</td><td>mvd_pc_quad_1</td></tr><tr><td>q2</td><td>mvd_pc_quad_2</td></tr><tr><td>q3</td><td>mvd_pc_quad_3</td></tr></tbody></table></div><h2 class="variable" id="mvd_pc_view_3">mvd_pc_view_3&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the powerup camera for viewport 3</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>p1</td><td>mvd_pc_pent_1</td></tr><tr><td>p2</td><td>mvd_pc_pent_2</td></tr><tr><td>p3</td><td>mvd_pc_pent_3</td></tr><tr><td>q1</td><td>mvd_pc_quad_1</td></tr><tr><td>q2</td><td>mvd_pc_quad_2</td></tr><tr><td>q3</td><td>mvd_pc_quad_3</td></tr></tbody></table></div><h2 class="variable" id="mvd_pc_view_4">mvd_pc_view_4&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the powerup camera for viewport 4</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>p1</td><td>mvd_pc_pent_1</td></tr><tr><td>p2</td><td>mvd_pc_pent_2</td></tr><tr><td>p3</td><td>mvd_pc_pent_3</td></tr><tr><td>q1</td><td>mvd_pc_quad_1</td></tr><tr><td>q2</td><td>mvd_pc_quad_2</td></tr><tr><td>q3</td><td>mvd_pc_quad_3</td></tr></tbody></table></div><h2 class="variable" id="mvd_powerup_cam">mvd_powerup_cam&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Will enable powerupcams, cams will be enabled on every viewport 5 seconds before the powerup spawns.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Turned ON</td></tr><tr><td>0</td><td>Turn OFF</td></tr></tbody></table>
+<p class="remarks">For setting up the viewports cams look at 
+mvd_pc_view_1-4
+and for setting the locations of the cams look at
+mvd_pc_quad_1-3
+mvd_pc_pent_1-3
+</p></div><h2 class="variable" id="mvd_status">mvd_status&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Shows information of the player you are currently tracking.
+Information includes.
+taken/dropped items and powerups
+last 3 runs (including the current one) run is from powerup-took/spawn to powerup-end/death</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Turned ON</td></tr><tr><td>0</td><td>Turned OFF</td></tr></tbody></table></div><h2 class="variable" id="mvd_status_x">mvd_status_x&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adjusts the horizontal placement of mvd_status table</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="mvd_status_y">mvd_status_y&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adjusts the vertical placement of mvd_status table</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="mvd_write_xml">mvd_write_xml&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Enables dumping of XML stats from a MVD.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="qtv_adjustbuffer">qtv_adjustbuffer&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Enables balancing of the buffer lenght of the QTV stream. When turned on, the size of the stream buffer (the delay from the actual action) will be auto-adjusted (by changing the playback speed when necessary) so that it stays on the same level most of the time.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Auto-adjust buffer size</td></tr><tr><td>0</td><td>Do not adjust buffer size, always play at 100% speed</td></tr></tbody></table>
+<p class="remarks">When turned on, the speed of the playback may change sometimes - that's how the buffer lenght is balanced. But usually you want to have this turned on when you are watching a shoutcast-commentated game because you want to stay synchronized with the commentary.</p></div><h2 class="variable" id="qtv_adjusthighstart">qtv_adjusthighstart&nbsp;</h2>
+<div><h3>Description</h3><p class="description">The level on which QTV buffer auto-adjusting will start. E.g. when set to 1.5, (and qtv_adjustbuffer is 1), QTV buffer auto-adjusting will start when buffer length reached 150% of it's normal length (determined by qtv_buffertime setting)</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br />Only values higher than 1.0 make sense</p></div><h2 class="variable" id="qtv_adjustlowstart">qtv_adjustlowstart&nbsp;</h2>
+<div><h3>Description</h3><p class="description">The bottom level on which QTV buffer auto-adjusting will start. E.g. when set to 0.5, (and qtv_adjustbuffer is 1), QTV buffer auto-adjusting will start when buffer length reached 50% of it's normal length (determined by qtv_buffertime setting)</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.3</span></p>
+<p>Variable is <strong>float</strong>.<br />Only values lower than 1.0 make sense</p></div><h2 class="variable" id="qtv_adjustmaxspeed">qtv_adjustmaxspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">The fastest possible playback speed when QTV buffer becomes excessive and auto-adjusting starts. The higher the speed is, the faster the QTV buffer length will go down to normal levels.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>999</span></p>
+<p>Variable is <strong>float</strong>.<br />Only values above 1.0 make sense</p>
+<p class="remarks">Works in conjunction with qtv_adjustbuffer 1</p></div><h2 class="variable" id="qtv_adjustminspeed">qtv_adjustminspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">The slowest possible playback speed when QTV buffer adjusting takes action. The slower the speed is, the faster the QTV buffer will fill up.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br />0.5 means 50% of the normal playback speed</p>
+<p class="remarks">Not allowing to slow down enough, buffer level might still drop down to zero if there were longer network lag. This causes pausing during playback. Allowing to slow down too much is noticeable.</p></div><h2 class="variable" id="qtv_buffertime">qtv_buffertime&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Defines how much the client buffers from the QTV stream</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.5</span></p>
+<p>Variable is <strong>float</strong>.<br />in seconds, values below 0.2 are treated as 0.2</p>
+<p class="remarks">This determines the &quot;delay&quot; you will get from what is actually happening. For example if you want to synchronize shoutcast commentary with the QTV stream, this is the variable you need to change.</p></div><h2 class="variable" id="qtv_chatprefix">qtv_chatprefix&nbsp;</h2>
+<div><h3>Description</h3><p class="description">String that will be added at the beginning of all messages send to a QTV chat.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>$[{QTV}$]</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="qtv_event_changename">qtv_event_changename&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Text pattern used when an user changes his name on a QTV stream</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>&amp;cFF0changed&amp;r name to</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="qtv_event_join">qtv_event_join&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Text pattern used when an user joins a QTV stream</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>&amp;c2F2joined&amp;r</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="qtv_event_leave">qtv_event_leave&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Text pattern used when an user leaves a QTV stream</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>&amp;cF22left&amp;r</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="qtv_gamechatprefix">qtv_gamechatprefix&nbsp;</h2>
+<div><h3>Description</h3><p class="description">String that will be added at the beginning of all messages send from QTV to the server where the broadcasted game is being played.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>$[{QTV&gt;game}$]</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-multiview-demos by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

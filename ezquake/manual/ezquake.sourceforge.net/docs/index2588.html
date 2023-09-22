@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-teamplay-communications by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Teamplay Communications Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Teamplay Communications Variables</h1>
+
+
+<h2 class="variable" id="cl_sayfilter_coloredtext">cl_sayfilter_coloredtext&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to filter your own outgoing messages out of markup that is used in this client to send colored text.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Send messages as they are</td></tr><tr><td>1</td><td>Filter out colored markup</td></tr><tr><td>2</td><td>Filter out colored and white text markup</td></tr></tbody></table>
+<p class="remarks">Colored text is not supported by some other clients. See cl_sayfilter_sendboth for compatibility mode with other clients. If you want to filter incoming messages out of colors, use scr_coloredtext.</p></div><h2 class="variable" id="cl_sayfilter_sendboth">cl_sayfilter_sendboth&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When used with cl_sayfilter_coloredtext, sends two versions of the teamplay colored messages: colored one with &quot;#c&quot; at the end and uncolored version of the message with &quot;#u&quot; at the end of the message</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Send two versions of the message</td></tr><tr><td>0</td><td>Send only one version of the message</td></tr></tbody></table>
+<p class="remarks">FuhQuake users then can use &quot;filter #u&quot; to see only uncolored messages, ezQuake users can set &quot;filter #c&quot; to see only colored messages</p></div><h2 class="variable" id="tp_forceTriggers">tp_forceTriggers&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Controls whether f_took, f_death etc are forced to execute even if the game isn't a team game.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="tp_loadlocs">tp_loadlocs&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Controls whether to load locs for teamplay reporting.
+Note: The locs should be in your &quot;/id1/locs/&quot;,
+&quot;/ezquake/locs&quot; or &quot;/qw/locs&quot; folder.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="tp_msgtriggers">tp_msgtriggers&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Switches on/off message triggers</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Message triggers are on</td></tr><tr><td>0</td><td>Message triggers are off</td></tr></tbody></table>
+<p class="remarks">For ruleset 'Smackdown' message triggers always are off.</p></div><h2 class="variable" id="tp_pointpriorities">tp_pointpriorities&nbsp;</h2>
+<div><h3>Description</h3><p class="description">You can choose the way the client decides what object you want to point with $point macro.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Object with highest priority will be chosen. First items in tp_point have highest priorities.</td></tr><tr><td>0</td><td>Original, default behavior. The closest object will be chosen.</td></tr></tbody></table>
+<p class="remarks">Priorities of object are given in tp_point command. You have to type all objects manually in tp_point command. Example: tp_point quad ra mh health. In this example, quad has the highest priority and $point will always return quad if quad ra mh are all in your view. Example: tp_point all. You never know what object will be pointed because all objects get the same priority.</p></div><h2 class="variable" id="tp_soundtrigger">tp_soundtrigger&nbsp;</h2>
+<div><h3>Description</h3><p class="description">SoundTrigger like proxys.
+A SoundTrigger must be terminated by either a CR, LF or filter. The .wav extension is not required at the end. Trigger is a character before the sound file.
+Example:
+filter #a
+say_team I'm at %l ~location.wav&quot;
+say_team ~location.wav$\me: I'm at %l #a&quot;
+say_team ~location$\me: I'm at %l #a&quot;
+say_team I'm at %l ~location #a&quot;</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>~</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="tp_triggers">tp_triggers&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable tp triggers.</td></tr><tr><td>0</td><td>Disable tp triggers.</td></tr></tbody></table></div><h2 class="variable" id="tp_weapon_order">tp_weapon_order&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This allows you to define the order from best to worst weapon. The default value
+is &quot;78564321&quot;, which means that the Rocket Launcher is the best weapon (impulse 7)
+then Lightning Gun (impulse 8), Super Nailgun (impulse 5), Grenade Launcher
+(impulse 6), Nailgun (impulse 4), Super Shotgun (impulse 3), Shotgun (impulse 2),
+Axe (impulse 1).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>78654321</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-teamplay-communications by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

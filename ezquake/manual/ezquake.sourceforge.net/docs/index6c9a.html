@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?scripting by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Scripting</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Scripting</h1>
+
+
+<p>Every game from Quake series has strong client-side scripting system.
+In modern QuakeWorld clients this has come even more far. In this client you can
+use (user) commands, (user) variables and macros in your scripts.</p>
+
+<p>Note: Advanced users may wish to skip to <a href="#advanced">Advanced
+scripting</a> section of this manual.</p>
+
+<h2>Basic scripting</h2>
+
+<h3>What is a script</h3>
+
+<p>Script is a piece of text your client understands. It means you can type
+that text into the <em>console</em> and after hitting <kbd>[Enter]</kbd>
+something happens. Example:<br />
+<code>/name superman</code><br />
+That piece of text will change your nickname to <em>superman</em> and other
+players can see you as <em>superman</em> in the scoreboard, etc.</p>
+
+<p>What have we used here:</p>
+<ul>
+<li>Forward slash - <kbd>/</kbd><br />This character tells your client
+that following text should be executed. Probably if you try to type
+only <code>name superman</code> in the console then the same thing will happen.
+That's because usualy (depends on your client settings) the client will first try
+to recognize if given text is a script. If this check is positive it will execute
+it and if the result is negative it will send that piece of text as a message
+to other players automatically.</li>
+<li>Variable - <kbd>name</kbd><br />
+<em>Name</em> is a variable. It contains your current nickname used in the game.</li>
+<li>string - <kbd>superman</kbd><br />
+That's the value we want to be saved into variable <code>name</code>.</li>
+</ul>
+
+<p>Since it's pretty boring to type long scripts containing many lines of
+stuff manually into console everytime, we are able to
+store it in a file which can be loaded on our request.
+QuakeWorld scripts are usualy stored in files with extension <kbd>.cfg</kbd>
+(which is not necessary) somewhere in your Quake directory. For a start it's good
+idea to place your configs into ID1 subdirectory, so it can be e.g.:<br />
+<code>C:\Quake\ID1\myscript.cfg</code><br />
+Such file is usually called "config" (abbrevation of "configuration file")
+or simply "script".</p>
+<p>In your client you can execute your script with command<br />
+<code>/exec myscript.cfg</code></p>
+<p>It is common that there are two types of ".cfg" files used in QuakeWorld:</p>
+<dl>
+  <dt>Configs</dt>
+  <dd>Series of all variables assignments and key bindings. In those files
+  players usually store their game configuration. You can save and load configs
+  with commands <code>cfg_save</code> and <code>cfg_load</code> but this manual
+  page is about something different:</dd>
+  <dt>Script</dt>
+  <dd>List of some commands you want to be done instantly - e.g. change some
+  keys bindings, change some of the graphic settings, create new advanced user 
+  commands.</dd>
+</dl>
+
+<p>This manual page will describe things you can use in your <strong>scripts</strong>.</p>
+
+<h3>Commands</h3>
+<p>Among simple commands like <code>/quit</code> (which will shut down your client) 
+there are commands with parameters. E.g.<br />
+<code>/demo_capture start 0:10 my.avi</code> will tell your client to
+start capturing new video file named "my.avi" and it will be 10 seconds long.</p>
+<p>Note that there are special types of commands with characters <kbd>+</kbd> and
+<kbd>-</kbd> as a first character. If you bind command with <kbd>+</kbd> to a key
+then the command will be executed when the key is pressed and same command but with
+<kbd>-</kbd> will be executed when the key is released.</p>
+<p>You can create your own commands using command<br />
+<code>alias new_command "command_definition"</code><br />
+Where <code>command_definition</code> is usually a string enclosed in quotes and it's a
+sequence of commands, user created
+commands and variables assignments separated by semicolons (<kbd>;</kbd>). E.g.:<br />
+<code>alias redteam "team red; color 4 4; ready"</code></p>
+
+<h3>Variables</h3>
+<p>Variables contain game settings. E.g. <code>name</code> contains your nickname,
+<code>volume</code> contains sound volume, etc.<br />By typing<br />
+<code>/&lt;variable_name&gt;</code> in the console the client will show you
+what is current value of that variable. E.g.<code>/name</code> will tell you
+what is your current nickname.<br />By typing <br />
+<code>/&lt;variable_name&gt; &lt;new_value&gt;</code> you will change the value
+of given variable. E.g. <code>/volume 0</code> will mute all game sounds.</p>
+
+<h2>Common scripts</h2>
+
+  <h3>Weapon scripts</h3>
+    <p>If you want to make your life as a QW player easier, you can start by using
+    a weapon script. What a weapon script does is that it selects the wanted weapon, and if it doesn't exist, it chooses the best weapon available. When you've fired the weapon it switches to the Shotgun or the Axe (cannot be dropped in backpack) to ensure that the enemy does not get a valuable weapon if he manages to kill you.</p>
+    <p>Example: this command will first try to select rocket launcher, then super-nailgun,
+    then super-shotgun and if you don't have even this weapon it will choose shotgun.<br />
+    <code>/impulse "7 5 3 2"</code></p>
+    <p>You can write all sorts of scripts, the only thing holding you back is your own imagination!</p>
+  <h3>Boomstick/Axe script</h3>
+  <p>What about not giving away the powerful Rocket Launcher? When you get fragged by another player he will get the weapon which you had selected last. If you are clever you would manually change to a weaker weapon before he kills you but you can make a script which does that for you in the heat of the battle.</p>
+  <pre><code>alias +rl "impulse 7;+attack"
+alias -rl "-attack;impulse 1"
+bind mouse1 "+rl"</code></pre>
+  <h3>Teamplay messages scripts</h3>
+  <p>Nowadays macros (see below) are used to create intelligent communication
+  messages with your team. This manual will explain you all scripting possibilities
+  but won't tell you how should such config look. There's a teamplay messages config distributed
+  along with ezQuake, you can find this and other configs in the
+  <a href="http://cvs.sourceforge.net/viewcvs.py/ezquake/mics/cfg/">confing dir</a> in the CVS repository.
+  Look for other popular teamplay-messages configs
+  e.g. in <a href="http://www.quakeworld.nu/forum/">forums</a>.</p>
+
+
+<h2 id="advanced">Advanced scripting</h2>
+
+<h3>User-created variables</h3>
+<p>You can create your own variables with command<br />
+<code>/set &lt;variable_name&gt; &lt;value&gt;</code><br />
+and destroy them using<br />
+<code>/unset &lt;variable_name&gt;</code><br />
+You can of course check what the variable value is by typing it's name<br />
+<code>/&lt;variable_name&gt;</code><br />
+You can use the <strong>value</strong> of <strong>any variable</strong> using
+<code>$&lt;variable_name&gt;</code>, e.g.:<br />
+<code>/mp3_volume $volume</code> sets the sound volume of mp3 player to same level
+as the game volume, equals to<br />
+<code>/set mp3_volume $volume</code></p>
+<p>The <code>set_tp</code> command creates a teamplay protected variable. That means you can use such variable only to script your custom teamplay messages. The difference from <code>set</code> command is that you cannot use <code>set</code> in combination with teamplay macros, that means you cannot create a teamplay unprotected variable with value based on a value of some teamplay variable. Example<br />
+<code>if $health &lt; 50 then set myvar danger else set myvar safe</code> - this will lead to a warning "set cannot be used in combination with teamplay macros. But if you use set_tp here instead of set, all will work. But if you now try to do for example this:<br />
+<code>exec $myvar.cfg</code>, you'll get an error saying "exec cannot be used in combination with teamplay macros". Because the "myvar" variable has been created as teamplay protected, you can only use it in combination with say, say_team, echo, if, and some other commands.</p>
+
+<h3>Mathematical operations</h3>
+<p>This client allows you to use some basic mathematical operations on your variables
+using <code>set_calc</code> command:
+<code>set_calc &lt;cvar&gt; &lt;command&gt; &lt;command arguments&gt;<br />set_calc
+&lt;cvar&gt; &lt;argument1&gt; &lt;operator&gt; &lt;argument2&gt;</code><br />
+valid commands: <code>strlen int substr set_substr pos</code><br />
+valid operators: <code>+ - * / div %% and or xor</code>.<br />
+This feature was ported from QW262 QuakeWorld client.<br />
+For simple increasing and decreasing variables you can use command <code>/inc
+variable value</code>.</p>
+
+<h3>User-created commands with parameters</h3>
+<p>Example:<br />
+<code>alias cool_zoom "fov %1;sensitivity %2;v_viewheight %3;crosshaircolor %5";
+cool_zoom 30 3.2 -6 79</code><br />
+ported by from QW262.</p>
+
+<p>E.g.: <strong>zooming script</strong>:<br />
+<code>alias zoom "set_calc fov $fov * %1; set_calc sensitivity $sensitivity * %1"<br />
+bind "capslock" "zoom 0.5"</code></p>
+
+<h3>Macros</h3>
+<p>Macro is a special type of string that is replaced in your custom command with value
+given by <strong>state of the client or the game</strong>. It is very similar to accessing variable
+value by <kbd>$</kbd> character but you cannot change values of macros.</p>
+<p>Example:<br /><code>/exec my_$matchstatus.cfg</code><br />
+Will exec my_standby.cfg script when the server is in prewar mode or
+my_normal.cfg if you play a game.</p>
+<p>Here is a <a href="index264a.html?macros">full list of macros</a>.</p>
+<p>Note that usage of many macros is very limited to prevent making
+the scripting possibilies not so powerful in gameplay. In Smackdown Ruleset you are
+able to use macros only in combination with "if", "say" and "say_team" commands.</p>
+
+<h3>Conditions</h3>
+<p>You can use <kbd>if</kbd> construct in your scripts with following syntax:<br />
+<code>
+if (<var>&lt;condition1&gt;</var>) then <var>&lt;commands&gt;</var>
+[else <var>&lt;commands&gt;</var>]
+</code></p>
+<p>The syntax of the condition has been changed in 1.9, read below for resolving backward compatibility issues.</p>
+<p>Commands are semicolon-separated commands or aliases.</p>
+<p>In the condition you can use parentheses, binary operators +, -, *, /, &lt;, &lt;=, =, ==, !=, &gt;=, &gt;, =~, !~, isin and !isin, and unary operator - and you can combine these with logical conjunctions "and" and "or" (also "AND", "&amp;&amp;", "OR" or "||" will work). You can use integers, decimal numbers and strings inside of the conditions, usually you will use macros there too. Strings should be enclosed in apostrophes, that applies for macros too, so it's recommended instead of condition "quad isin $powerups" use either older way "quad isin $qt$powerups$qt", which will work just well, or newer syntax: <kbd>('quad' isin '$powerups')</kbd>.</p>
+<h4>Operators</h4>
+<p>Operators +, -, *, / are standard arithmetical operators, + works also as a string concatenation. Example: <code>if ('abcd' = 'ab' + 'cd') then echo yes</code> - will print "yes".</p>
+<p>Operators &lt;, &lt;=, =, ==, !=, &gt;=, &gt; work as usual number and string comparision operators. Operators = and == are equivalent. Operator != means "not equals".</p>
+<p><code>isin</code> means "<var>expr1</var> is a substring of <var>expr2</var>" and
+<code>!isin</code> is a negation of this.</p>
+<p>The <code>=~</code> in "x =~ z" means "x matches to the regular expression z", the <code>!~</code> operator is the negation of this. When using this, the variables re_trigger_match_0, ..., re_trigger_match_9 will be set to values representing matched regexp groups. For example:<br />
+<code>if ('abc' =~ '(.)(.)(.)') then processthis</code> will cause re_trigger_match_0 be set to "abc", re...match_1 to "a", re...match_2 to "b" and re...match_3 to "c".</p>
+<p>The [else ...] part is optional and if used, all commands after it will be executed only when the main condition is false.</p>
+<p>Example of the use:<br />
+<code>if (2.2-1.2 == 3/(2+1) and ('quad' isin '$powerups' or 'ring' isin '$powerups')) then say we are sane and powerupped!</code></p>
+
+<h4>Backward compatibility of the "if" command</h4>
+<p>The syntax of the condition in the if command has been changed in the version 1.9 of the client. Backward compatibility has been kept in majority of the scripts.<br />
+The client uses old if command in a situation where you do not use parentheses around (at least at the beginning of) the condition. If you use parentheses, new if command evaluating will be applied. Example:</p>
+<p><code>if $quad isin $powerups say_team I have quad</code><br />
+This will work as an "old if command".</p>
+<p><code>if ('quad' isin '$powerups') then say_team I have quad</code><br />
+This will use the "new if command"</p>
+
+<h3>Regexp matching</h3>
+<p>This client supports multiple params &amp; regexp match for 'viewalias, unalias_re, toggle_re, cvar_reset_re'<br />
+Regexp match support for 'aliaslist, cvarlist, cmdlist, macrolist'.<br />Examples:</p>
+<pre><code>unalias_re alias1 alias2 ^\.took(.+)$
+cvar_reset_re gl_part_.+
+toggle_re gl_part_.+
+cvarlist gl_</code></pre>
+
+
+<p id="last-update">Last update: 11.03.2008 05:15 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?scripting by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

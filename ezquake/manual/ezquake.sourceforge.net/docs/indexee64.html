@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?multiview by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Multiview</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Multiview</h1>
+
+
+<p>This client adds a multiview component to mvd playback.
+Upto four views can be displayed at once. The <code>trackteam</code> command 
+seems to be the most useful command: least effort, more enjoyment.
+Multiview support was implemented to this client by Oppy.</p>
+
+<p>note:</p>
+
+<ul>
+<li>only works with .mvd demos, qwd-&gt;mvd converted demos 'work' but not as intended as they 
+are not true multiview demos.  Also if you have an ATI card remember to use -maxtmu2 on 
+command line as fuhquake + mvd have an issue without that parameter.</li>
+
+<li>when capturing screenshots for movies ensure you multiply the number of views by your desired capture
+rate, eg for cl_multiview 2 use demo_capture_fps 60 if you want 30 frames</li>
+</ul>
+
+<p>Added cvars:</p>
+
+<ul>
+<li>cl_multiview &lt;0/1/2/3/4&gt;</li>
+<li>trackteam &lt;1/2/off&gt;</li>
+<li>track1 &lt;userid/name/off&gt;</li>
+<li>track2 &lt;userid/name/off&gt;</li>
+<li>track3 &lt;userid/name/off&gt;</li>
+<li>track4 &lt;userid/name/off&gt;</li>
+<li>cl_mvdisplayhud &lt;0/1&gt;</li>
+<li>cl_mvinset &lt;0/1&gt; - only works with cl_multiview 2, change pov by pressing +jump</li>
+<li>cl_mvinsetcrosshair &lt;0/1&gt;</li>
+<li>cl_mvinsethud &lt;0/1&gt; - inset hud only works with conwidth&gt;512</li>
+</ul>
+
+<p id="last-update">Last update: 31.12.1969 16:00 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?multiview by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

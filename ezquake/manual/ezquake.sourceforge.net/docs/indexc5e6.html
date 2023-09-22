@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?textures by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Textures, console font and background, crosshairs, sky</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Textures, console font and background, crosshairs, sky</h1>
+
+
+<h2>24-bit Textures</h2>
+<p>This client supports textures replacement. You can replace textures of old maps with some new pictures. Just download a texture pack and extract it to your &lt;quakedir&gt;/qw/textures path.</p>
+
+<p>We recommend <a href="http://facelift.quakedev.com/">Quake Revitalization Project</a> and <a href="http://gfx.qwdrama.com/browse/textures/">QuakeWorld GFX at qwdrama</a>.</p>
+
+<p>You can place all the textures in the root directory of the textures dir (see above) or you can create sub-dirs for each map there. E.g. C:\Quake\qw\textures\dm4\ contains textures to be used only in map The Bad Place.</p>
+
+<h2>Console background</h2>
+<p>You can replace the picture that is used as an console background. This file must be named conback.png and placed into &lt;quakedir&gt;/qw/gfx directory. You can download some console backgrounds <a href="http://gfx.qwdrama.com/browse/conbacks/">from here</a>.</p>
+
+<h2>Console font</h2>
+<p>Console font, called charset, is a picture of special format that goes into &lt;textures&gt;/charsets directory.
+We recommend <a href="http://gfx.qwdrama.com/browse/charsets/">QuakeWorld GFX at qwdrama</a>.<br />
+Once place there, use <code>loadcharset</code> command with the name of the file with your desired console font.</p>
+
+<h2>Crosshairs</h2>
+<p>You can switch between some inbuilt crosshairs using the <code>crosshair</code> command giving it an integer number as a parameter. E.g. <code>crosshair 4</code> gives you simple square.</p>
+
+<p>You can also create a crosshair for yourself in 24-bit colors with alpha-transparency! Save your image as a 24-bit PNG picture with alpha-transparency channel and place it into &lt;quakedir&gt;/qw/crosshairs directory.<br />
+Presume, you've created file 'mycross.png'. Then type in the console <code>crosshairimage mycross</code> and your crosshair will appear on the screen.</p>
+
+<p>You can download crosshairs from <a href="http://gfx.qwdrama.com/browse/crosshairs/">QuakeWorld GFX archive</a>.</p>
+
+<p>Other commands for manipulation with crosshairs: crosshairsize, crosshairalpha, crosshaircolor</p>
+
+<h2>Skyboxes</h2>
+<p>You can also replace textures used as the sky. Textures used as a replacement must have a special naming convetion: each file name consist of these parts: [basename][part][extension], where</p>
+<dl><dt>basename</dt><dd>is the name that you will use within <code>loadsky</code> command when want to load the sky replacement</dd>
+<dt>part</dt><dd>is one of 'bk', 'dn', 'lf', 'ft', 'rt' and 'up', and</dd>
+<dt>extension</dt><dd>is usually .png or .tga</dd>
+</dl>
+
+<p>Those files goes to your &lt;quakedir&gt;/qw/env directory<br />
+E.g.: You want to use skybox called 'Day'. Then you have to have files daybk.tga, daydn.tga, dayft.tga, daylf.tga, dayrt.tga and dayup.tga in your skyboxes directory. Then you just type <code>loadsky day</code> into the console.</p>
+
+<p>You can also use <code>skygroup</code> command to define rules to use different sky textures in different maps.</p>
+
+<h2>Skins</h2>
+<p>You can use custom player skins. Create an pcx image and place it into your &lt;quakedir&gt;/qw/skins directory.<br />
+E.g.: You have abc.pcx, use <code>teamskin abc</code> command to use that image as a player skin for your teammates. Other commands are <code>enemyskin, teamquadskin, teampentskin, teambothskin, enemyquadskin, enemypentskin, enemybothskin</code>.</p>
+
+<p>You can download skins from <a href="http://gfx.qwdrama.com/browse/skins/">QuakeWorld GFX at qwdrama</a>.</p>
+
+<h2>Head up display images</h2>
+<p>You can alter you gfx.wad using <a href="http://wiki.quakesrc.org/index.php/AdQuedit">AdQuedit</a> tool or you can use some hi-res 24-bit pictures instead. Those files go into your &lt;quakedir&gt;/qw/textures/wad directory.</p>
+
+<p>You can download HUD graphics from <a href="http://gfx.qwdrama.com/browse/hud/">QuakeWorld GFX at qwdrama</a>.</p>
+
+<p id="last-update">Last update: 21.06.2007 01:39 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?textures by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

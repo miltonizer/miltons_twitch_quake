@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?upgrading by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Upgrading to new version</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Upgrading to new version</h1>
+
+
+<p>This page will tell you how to comfortably upgrade from older to new versions of ezQuake. To know how to upgrade from FuhQuake, visit the <a href="index19ad.html?install">Installation manual page</a>.</p>
+<p>Also don't forget to check the <a href="indexda75.html?faq">FAQ</a></p>
+
+<h2>Upgrading from 1754 to 1.8</h2>
+<ul>
+<li>
+  The way how the client loads and saves it's configuration has been changed in many aspects. This is our recommendation how to save your configuration now:
+<ol>
+<li>Load the client and load your configuration.</li>
+<li>Go to Options menu, select the Config tab and hit "Save". Before you do that you may wish to decide where you want to have your configuration saved - in your quake/ezquake dir or in your system profile dir - recommended (e.g. in Windows that's My Documents/ezQuake). If you change this in future, you will have to manualy delete config.cfg from the old location.</li>
+<li>If you have your own various default.cfg, config.cfg and autoexec.cfg files to auto-load your configuration on start-up, remove them. If you used command-line option +cfg_load myconfig, remove it.</li>
+</ol>
+Now your configuration will be auto-loaded on client startup from the config.cfg file.
+</li>
+<li>The r_fastsky setting now works even if you are using custom skybox texture; use r_fastsky 0 if you are missing your custom sky look</li>
+<li>Screen settings in GL version are now done via config. Go to the Options menu, video tab, set the screen settings you like and save your config</li>
+<li>As you might have already noticed, you do not need any command-line options. Typically you should be able to completely erase your command line. Look for variable equivalents. Video related settings are all available through the menu, -dinput is represented by in_mouse 2, -m_smooth by in_m_smooth 1, etc.</li>
+<li>In this build, the menu will pop up once starting ezQuake. If you'd like ezQuake to go directly to console like old times, set <var>cl_onload</var> variable to "<code>console</code>". You need to use the recommended way to load and save configuration (see above) for this to have any effect.</li>
+</ul>
+
+<h2>Upgrading from 1517</h2>
+<ul>
+<li><a href="index04b4.html?independent-physics">Independent physics</a> feature is now enabled by default. Follow the link for more info. If you want to disable them, use this command-line option when running ezQuake:<br />
+<code>-noindphys</code></li>
+<li>If your graphics card settings say that vertical synchronization should be application controled, you will have <strong>vertical synchronization turned on</strong> on startup. To prevent this, you have to explicitly mention:<br /><code>vid_vsync 0.0</code><br />either in your config or in the console or put <code>+vid_vsync 0</code> in your command line. (Note: Due to some other circumstances you have to use exactly 0.0 in your config, just vid_vsync 0 might get ignored in some occasions).</li>
+<li>If you have vid_displayfrequency 75 in your config, your display frequency will now really get switched to 75 when you load your config. To prevent this, type new value of your desired vid_displayfrequency and save your config.</li>
+<li>Head Up Display defaults have been changed. If you have noticed different frags and teamfrags placement, try this:<br />
+<code>frags extra_spec_info 0<br />
+teamfrags extra_spec_info 0</code><br />
+If you noticed some odd clocks or frag counter on your screen, use:<br />
+<code>hide democlock<br />hide gameclock<br />hide teamfrags</code><br />
+To make sure your HUD configuration is exactly the same as in previous version of ezQuake, use the <a href="#keep">Keeping exact old settings</a> guide from below.</li>
+<li>For MultiView Demos (MVD) we do automatically load custom Head Up Display (HUD) configuration from now on. To disable this behavior, use:<br />
+<code>mvd_autohud 0</code></li>
+<li>Behavior of mp3_volume has been changed. If you had custom scripts for increasing and decreasing your media player volume, those won't work anymore. To increase or decrease your media player volume from within the client, use following commands:<br />
+<code>mp3_volume +0.1<br />
+mp3_volume -0.1</code><br />
+This has been changed to avoid media player volume problems when loading your config.</li>
+<li>You can make your commandline more friendly by changing following option:<br />
+<code>+set vid_displayfrequency X</code> into <code>-freq X</code> (both ways still do work but also don't forget save your vid_displayfrequency into the config - see above)<br />
+Also you can throw away "+set cl_independentphysics 1" because it's on by default now.</li>
+<li>cl_nolerp default value has been changed to 0</li>
+</ul>
+<p>For full description of what has been changed see the <a href="index6b30.html?changelog">changelog</a></p>
+
+<h2>Upgrading to 1517</h2>
+<ul><li>You might get fullbright textures on walls in this build. That's because we have fixed r_fullbright behavior and you have set variable to 1 in belief it has something to do with fullbright skins. To get rid of this behavior, just use:<br />
+<code>r_fullbright 0</code></li>
+</ul>
+
+<h2 id="keep">Keeping exact old settings</h2>
+
+<p>You are expected to install (or extract) the client package as if it was your first ezQuake installation. But note that as we are modernizing default settings to meet current gaming standards, these changes might appear in your new ezQuake version and might disturb users who like to have everything pixel perfect as in their previous version.<br />
+<strong>To make sure nothing is changed since your previous installation of ezQuake</strong>, save your full config also with default values. To do this, before you use the <a href="index1361.html?cfg_save">cfg_save</a> command, type this into the console:<br />
+<code>cfg_save_unchanged 1</code><br />
+After this just save your config with<br />
+<code>cfg_save yourname</code></p>
+<p>Now you can install new version of ezQuake and load your full config in it using the <code>cfg_load yourname</code> command.</p>
+
+
+<p id="last-update">Last update: 27.09.2007 11:13 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?upgrading by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

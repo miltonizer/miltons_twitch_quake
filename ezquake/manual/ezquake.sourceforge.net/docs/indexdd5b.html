@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?tcl by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: TCL - Tool Command Language</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: TCL - Tool Command Language</h1>
+
+
+<p>Why Tcl has been chosen?  First, it is simplicity of embedding: Tcl, unlike, for example, Perl, has been initially developed so that it could be built in the existing application written on C (in our case ezQuake). Secondly, Tcl support Tcl does not need of additional libraries and files, except for tcl.dll. Well and at last, simple enough syntax.</p>
+
+<p>Following 3 commands was added:<br />
+tcl_eval - execute line as tcl code<br />
+tcl_exec - execute a config as tcl script<br />
+tcl_proc &lt;name&gt; [parameters] - execute a Tcl-procedure &lt;name&gt; with parameters &lt;parameters&gt;. Procedure must be difened before thru tcl_eval or tcl_exec commands.</p>
+
+<p>In Tcl-scripts you can use qw-variables. Since this variables are global, you must define them inside procedures with a command global, or iput before that name of a variable: ::, for example: set x $::fov</p>
+
+<p>Besides that, for interaction with the client in Tcl interpreter were added following commands: 
+cmd  &lt;line&gt; - executes string as a qw-command or alias
+alias &lt;name&gt; [args] - similar to the Tcl-command 'proc', but except for definition of procedure is defined as qw-alias.</p>
+
+<p>Example:</p>
+<pre><code>alias +wswitch {weapon} {
+     set ::last_weapon $::weaponnum
+     cmd impulse $weapon
+     cmd +attack
+}
+alias -wswitch {} {
+     cmd -attack
+     cmd impulse $::last_weapon
+}
+cmd bind MOUSE3 +wswitch 2 ;</code></pre>
+
+<p>For more info visit <a href="http://www.tcl.tk/man/tcl8.5/tutorial">TCL Tutorial</a>.</p>
+
+<p id="last-update">Last update: 29.08.2006 07:03 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?tcl by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

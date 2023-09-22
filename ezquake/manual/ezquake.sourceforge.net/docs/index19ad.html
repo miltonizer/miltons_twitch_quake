@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?install by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Install instructions</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Install instructions</h1>
+
+
+<h2>Requirements</h2>
+<p>To play QuakeWorld you need original <a href="http://www.idsoftware.com/games/quake/quake/">Quake game</a> with <a href="http://www.idsoftware.com/games/quake/quake/index.php?game_section=updates">1.06 patch</a>.<br />
+Note: You don't need all the files from Quake. See <a href="#clean-quake-install">Clean Quake Install</a> below on this page.</p>
+<h2>Installation</h2>
+<p>After you <a href="http://ezquake.sourceforge.net/download/">download ezQuake</a> extract/install the client into your Quake directory.</p>
+
+<h2>Upgrading from previous version of this client</h2>
+<p>See <a href="indexb170.html?upgrading">Upgrading manual page</a>.</p>
+
+<h2>Already have fQuake pack</h2>
+<p>fQuake has been replaced by <a href="http://nquake.com/">nQuake</a>. But if you already have QuakeWorld installed using fQuake pack and you would like to use this client, just install it into your fQuake directory. The fQuake pack comes with ezQuake included by default though.</p>
+
+<h2>Already using FuhQuake</h2>
+<p>You can keep majority of your configuration and settings from FuhQuake by just copying / renaming the <var>fuhquake</var> directory in your Quake directory to <var>ezquake</var>.</p>
+<p>After this, install / extract ezQuake into your Quake directory.</p>
+
+<h2>Troubleshooting</h2>
+
+<p>Most of the problems are caused by wrong files placement. Here we will make sure that you have all the files you need on right places.</p>
+
+<h3 id="clean-quake-install">Clean Quake Install</h3>
+
+<p>As we've said already, you need data from original Quake game to run this client. Those data are stored in files pak0.pak (included in <a href="ftp://ftp.idsoftware.com/idstuff/quake/quake106.zip">shareware version</a> of Quake) and pak1<a href="http://www.google.com/search?q=pak0.pak+pak1.pak+intitle:index">.</a>pak (included in the <a href="http://www.idsoftware.com/games/quake/quake/index.php?game_section=buy">full version</a> of Quake game). To make a <em>clean Quake installation</em> do following:</p>
+<ol>
+<li>Create a new directory on your disc, we will call this directory your "Quake directory" or "Quake root" from now on.</li>
+<li>Create directory called "id1" in your Quake directory.</li>
+<li>copy both pak0.pak and pak1.pak files into the id1 directory</li></ol>
+<p>Now you can install this client or any other Quake engine into the Quake directory. Have fun. :-)</p>
+<p>A typical error message is about glide2x.dll missing. To get rid of this error, remove the file opengl32.dll from your Quake directory.</p>
+
+<h3>Required final structure</h3>
+
+<ul>
+<li>Quake [dir]<ul>
+  <li>id1 [dir]<ul>
+    <li>pak0.pak [file from full or shareware Quake]</li>
+    <li>pak1.pak [file from full Quake version, optional]</li>
+  </ul></li>
+  <li>ezquake [dir]<ul>
+    <li>pak0.pak [included in ezQuake package]</li>
+    <li>help.pak</li>
+    <li>...</li>
+  </ul></li>
+  <li>ezquake.exe</li>
+  <li>ezquake-gl.exe</li>
+  <li>ezstart.exe</li>
+</ul></li>
+</ul>
+
+<p id="last-update">Last update: 31.03.2008 09:13 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?install by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

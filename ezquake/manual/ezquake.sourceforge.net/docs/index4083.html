@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-server-browser by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Server Browser Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Server Browser Variables</h1>
+
+
+<h2 class="variable" id="sb_autohide">sb_autohide&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles in which cases the server browser should automatically hide itself 
+when connecting to a server.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Never hide server browser</td></tr><tr><td>1</td><td>This will cause the server browser to always hide after connecting</td></tr><tr><td>2</td><td>This will cause the server browser to hide after connecting only, if the     connected server is not a qizmo proxy, useful if you often connect to Qizmos
+    only for rerouting features (with &quot;useproxy 1&quot;)</td></tr></tbody></table></div><h2 class="variable" id="sb_autoupdate">sb_autoupdate&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Enabled auto-updates (pings &amp; refreshes status) servers from actually marked server sources in Server Browser.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>auto-refresh server list when first entering Server Browser menu</td></tr><tr><td>0</td><td>do not refresh server list automatically</td></tr></tbody></table>
+<p class="remarks">Usefull with sb_starttab 1 and '+cfg_load myconfig +menu_slist' in command-line.</p></div><h2 class="variable" id="sb_hidedead">sb_hidedead&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should hide dead servers.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>hide dead servers</td></tr><tr><td>0</td><td>don't hide dead servers</td></tr></tbody></table></div><h2 class="variable" id="sb_hideempty">sb_hideempty&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should hide empty servers.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>hide empty servers</td></tr><tr><td>0</td><td>don't hide empty servers</td></tr></tbody></table></div><h2 class="variable" id="sb_hidefull">sb_hidefull&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should hide full servers.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>hide full servers</td></tr><tr><td>0</td><td>don't hide full servers</td></tr></tbody></table></div><h2 class="variable" id="sb_hidenotempty">sb_hidenotempty&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should hide empty servers.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>hide empty servers</td></tr><tr><td>0</td><td>don't hide empty servers</td></tr></tbody></table></div><h2 class="variable" id="sb_inforetries">sb_inforetries&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how often ezQuake should try to retrieve information from a server 
+until it is considered to be not responding.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_infospersec">sb_infospersec&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how many serverinfos per second ezQuake should retrieve when 
+scanning servers. When setting this value too high you will flood your line,
+causing you to not receive information from servers or lagging your connect
+to the server you are currently connected to.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>100</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_infotimeout">sb_infotimeout&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how long ezQuake will wait for a reply when trying to retrieve
+information from a server until the attempt times out.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_liveupdate">sb_liveupdate&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This will determine how often ezQuake should refresh the serverinfo window, the
+specified value sets the delay in seconds. Setting it to &quot;0&quot; will disable
+automatic refreshing.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_mastercache">sb_mastercache&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should cache the results of queries to master server 
+(in directory qw/sb/cache). If you restart ezQuake and don't update sources or if 
+a master server is down, ezQuake will use the cache.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>use the cache for master servers when they are down or haven't been refreshed</td></tr><tr><td>0</td><td>don't use cache for master servers</td></tr></tbody></table></div><h2 class="variable" id="sb_masterretries">sb_masterretries&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how often ezQuake should try to retrieve information from a master 
+server until it is considered to be not responding.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_mastertimeout">sb_mastertimeout&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how long ezQuake will wait for a reply when trying to retrieve
+information from a master server until the attempt times out.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_maxheight">sb_maxheight&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been deleted</p><h3>Description</h3><p class="description">This set the maximum height for the server browser menu in pixels.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_maxwidth">sb_maxwidth&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been deleted</p><h3>Description</h3><p class="description">This set the maximum width for the server browser menu in pixels.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_pings">sb_pings&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how many pings ezQuake will send to a server when trying to
+determine your ping to it. A higher value will cause scanning servers to take
+longer, but the result may be more exact. A lower value obviously makes scanning
+faster, but pings may be inaccurate.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_pingspersec">sb_pingspersec&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how many pings per second ezQuake should sent out when scanning
+servers. If you set this value too high the result will be that the pings will 
+not be accurate because you overloaded your line. If you set it too low scanning 
+servers will take very long especially when you have a large server list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>150</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_pingtimeout">sb_pingtimeout&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines how long ezQuake will wait for a reply when trying to ping a 
+server until the attempt times out.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_showaddress">sb_showaddress&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the server IP column in the server
+list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the server IP column</td></tr><tr><td>0</td><td>do not show the server IP column</td></tr></tbody></table></div><h2 class="variable" id="sb_showcounters">sb_showcounters&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the number of servers or players in
+the status line.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the server/player counter in the status line</td></tr><tr><td>0</td><td>do not show the server/player counter in the status line</td></tr></tbody></table></div><h2 class="variable" id="sb_showfraglimit">sb_showfraglimit&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the fraglimit column in the server
+list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the fraglimit column</td></tr><tr><td>0</td><td>do not show the fraglimit column</td></tr></tbody></table></div><h2 class="variable" id="sb_showgamedir">sb_showgamedir&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the gamedir column in the server list,
+for example to see which mod is being played.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the gamedir column</td></tr><tr><td>0</td><td>do not show the gamedir column</td></tr></tbody></table></div><h2 class="variable" id="sb_showmap">sb_showmap&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the map column in the server list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the map column</td></tr><tr><td>0</td><td>do not show the map column</td></tr></tbody></table></div><h2 class="variable" id="sb_showping">sb_showping&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the ping column in the server list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the ping column</td></tr><tr><td>0</td><td>do not show the ping column</td></tr></tbody></table></div><h2 class="variable" id="sb_showplayers">sb_showplayers&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the players column in the server list
+that shows how many players are on the server as well as how many players are 
+allowed.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the players column</td></tr><tr><td>0</td><td>do not show the players column</td></tr></tbody></table></div><h2 class="variable" id="sb_showtimelimit">sb_showtimelimit&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether ezQuake should display the timelimit column in the server 
+list.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>show the timelimit column</td></tr><tr><td>0</td><td>do not show the timelimit column</td></tr></tbody></table></div><h2 class="variable" id="sb_sortplayers">sb_sortplayers&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines sort order in the players list. This uses the numbers from the
+description of the columns. Check &quot;Columns available in servers/players list&quot;
+above for an explanation of each number. A &quot;-&quot; in front of the value reverses 
+the sort order for that value from ascending to descending.
+address (ip:port).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>92</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_sortservers">sb_sortservers&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This determines sort order in the servers list. This uses the numbers from the
+description of the columns. Check &quot;Columns available in servers/players list&quot; 
+above for an explanation of each number. A &quot;-&quot; in front of the value reverses 
+the sort order for that value from ascending to descending.
+server address (ip:port).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>32</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_sortsources">sb_sortsources&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Ordering instructions for server browser sources list are stored in this variable. You can order source server in Server browser by pressing Ctrl+1, Ctrl+2 and Ctrl+3. Sequence of your desired combination will be stored in this variable, newest keys first.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>string</strong>.<br />E.g.: 3-21 means you've pressed Ctrl+1, Ctrl+2, Ctrl+2 and Ctrl+3 so your sources are now ordered by server count, last update time and source name.</p></div><h2 class="variable" id="sb_sourcevalidity">sb_sourcevalidity&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This sets the time of master servers validity in minutes. Master servers that
+were updated within the specified time will not be refreshed when updating 
+sources with [SPACE].</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>30</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="sb_starttab">sb_starttab&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been deleted</p><h3>Description</h3><p class="description">Sets default tab in Server Browser. This tab will be displayed when you enter Server Browser for the first time of client instance.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>integer</strong>.<br />Possible values are 1, 2, 3 and 4.</p>
+<p class="remarks">Usefull with sb_autoupdate 1 and '+cfg_load myconfig +menu_slist' in command-line.</p></div><h2 class="variable" id="sb_status">sb_status&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This toggles whether the server status should be displayed in the two bottom 
+lines of the server browser.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>display the status</td></tr><tr><td>0</td><td>do not display the status</td></tr></tbody></table></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-server-browser by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

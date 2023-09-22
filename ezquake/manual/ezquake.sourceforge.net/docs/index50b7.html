@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?radar by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Radar &amp; team hold statistics hud items</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Radar &amp; team hold statistics hud items</h1>
+
+
+<h2>Introduction</h2>
+
+<p>The Radar is a hud item that displays a picture of the current map and then 
+plots the players on it during demo playback or when spectating (and in the 
+future hopefully when watching QTV).</p>
+
+<h3>Requirements</h3>
+<p>First of all the radar only works in GLQUAKE.</p>
+<p>For the radar to work properly you need to be watching a MVD that hasn&#39;t 
+been converted from a QWD demo. This is because an  MVD contains all the information 
+for all the players on the map at all times, such as ammo, position, health and so on. 
+When you&#39;re spectating or watching QWD&#39;s on the other hand, only the information that
+is needed to display what your &quot;current view&quot; is available, that is, the information of the players 
+closest to you.&nbsp;&nbsp;</p>
+
+<p>You also need a radar picture for each level that you want the radar to work on that you put in
+your <b>qw/radar</b> directory.</p>
+
+<h2>The Basics</h2>
+<h3>Showing and placing</h3>
+<dl>
+	<dt>scr_newhud 1</dt>
+		<dd>Enables showing hud items.</dd>
+	<dt>show radar</dt>
+		<dd>Shows the radar hud item.</dd>
+	<dt>place radar screen</dt>
+		<dd>Places the radar on the screen area.</dd>
+	<dt>align radar right top</dt>
+		<dd>Aligns the radar to right top.</dd>
+	<dt>move radar -20 5</dt><dd>Moves the radar 20 pixels to the left and 5 down.</dd>
+</dl>
+<p>Place the radar where you want it on screen using align, move and place. (For 
+more information about this, check the general <a href="index8eaa.html?hud">HUD manual page</a>.)</p>
+	
+<h4>Sizing the radar</h4>
+<p>When you want to size the radar there are two options:</p>
+<ul>
+	<li>
+	Using &quot;radar autosize 1&quot;. This will automatically size the hud item so that it 
+	fits the radar image at it&#39;s original size, the height and width of the hud item 
+	is ignored.
+	</li>
+	
+	<li>
+	Set the height and width manually. This will resize the radar picture so that 
+	it will fit inside the hud item.
+	</li>
+</ul>
+<h4>Opacity</h4>
+<dl>
+	<dt>radar opacity 0.5</dt>
+	<dd>
+	You can use &quot;radar opacity&quot; to set how transparent the radar picture should be 
+	using a value between 0 and 1.
+	</dd>
+</dl>
+
+<h2>Player appearance</h2>
+<p>The players are shown as circles with a line pointing in the direction they&#39;re 
+facing. These are the settings that you can use to modify the appearance of they 
+players on the radar:</p>
+
+<ul>
+	<li>
+	<b>radar show_height 1/0</b>
+	<p>Decides if the players relative height position on the map 
+	should be shown or not. If this is set to &quot;1&quot; the players will change size 
+	depending on if they&#39;re located high or low on the level. Otherwise the players 
+	will always stay the same size.</p>
+	</li>
+	
+	<li>
+	<b>radar player_size &lt;value&gt;</b>
+	<p>Sets the size of the player on the radar, if <b>show_height</b>
+	is off, the players will be shown in this size at all times. If it&#39;s on, the 
+	size specified here is the size that the player has when he&#39;s located at the 
+	highest point of the level.</p>
+	</li>
+	
+	<li>
+	<b>radar fade_players 1/0</b>
+	<p>If this is on the players will fade gradually as they lose health/armor, 
+	this enables you to spot weak players easily on the radar.</p>
+	</li>
+	
+	<li>
+	<b>radar show_powerups 1/0</b> 
+	<p>This will highlight players that has taken a powerup of some 
+	kind (quad, pent, ring and suit).</p>
+	</li>
+	
+	<li>
+	<b>radar show_names 1/0</b>
+	<p>Show the names of the players on the radar.</p>
+	</li>
+</ul>
+<h2>Items</h2>
+<p>You can choose what types of items that should be shown on the radar, if any. 
+The following settings takes a string as an argument containing the items that 
+should be shown on the radar. Any character chan be used as a delimiter, but if 
+you use a whitspace character, remember to put the string in quotes.</p>
+
+<ul>
+	<li>
+	<b>radar weaponfilter</b>
+	<p>Decides what weapons that should be shown.</p>
+	Valid values:<br />
+	<table border="1px" width="400">
+		<tr><th align="left">Value</th><th align="left">Shows</th></tr>
+		<tr><td>all</td><td>All weapons</td></tr>		
+		<tr><td>ng, nailgun</td><td>Nail gun</td></tr>		
+		<tr><td>ssg, supershotgun</td><td>Super shotgun</td></tr>	
+		<tr><td>sng, supernailgun</td><td>Super nail gun</td></tr>		
+		<tr><td>rl, rocketlauncher</td><td>Rocket launcher</td></tr>		
+		<tr><td>gl, grenadelauncher</td><td>Grenade launcher</td></tr>		
+		<tr><td>lg, shaft, lightning</td><td>Lightning gun</td></tr>		
+	</table>
+	<h5>Example</h5>
+	<p><b>radar weaponfilter &quot;rl lg gl&quot;</b><br />
+	This will show the rocket launcher, lightning gun and grenade launcher.</p>
+	</li>
+	
+	<li>
+	<b>radar itemfilter&quot;</b>
+	<p>Decides what items should be shown.</p>
+	Valid values:
+	<br />
+	<table border="1" width="400">
+		<tr><th align="left">Value</th><th align="left">Shows</th></tr>
+		<tr><td>all</td><td>All items</td></tr>
+		<tr><td>bp, backpack</td><td>Backpacks</td></tr>
+		<tr><td>hp, health</td><td>Health packs</td></tr>
+		<tr><td>armor </td><td>All armors</td></tr>
+		<tr><td>ra, redarmor</td><td>Red armor</td></tr>
+		<tr><td>ya, yellowarmor</td><td>Yellow armor</td></tr>
+		<tr><td>ga, greenarmor</td><td>Green armor</td></tr>
+		<tr><td>ammo</td><td>All ammo</td></tr>
+		<tr><td>rockets, rocks</td><td>Rockets</td></tr>
+		<tr><td>nails, spikes</td><td>Nails</td></tr>
+		<tr><td>cells, battery</td><td>Shaft cells</td></tr>
+		<tr><td>shells </td><td>Shotgun shells</td></tr>
+		<tr><td>powerups </td><td>All powerups</td></tr>
+		<tr><td>quad </td><td>Quad</td></tr>
+		<tr><td>pent, pentagram, 666</td><td>Pentagram</td></tr>
+		<tr><td>ring, invisible, eyes</td><td>Ring</td></tr>
+		<tr><td>suit </td><td>Hazard suit</td></tr>
+		<tr><td>mh, mega, megahealth, 100+</td><td>Mega health</td></tr>
+	</table>
+	<h5>Example</h5>
+	<b>radar itemfilter &quot;powerups armor mh&quot;</b>
+	<p>This shows all powerups, all armors and megahealth.</p>
+	</li>
+	
+	<li>
+	<b>radar otherfilter</b>
+	<p>Decides what other things such as projectiles, gibs and explosions should be shown.</p>
+	Valid values:<br />
+	<table border="1" width="440">
+		<tr><th align="left">Value</th><th align="left">Shows</th></tr>
+		<tr><td>all</td><td>Show all other stuff</td></tr>
+		<tr><td>projectiles</td><td>Show all projectiles</td></tr>
+		<tr><td>nails </td><td>Show nail projectiles</td></tr>
+		<tr><td>rockets </td><td>Show rocket projectiles</td></tr>
+		<tr><td>shaft </td><td>Show shaft beams</td></tr>
+		<tr><td>gibs</td><td>Show gibs (gib filter needs to be turned off)</td></tr>
+		<tr><td>explosions </td><td>Show explosions</td></tr>
+		<tr><td>tele</td><td>Show teleport effects</td></tr>
+		<tr><td>shotgun, sg, buck</td><td>Show where shotgun shots hit</td></tr>
+	</table>
+	<h5>Example</h5>
+	<b>radar otherfilter &quot;projectiles explosions buck tele&quot;</b>
+	<p>Will show projectiles, explosions, shotgun bucks and teleport effects.</p>
+	<br />
+	</li>
+</ul>
+
+<h2>Statistics</h2>
+<h3>Statistics on radar</h3>
+<p>During a match statistics such as what team holds what position of the map and 
+where people die is collected. You can choose to visualize this on the radar 
+using &quot;radar show_stats&quot;. It has 6 different options:</p>
+
+<table border="1" width="350">
+	<tr><th align="left">Value</th><th align="left">Result</th></tr>
+	<tr><td>0</td><td>Show no stats</td></tr>
+	<tr><td>1</td><td>Show team statistics for both teams</td></tr>
+	<tr><td>2</td><td>Show team statistics for team 1</td></tr>
+	<tr><td>3</td><td>Show team statistics for team 2</td></tr>
+	<tr><td>4</td><td>Show death statistics for both teams</td></tr>
+	<tr><td>5</td><td>Show death statistics for team 1</td></tr>
+	<tr><td>6</td><td>Show death statistics for team 2</td></tr>
+</table>
+
+<p>The color that is shown for the team statistics is calculated depending on the 
+&quot;weight&quot; of a player when he moves over a grid in the map. A stronger player 
+leaves a greater weight when passing over a grid cell. Each grid cell then has a 
+weight for each team, and based on which team has the greater weight, that grid 
+cell is colored in that teams color. </p>
+
+<p>So basically when a team is holding a 
+certain position on the map (has RL/armor/good health) they will color that area 
+in their teams color, and it is obivous what team is dominating the map. For 
+more information like this check out the <b>teamholdbar</b> and <b>teamholdinfo</b> hud 
+items below.</p>
+
+<h3>Teamholdinfo</h3>
+<h4>Introduction</h4>
+<p>Teamholdinfo is a hud item that shows what team is holding specific &quot;important&quot; 
+items on the map.</p> 
+
+<h4>Radar interaction</h4>
+<p>The radar can display the names of the items that are listed 
+for the teamholdinfo hud item. This is handy if a map has more than one item of 
+the same type, such as DM2 that has several YA&#39;s. If you want to know the name 
+of the YA next to tele, then use:</p>
+	<p><b>radar show_hold 1</b></p>
+<p>to show the hold items on the map. Each item will be surrounded by a circle.
+This circle is used when calculating which team that is holding that item. 
+Basically all the weights inside of the circle are summed up and the team with 
+the highest percentage of cells inside that perimitter is considered to be holding the item.</p>
+
+<p>Tip: Create an alias for this, so that if you forget which item name corresponds to what item
+on the map, you can just press a button and see all the item names.</p>
+
+<p>
+<b>alias +show_item_names &quot;radar show_hold 1&quot;</b><br />
+<b>alias -show_item_names &quot;radar show_hold 0&quot;</b><br />
+<b>bind k +show_item_names</b><br />
+</p>
+
+<h4>Filtering items</h4>
+<p>The teamholdinfo hud item also has a filter option like the radar does:</p>
+	<p><b>teamholdinfo itemfilter</b></p>
+<p>which decides what items to show in the list.</p>
+
+<p>Valid values are:<br />
+<b>rl, quad, ring, pent, suit, lg, gl, sng, mh, ra, ya and ga</b>.</p>
+
+<p>Setting different styles is also possible using <b>teamholdinfo style&quot;</b></p>
+
+<table border="1" width="450">
+	<tr><th align="left">Style</th><th align="left">Result</th></tr>
+	<tr><td>0</td><td>The team name of that holds the item in question is show to the right of the item name.</td></tr>
+	<tr><td>1</td><td>A &quot;teamholdbar&quot; is shown for each item, with the percentage of the item held by each team.</td></tr>
+	<tr><td>2</td><td>Two bars for each item is shown corresponding to the two teams hold percentage.</td></tr>
+</table>
+
+<h3>Teamholdbar</h3>
+<p>This hud item shows you a percentage bar that shows how much of the level each 
+team is holding at the moment.</p>
+
+<dl>
+	<dt>teamholdinfo vertical</dt> 
+	<dd>Will draw the hold bar vertically.</dd>
+	
+	<dt>teamholdinfo vertical_text</dt>
+	<dd>Will draw the text vertically when in vertical mode.</dd>
+	
+	<dt>teamholdinfo show_text</dt>
+	<dd>Toggles the percentage text on or off.</dd>
+
+	<dt>teamholdinfo onlytp</dt>
+	<dd>Show only in teamplay or always.</dd>
+</dl>
+
+<h2>Only in teamplay/demo playback</h2>
+<p>Since these controls only works "good" during demo playback, and you most likely only want them visible when they're useable, there is a property that allows you turn them off when the game is not a teamplay game, or when not in demo playback:</p>
+
+<dl>
+<dt>radar tponly 1</dt><dd>Only show when teamplay is on.</dd>
+<dt>radar tponly 2</dt><dd>Only show when in demo playback.</dd>
+<dt>radar tponly 3</dt><dd>Only show when in teamplay + demo playback.</dd>
+</dl>
+
+<p id="last-update">Last update: 18.10.2007 02:24 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?radar by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

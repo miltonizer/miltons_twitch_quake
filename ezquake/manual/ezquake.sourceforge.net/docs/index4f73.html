@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelog-19 by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: 1.9 Changelog</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: 1.9 Changelog</h1>
+
+
+<h2>ezQuake 1.9 - 28th April 2008</h2>
+<dl>
+<dt>Major Features</dt><dd><ul>
+<li>qw:// protocol support for windows - feature by <span class='author'>cokeman</span></li>
+<li>r_bloom_* / gl_bloom* blooming - feature by <span class='author'>cokeman</span></li>
+<li>use already running client to run demos, QTV files, qw:// handlers - feature by <span class='author'>cokeman</span></li>
+<li><a href='indexaeb2.html?mp3_playertype'>mp3_playertype</a> - more media players support (winamp, xmms, xmms2, audacious, mpd) - feature by <span class='author'>dkure</span></li>
+<li>pk3, zip, gz, tar, doompack support, faster opening of files, VFS, load all present paks - feature by <span class='author'>dkure</span></li>
+<li><a href='indexc96f.html?ownfrags'>ownfrags</a> HUD elements (You fragged Thresh) - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index7b20.html?scr_teaminfo'>scr_teaminfo</a> for MultiView demos playback, <a href='index4c79.html?scr_teaminfo_show_self'>scr_teaminfo_show_self</a> - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index1d59.html?teamforceskins'>teamforceskins</a>, <a href='index237e.html?enemyforceskins'>enemyforceskins</a> - feature by <span class='author'>johnnycz</span></li>
+<li>f_modified accepts plaguespak, debug and ruohis model(s) - feature by <span class='author'>johnnycz</span></li>
+<li>ingame menu <a href='index6097.html?menu_ingame'>menu_ingame</a> - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index02ab.html?scr_weaponstats'>scr_weaponstats</a> live weapon stats support = old +wp_stats done better - feature by <span class='author'>qqshka</span></li>
+<li>faster (chunked) downloads - FTE protocol extension - feature by <span class='author'>qqshka</span></li>
+<li>powerup shells <a href='index6a65.html?gl_powerupshells'>gl_powerupshells</a>, <a href='index38eb.html?gl_powerupshells_style'>gl_powerupshells_style</a>, <a href='indexdc5c.html?gl_powerupshells_size'>gl_powerupshells_size</a> main code by Electro / LordHavoc - feature by <span class='author'>qqshka</span></li>
+<li>scr_shownick_* customization variables - feature by <span class='author'>qqshka</span></li>
+<li>teamoverlay: <a href='indexe19e.html?scr_teaminfo_order'>scr_teaminfo_order</a>, <a href='index8412.html?scr_teaminfo_health'>scr_teaminfo_health</a>, <a href='indexd976.html?scr_teaminfo_armor_style'>scr_teaminfo_armor_style</a>, <a href='index12d2.html?scr_teaminfo_weapon_style'>scr_teaminfo_weapon_style</a> - feature by <span class='author'>qqshka</span></li>
+<li>VWEP support - see which weapon the player is holding; <a href='index37c1.html?r_drawvweps'>r_drawvweps</a>, <a href='index0475.html?cl_novweps'>cl_novweps</a> - feature by <span class='author'>tonik</span></li>
+<li><a href='index2a6e.html?cl_vsync_lag_fix'>cl_vsync_lag_fix</a> reduces delay in rendering for vertical synchronization with independent physics, check with <a href='index6f3a.html?vidlag'>vidlag</a> HUD element - feature by <span class='author'>tonik</span></li>
+</ul></dd>
+<dt>Major Fixes</dt><dd><ul>
+<li>software rendering features from OpenGL version - HUD editor, pictures scaling, png support, text scaling, better caching, off-screen clipping, common GUI drawing - fixed by <span class='author'>cokeman</span></li>
+<li><a href='indexa288.html?mvd_autotrack'>mvd_autotrack</a> fixes and refactoring + <a href='indexa288.html?mvd_autotrack'>mvd_autotrack</a> 4 - improved KTPro-like algorithm - fixed by <span class='author'>johnnycz</span></li>
+<li>QTV playback fixes: chat support, download, mapchange, buffering - fixed by <span class='author'>qqshka</span></li>
+</ul></dd>
+<dt>Major Changes</dt><dd><ul>
+<li>skyboxes turned off by default, we support 24bit sky textures now - changed by <span class='author'>tonik</span></li>
+</ul></dd>
+<dt>For major contributions thanks goes to</dt><dd><ul>
+<li><span class='author'>biomass</span> for extensive testing and feedback</li>
+<li><span class='author'>cokeman</span> for lot's of work on new GUI system</li>
+<li><span class='author'>cokeman</span> for updating the software rendering code</li>
+<li><span class='author'>dkure</span> for enormous ammount of work on virtual filesystem</li>
+<li><span class='author'>qqshka</span> for qtv support updating</li>
+<li><span class='author'>tonik</span> for keeping the code sane</li>
+</ul></dd>
+<dt>Credits to external contributors</dt><dd><ul>
+<li><span class='author'>Electro</span> for powerup shells code</li>
+<li><span class='author'>LordHavoc</span> for powerup shells code and CM_HullTrace gotos :) </li>
+<li><span class='author'>PaRadiZer</span> for help on Intel console flickering bug</li>
+<li><span class='author'>phrosty</span> for direct input buffer increase patch and Vista 64bit support</li>
+<li><span class='author'>ruskie</span> for helping our users when we are asleep (always)</li>
+<li><span class='author'>senft</span> for HUD config</li>
+<li><span class='author'>shaga</span> for helping out our users and for fragfile update</li>
+<li><span class='author'>vegetous</span> for portuguese br keymap</li>
+</ul></dd>
+<dt>More Features</dt><dd><ul>
+<li><a href='index9e01.html?cl_curlybraces'>cl_curlybraces</a> - enhanced scripting using { .. } blocks; split script lines by '\' char - feature by <span class='author'>borisu</span></li>
+<li><a href='indexc46e.html?cvar_in'>cvar_in</a>, <a href='indexdfc4.html?cvar_out'>cvar_out</a>, <a href='indexd4ab.html?alias_in'>alias_in</a>, <a href='index3364.html?alias_out'>alias_out</a> - QW262 config compatibility - feature by <span class='author'>borisu</span></li>
+<li>semi-transparent images for status bar possible - feature by <span class='author'>cokeman</span></li>
+<li>coilgun particle trail, use setinfo railtrail 1..7 - feature by <span class='author'>deurk</span></li>
+<li><a href='index247e.html?cl_backpackfilter'>cl_backpackfilter</a> - feature by <span class='author'>dkure</span></li>
+<li>conback loaded also from gamedir - possible to have special TF conback - feature by <span class='author'>dkure</span></li>
+<li>notify hud element - feature by <span class='author'>gavoja</span></li>
+<li><a href='index81af.html?autotrack'>autotrack</a> universal command - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index19e9.html?cl_sayfilter_coloredtext'>cl_sayfilter_coloredtext</a> <a href='index69f9.html?cl_sayfilter_sendboth'>cl_sayfilter_sendboth</a> - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index0ac7.html?con_tilde_mode'>con_tilde_mode</a> 1 make typing ~ char possible - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index1647.html?legacyquake'>legacyquake</a> command which turns off new features which can disturb old players - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index9330.html?mvd_autotrack_lockteam'>mvd_autotrack_lockteam</a> - keep auto-tracking only one team - feature by <span class='author'>johnnycz</span></li>
+<li><a href='indexe37f.html?set_tp'>set_tp</a> command, easier teamplay messages scripting - feature by <span class='author'>johnnycz</span></li>
+<li><a href='indexa9d7.html?timedemo'>timedemo</a> with <a href='indexae87.html?demo_benchmarkdumps'>demo_benchmarkdumps</a> outputs $log_dir/timedemo.log - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index9ae2.html?trackkiller'>trackkiller</a> command that will switch view to the player who fragged the player we are tracking - feature by <span class='author'>johnnycz</span></li>
+<li><a href='indexe08f.html?cl_sbar'>cl_sbar</a> 2 and 3 faithful HUD - feature by <span class='author'>oldmanuk</span></li>
+<li>Windows Raw Input <a href='indexa7b3.html?in_mouse'>in_mouse</a> 3 (which fixes accelleration problems) - feature by <span class='author'>qqshka</span></li>
+<li><a href='index8358.html?demo_autotrack'>demo_autotrack</a> - listen to demo-recorded autotrack - feature by <span class='author'>qqshka</span></li>
+<li><a href='index93b2.html?gl_rl_globe'>gl_rl_globe</a> - customization of rocket light - feature by <span class='author'>qqshka</span></li>
+<li><a href='index5141.html?in_di_bufsize'>in_di_bufsize</a> - larger direct input buffer can prevent losing mouse positions info on low FPS - feature by <span class='author'>qqshka</span></li>
+<li><a href='index5a13.html?qtv_adjustbuffer'>qtv_adjustbuffer</a> dynamic buffer adjusting by changing playback speed - feature by <span class='author'>qqshka</span></li>
+<li><a href='index2146.html?scr_showcrosshair'>scr_showcrosshair</a> hides cross in +showscores - feature by <span class='author'>qqshka</span></li>
+<li><a href='index7269.html?togglespec'>togglespec</a> command - feature by <span class='author'>qqshka</span></li>
+<li><a href='indexe3b3.html?vid_borderless'>vid_borderless</a> removes window borders in windowed mode - feature by <span class='author'>qqshka</span></li>
+<li>allow models use _luma textures - feature by <span class='author'>qqshka</span></li>
+<li>r_tracker_color_* settings - feature by <span class='author'>qqshka</span></li>
+<li><a href='index3055.html?sys_inactiveSound'>sys_inactiveSound</a> playing sounds even if window is not focused - feature by <span class='author'>tonik</span></li>
+<li>keys hud element, shows pressed keys - feature by <span class='author'>tonik, johnnycz</span></li>
+<li>inbuilt teamplay messages updates - feature by <span class='author'>up2nogood</span></li>
+</ul></dd>
+<dt>More Fixes</dt><dd><ul>
+<li>mouse updating in DGA and X11 - fixed by <span class='author'>disconnect</span></li>
+<li>support all sizes of skins - fixes TF skin bug - fixed by <span class='author'>dkure</span></li>
+<li>scoreboard label position bugfix - fixed by <span class='author'>gavoja</span></li>
+<li>OSS to ALSA switch bugfix - fixed by <span class='author'>hexum</span></li>
+<li>sound init crash bugfix - fixed by <span class='author'>hexum</span></li>
+<li><a href='indexf1fc.html?scr_drawVFrags'>scr_drawVFrags</a> works again - fixed by <span class='author'>johnnycz</span></li>
+<li><a href='index9c1a.html?con_shift'>con_shift</a> in disconnected mode fixed - fixed by <span class='author'>qqshka</span></li>
+<li><a href='indexbe4c.html?vid_restart'>vid_restart</a> memory leak bugfix, map change crash bugfix - fixed by <span class='author'>qqshka</span></li>
+<li><a href='index05b8.html?window'>window</a> command working again - fixed by <span class='author'>qqshka</span></li>
+<li>fixed loading of userinfo variables - fixed by <span class='author'>qqshka</span></li>
+<li>menu sensitivity fix - fixed by <span class='author'>qqshka</span></li>
+<li>less toon-like coronas - fixed by <span class='author'>tei</span></li>
+<li><a href='indexf0e6.html?gl_lightmode'>gl_lightmode</a> 2, textures were 25% darker - fixed by <span class='author'>tonik</span></li>
+<li>made AltGr-combinations work - fixed by <span class='author'>tonik</span></li>
+<li>old Quake dm4 "near quad movement" bugfix, used LordHavoc's gotos :) - fixed by <span class='author'>tonik</span></li>
+<li>turb textures were being brightened even without lightmaps - fixed by <span class='author'>tonik</span></li>
+<li>Mac build maintenance - fixed by <span class='author'>tuna</span></li>
+<li>gl_no24bit + gl_nailtrails 1 crash - fixed by <span class='author'>up2nogood</span></li>
+<li>reduce setinfo string usage - fixed by <span class='author'>up2nogood</span></li>
+</ul></dd>
+<dt>More Changes</dt><dd><ul>
+<li>allow independent physics toggling without restarting the client - changed by <span class='author'>disconnect</span></li>
+<li>"<a href='index39c8.html?if'>if</a>" command support for rich condition syntax - changed by <span class='author'>johnnycz</span></li>
+<li><a href='index565a.html?cl_onload'>cl_onload</a> allows you to execute any command on startup - changed by <span class='author'>johnnycz</span></li>
+<li>new main menu - changed by <span class='author'>johnnycz</span></li>
+<li>square coronas to circle ones - changed by <span class='author'>qqshka</span></li>
+<li>-data cmdline option - changed by <span class='author'>tei</span></li>
+<li><a href='indexed54.html?cl_pext_chunkeddownloads'>cl_pext_chunkeddownloads</a> and <a href='index478f.html?cl_pext_other'>cl_pext_other</a> to fix QWD recording with chunked downloads enabled - changed by <span class='author'>tonik</span></li>
+<li><a href='indexabf6.html?in_builtinkeymap'>in_builtinkeymap</a> 0 by default - changed by <span class='author'>tonik</span></li>
+<li><a href='indexb5a0.html?cl_crypt_rcon'>cl_crypt_rcon</a> default to 1 - changed by <span class='author'>up2nogood</span></li>
+<li><a href='index14d4.html?cl_demoplay_flash'>cl_demoplay_flash</a> default to 0.33 - changed by <span class='author'>up2nogood</span></li>
+<li><a href='indexe535.html?cl_window_caption'>cl_window_caption</a> default to 1 - changed by <span class='author'>up2nogood</span></li>
+<li><a href='index2439.html?vid_hwgammacontrol'>vid_hwgammacontrol</a> default to 2 - changed by <span class='author'>up2nogood</span></li>
+<li>menu updates - changed by <span class='author'>up2nogood</span></li>
+</ul></dd>
+<dt>Minor Features</dt><dd><ul>
+<li>Demo rewinding (go back to start of demo and fastforward to wanted position) - feature by <span class='author'>cokeman</span></li>
+<li>style property to speed HUD element - feature by <span class='author'>cokeman</span></li>
+<li>DarkPlaces Memory Manager - feature by <span class='author'>disconnect</span></li>
+<li>support for more FTE protocol extensions (modeldbl, entitydbl*, spawnstatic2) - feature by <span class='author'>disconnect</span></li>
+<li>EF_GREEN - feature by <span class='author'>dkure</span></li>
+<li>gamedir macro - feature by <span class='author'>dkure</span></li>
+<li>glqwcl explosion type - feature by <span class='author'>dkure</span></li>
+<li><a href='index0dd3.html?cfg_save_onquit'>cfg_save_onquit</a> automatically save your configuration - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index3baf.html?gl_part_tracer1_color'>gl_part_tracer1_color</a> <a href='index7149.html?gl_part_tracer2_color'>gl_part_tracer2_color</a> to change color of rocket trail - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index9a01.html?hud_clock_format'>hud_clock_format</a> - more clock formats - feature by <span class='author'>johnnycz</span></li>
+<li><a href='index9dd3.html?mvd_utils_reinit'>mvd_utils_reinit</a> may help when mvd_autotrack doesn't work - feature by <span class='author'>johnnycz</span></li>
+<li>disable monitor power off - feature by <span class='author'>johnnycz</span></li>
+<li>in-build "boomstick script" only in deathmatch mode higher than 1 - feature by <span class='author'>johnnycz</span></li>
+<li>lastloc, lastpowerup macros (%L, %o) - feature by <span class='author'>johnnycz</span></li>
+<li>scale property for tracking hud element - feature by <span class='author'>johnnycz</span></li>
+<li><a href='indexc4cc.html?r_tracker_string_suicides'>r_tracker_string_suicides</a>, <a href='index6e29.html?r_tracker_string_died'>r_tracker_string_died</a> - feature by <span class='author'>qqshka</span></li>
+<li>$W macro giving white led - feature by <span class='author'>up2nogood</span></li>
+</ul></dd>
+<dt>Minor Fixes</dt><dd><ul>
+<li>tons of inappreciable bugfixes - fixed by <span class='author'>all of us</span></li>
+<li>hud262 elements drawing - fixed by <span class='author'>borisu</span></li>
+<li>support showing more than 4 GB of memory - fixed by <span class='author'>cokeman</span></li>
+<li><a href='indexe994.html?re_trigger'>re_trigger</a> bugfix - fixed by <span class='author'>disconnect</span></li>
+<li>-mevdev bugfix - fixed by <span class='author'>hexum</span></li>
+<li><a href='index650b.html?cl_fakename'>cl_fakename</a> and in-built teamplay messages fix - fixed by <span class='author'>johnnycz</span></li>
+<li><a href='index68a7.html?gl_max_size'>gl_max_size</a> not ignored in config.cfg anymore - fixed by <span class='author'>qqshka</span></li>
+<li>chaticon high ping bugfix - fixed by <span class='author'>qqshka</span></li>
+<li>colored string line end parsing - fixed by <span class='author'>qqshka</span></li>
+<li>menu mouse sensitivity on low FPS - fixed by <span class='author'>qqshka</span></li>
+<li>PF_logfrag invalid player name fix - fixed by <span class='author'>tonik</span></li>
+<li>clan arena TE_EXPLOSION packets bugfix - fixed by <span class='author'>tonik</span></li>
+</ul></dd>
+<dt>Minor Changes</dt><dd><ul>
+<li>emodel, pmodel to userinfo - changed by <span class='author'>hexum</span></li>
+<li><a href='index9043.html?match_auto_logconsole'>match_auto_logconsole</a> default to 1 - changed by <span class='author'>johnnycz</span></li>
+<li>removed <a href='index881c.html?cl_oldPl'>cl_oldPl</a>, <a href='index5093.html?cl_newCompletion'>cl_newCompletion</a> 0 - changed by <span class='author'>johnnycz</span></li>
+<li>MAX_INFO_STRING changed to 1024 - changed by <span class='author'>qqshka</span></li>
+<li><a href='index5e8e.html?developer'>developer</a> 2 debug level - changed by <span class='author'>qqshka</span></li>
+<li><a href='index8c8c.html?r_particles_count'>r_particles_count</a> does what -particles option did - changed by <span class='author'>qqshka</span></li>
+<li>better way of fbskins, watervis, allow_lumas protection - changed by <span class='author'>tonik</span></li>
+<li>draw_fps renamed to <a href='indexaead.html?scr_scoreboard_drawfps'>scr_scoreboard_drawfps</a> - changed by <span class='author'>up2nogood</span></li>
+<li>msg setinfo default 1 - changed by <span class='author'>up2nogood</span></li>
+</ul></dd>
+</dl>
+
+
+<p id="last-update">Last update: 27.04.2008 13:57 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelog-19 by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

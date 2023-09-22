@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?colored-text by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Colored text</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Colored text</h1>
+
+
+<p>You can use coloured text in this client. First you need to set <code>scr_coloredText 1</code>.<br />
+Then you can type colored text. The syntax is "{&amp;cRGBtext}" where R is a hexadecimal number in range of 0,1,...,E,F specifying amount of red in the resulting color. Same is G for green and B for blue. E.g. '888' is gray, 'f0f' is pink.<br />
+Note.: values of those numbers get expanded to <code>RRGGBB</code> format so e.g. color '04f' can be found as color #0044FF in most graphics editors.</p>
+<p>Color 'fff' has a special meaning. It turns coloured text off. To get white text, you should use braces <code>{</code> and <code>}</code>.</p>
+<p>Example: "<code>say {&amp;cff0this text will be yellow}, {&amp;cfff}this will be the default orange {and this will be white text}</code>"</p>
+<p>Note: The color of the text depends on the <a href="indexc5e6.html?textures">console font</a> you use. Most console fonts have white letters. This client mixes the resulting color from these letters. If your standard console font color is not white, you might get different results.</p>
+
+<h3>Examples</h3>
+<pre><code>{&amp;c0b0safe&amp;cfff}</code></pre>
+<pre><code>{&amp;cf00enemy&amp;cfff} {&amp;c04fquad&amp;cfff}</code></pre>
+
+<p id="last-update">Last update: 22.12.2007 07:12 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?colored-text by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?mvd-autotracking by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: MVD Autotracking</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: MVD Autotracking</h1>
+
+
+<h3> MVD Autotracking </h3>
+<p>This feature allows you to sit on your lazy ass while watching a MultiView Demo (MVD) and let the client switch POVs to the best player for you. To tell the client who is THE BEST player, you have the possibility to specify an equation wich will then be evaluated for every player, giving the player a 'value'. During the playback the player with highest value will be tracked.</p>
+<p>This value can be seen by using 'mvd_info 1' and 'mvd_info_setup %n %v' wich will show something like "Johnny_cz -6" :).</p>
+<p>In the equation you are allowed to use the standard math operations +-/* and parentheses ().</p>
+
+<h4>Autotrack types</h4>
+
+<dl>
+<dt>mvd_autotrack 1</dt>
+<dd><p>This will get the current gametype and select one of the following:</p>
+<ul>
+  <li>mvd_autotrack_1on1</li>
+  <li>mvd_autotrack_2on2</li>
+  <li>mvd_autotrack_4on4</li>
+</ul>
+</dd>
+<dt>mvd_autotrack 2</dt>
+<dd><p>This will use mvd_autotrack_custom</p></dd>
+
+<dt>mvd_autotrack 3</dt>
+<dd><p>Only works in combination with cl_multiview. Then you can use different equation for each window using these variables:</p>
+<ul>
+	<li>mvd_multitrack_1 for viewport 1</li>
+	<li>mvd_multitrack_2 for viewport 2</li>
+	<li>mvd_multitrack_3 for viewport 3</li>
+	<li>mvd_multitrack_4 for viewport 4</li>
+</ul>
+</dd>
+</dl>
+
+<h4>Constants</h4>
+
+<p>You can specify constants used in your equations like 'value of Quad', 'value of Pent', 'value of Nailgun' ;-).</p>
+
+<ul>
+	<li>mvd_autotrack_1on1_values for mvd_autotrack_1on1</li>
+	<li>mvd_autotrack_2on2_values for mvd_autotrack_2on2</li>
+	<li>mvd_autotrack_3on3_values for mvd_autotrack_3on3</li>
+	<li>mvd_autotrack_4on4_values for mvd_autotrack_4on4</li>
+	<li>mvd_autotrack_custom_values for mvd_autotrack_custom</li>
+	<li>mvd_multitrack_1-4_values for mvd_multitrack_1-4</li>
+</ul>
+<p>All these mvd_autotrack_*_values variables consist of 14 numbers. Each number is a value assigned to given item, armor or powerup according to this table:</p>
+<table>
+<tr>
+	<td align="right">1</td><td>Axe</td>
+</tr>
+<tr>
+	<td align="right">2</td><td>Shotgun</td>
+</tr>
+<tr>
+	<td align="right">3</td><td>Supershotgun</td>
+</tr>
+<tr>
+	<td align="right">4</td><td>Nailgun</td>
+</tr>
+<tr>
+	<td align="right">5</td><td>Supernailgun</td>
+</tr>
+<tr>
+	<td align="right">6</td><td>Grenadelauncher</td>
+</tr>
+<tr>
+	<td align="right">7</td><td>Rocketlauncher</td>
+</tr>
+<tr>
+	<td align="right">8</td><td>Lightninggun</td>
+</tr>
+<tr>
+	<td align="right">9</td><td>Green Armor</td>
+</tr>
+<tr>
+	<td align="right">10</td><td>Yellow Armor</td>
+</tr>
+<tr>
+	<td align="right">11</td><td>Red Armor</td>
+</tr>
+<tr>
+	<td align="right">12</td><td>Ring Powerup</td>
+</tr>
+<tr>
+	<td align="right">13</td><td>Quad Powerup</td>
+</tr>
+<tr>
+	<td align="right">14</td><td>Pent Powerup</td>
+</tr>
+</table>
+
+<p>Example:</p>
+<p><code>mvd_autotrack_1on1_values "0 1 2 1 2 4 6 6 0.5 0.3 1.3 50 200 2000"</code></p>
+
+<p>These constants are used in the %-variables. Example:</p>
+
+<dl>
+<dt>%A - armortype value</dt>
+<dd>Example: you set Red Armor type value to 1.3 =&gt; %A will be 1.3 if the player has the Red Armor</dd>
+<dt>%p - sum of all carried powerups values</dt>
+<dd>Example: Pent Value is 2000 and Quad value is 200 =&gt; %p will return 2200 if the player has both Quad and Pent.</dd>
+<dt>%w - value of the best carried weapon</dt>
+<dd>The priority of the weapons is set via 'tp_weapon_order'</dd>
+</dl>
+
+<h4>Variables</h4>
+
+<p>There are lots of variables available for you to be used with %. Most of these variables can be seen with 'mvd_status 1'.</p>
+
+<p>Notes:</p>
+<ul>
+<li>A run is from spawn to death.</li>
+<li>For powerups run is from took to end/death.</li>
+<li>An average run is a sum of all runs divided by the amount of runs.</li>
+</ul>
+
+<table>
+	<tr>
+		<td>%a</td><td>- is the current amount of armor a player has</td>
+	</tr>
+	<tr>
+		<td>%A</td><td>- is the value of the current armor type</td>
+	</tr>
+	<tr>
+		<td>%c</td><td>- current run time</td>
+	</tr>
+	<tr>
+		<td>%C</td><td>- current run frags</td>
+	</tr>
+	<tr>
+		<td>%d</td><td>- current run teamfrags</td>
+	</tr>
+	<tr>
+		<td>%f</td><td>- overall frags</td>
+	</tr>
+	<tr>
+		<td>%F</td><td>- overall teamfrags</td>
+	</tr>
+	<tr>
+		<td>%g</td><td>- deaths</td>
+	</tr>
+	<tr>
+		<td>%h</td><td>- current amount of health</td>
+	</tr>
+	<tr>
+		<td>%I(big i)</td><td>- taken Supershotguns</td>
+	</tr>
+	<tr>
+		<td>%j</td><td>- taken Nailguns</td>
+	</tr>
+	<tr>
+		<td>%J</td><td>- taken Supernailguns</td>
+	</tr>
+	<tr>
+		<td>%k</td><td>- taken Grenadelaunchers</td>
+	</tr>
+	<tr>
+		<td>%K</td><td>- dropped Grenadelaunchers (left in pack when player died)</td>
+	</tr>
+	<tr>
+		<td>%l(small L)</td><td>- taken Rocketlaunchers</td>
+	</tr>
+	<tr>
+		<td>%L</td><td>- dropped Rocketlaunchers</td>
+	</tr>
+	<tr>
+		<td>%m</td><td>- taken Lightningguns</td>
+	</tr>
+	<tr>
+		<td>%M</td><td>- dropped Lightningguns</td>
+	</tr>
+	<tr>
+		<td>%n</td><td>- taken Megahealths</td>
+	</tr>
+	<tr>
+		<td>%N</td><td>- taken green armors</td>
+	</tr>
+	<tr>
+		<td>%o</td><td>- taken yellow armors</td>
+	</tr>
+	<tr>
+		<td>%O</td><td>- taken red armors</td>
+	</tr>
+	<tr>
+		<td>%p</td><td>- added powerupvalues player currently has</td>
+	</tr>
+	<tr>
+		<td>%q</td><td>- Axe kills</td>
+	</tr>
+	<tr>
+		<td>%Q</td><td>- Shotgun kills</td>
+	</tr>
+	<tr>
+		<td>%r</td><td>- Supershotgun kills</td>
+	</tr>
+	<tr>
+		<td>%R</td><td>- Nailgun kills</td>
+	</tr>
+	<tr>
+		<td>%s</td><td>- Supernailgun kills</td>
+	</tr>
+	<tr>
+		<td>%S</td><td>- Grenadelauncher kills</td>
+	</tr>
+	<tr>
+		<td>%t</td><td>- Rocketlauncher kills</td>
+	</tr>
+	<tr>
+		<td>%T</td><td>- Lightninggun kills</td>
+	</tr>
+	<tr>
+		<td>%v</td><td>- average run time</td>	
+	</tr>
+	<tr>
+		<td>%V</td><td>- average run frags</td>
+	</tr>
+	<tr>
+		<td>%w</td><td>- average run teamfrags</td>
+	</tr>
+	<tr>
+		<td>%W</td><td>- best weapon value</td>
+	</tr>
+	<tr>
+		<td>%x</td><td>- taken Rings</td>
+	</tr>
+	<tr>
+		<td>%y</td><td>- taken Quads</td>
+	</tr>
+	<tr>
+		<td>%z</td><td>- taken Pents</td>
+	</tr>
+</table>
+
+<h4>Examples</h4>
+
+<p>Easy one first :)</p>
+
+<dl>
+<dt><code>%f</code></dt><dd>This would just be the same as cl_hightrack 1</dd>
+</dl>
+
+<p>Now to make it more sophisticated:</p>
+
+<dl>
+<dt><code>%f/(%g+2*%F)</code></dt><dd>This divides player's frags by his teamfrags * 2 + his deaths giving you some kind of efficiency calculation for the player.</dd>
+</dl>
+
+<p>For a more numbery look lets say </p>
+<table>
+	<tr><td>player 1</td><td>- 3 frags, 5 teamkills and 4 deaths (your average teamplay newbie)</td></tr>
+	<tr><td>player 2</td><td>- 12 frags, 1 teamkill and 2 deaths (your not so average guy with a quad run)</td></tr>
+</table>
+
+<p>for player 1 it would be 3/(4+2*5) = 0.214285714<br/>
+for player 2 it would be 12/(2+2*1) = 3 <br/>
+meaning player 2 would be tracked.</p>
+
+<p>There are no limitations to how often you can use a value or how high you want to set the values or the static numbers in the algorythm. There is one limitation thats when the number is longer than 4096 digits but in that case mvd_autotrack would disable itself.</p>
+
+
+<p id="last-update">Last update: 08.02.2008 08:38 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?mvd-autotracking by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

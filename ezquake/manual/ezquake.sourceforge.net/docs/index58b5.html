@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-view-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: View Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: View Settings Variables</h1>
+
+
+<h2 class="variable" id="cl_rollalpha">cl_rollalpha&nbsp;</h2>
+<div><h3>Description</h3><p class="description">You can turn off the 'dodging' or 'rolling' effect for your own point of view while still see other player models affected by cl_rollangle.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>20</span></p>
+<p>Variable is <strong>integer</strong>.<br />By using 0 you will not get affected by cl_rollangle setting</p>
+<p class="remarks">-ruleset smackdown disables it and sets the value to default</p></div><h2 class="variable" id="cl_rollangle">cl_rollangle&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls how much your screen tilts when strafing.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_rollspeed">cl_rollspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls how quickly you and other players straighten out after 
+strafing.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>200</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="default_fov">default_fov&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Very useful in TeamFortress, and other mods that reset your fov when you spawn to 90. 
+Basically, when the server sends you &quot;fov 90&quot;, your fov is set to default_fov.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>90</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="fov">fov&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable defines your field of vision, which determines how close your 
+vision field is to the objects.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>110</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="viewsize">viewsize&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable determines how large the viewable screen size is.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>100</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>30</td><td>Minimum screen size</td></tr><tr><td>100</td><td>Normal screen size.</td></tr><tr><td>110</td><td>Large screen size, without the weapons status bar.</td></tr><tr><td>120</td><td>Maximum screen size, without any status bars.</td></tr></tbody></table>
+<p class="remarks">...</p></div><h2 class="variable" id="v_centermove">v_centermove&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets the distance that the player must move before the screen 
+automatically centers itself when &quot;lookspring&quot; is set to &quot;1&quot;. This variable is 
+only useful to people who only play with the keyboard, have &quot;lookspring&quot; set to
+&quot;1&quot; and do not have &quot;+klook&quot; or &quot;+mlook&quot; enabled at that time. When the player 
+moves the distance specified in this variable the screen will pop back to the 
+center position.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.15</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_centerspeed">v_centerspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets how quickly your view returns to the center after looking up
+or down and moving after that and &quot;lookspring&quot; is set to &quot;1&quot;. This variable is 
+only useful to people who only play with the keyboard, have &quot;lookspring&quot; set to
+&quot;1&quot; and do not have &quot;+klook&quot; or &quot;+mlook&quot; enabled at that time. When the player 
+moves the distance specified in this variable the screen will pop back to the 
+center position.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>500</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_gunkick">v_gunkick&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Kickback effect when the weapon is fired.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_idlescale">v_idlescale&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the amount that the screen should sway automatically.
+When this variable is set to a value above &quot;0&quot; the screen will start swaying in 
+all directions, similar as if the player was drunk of had a concussion. If you 
+want to have some real fun, set this variable to a value of &quot;100&quot; and run around 
+some maps. The larger the value for this variable the more the screen will sway 
+from side to side.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Disable automatic swaying.</td></tr></tbody></table></div><h2 class="variable" id="v_ipitch_cycle">v_ipitch_cycle&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the speed at which the screen should sway up and down
+when &quot;v_idlescale&quot; is set to a value above &quot;0&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_ipitch_level">v_ipitch_level&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the distance that the screen should sway up and down when &quot;v_idlescale&quot; is set to a value above &quot;0&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_iroll_cycle">v_iroll_cycle&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the speed at which the screen should roll clockwise and 
+counter clockwise when &quot;v_idlescale&quot; is set to a value above &quot;0&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.5</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_iroll_level">v_iroll_level&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the distance the screen should roll clockwise and counter
+clockwise when &quot;v_idlescale&quot; is set to a value above &quot;0&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.1</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_iyaw_cycle">v_iyaw_cycle&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets how quickly you look left and right when v_idlescale is active.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_iyaw_level">v_iyaw_level&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets how far you look left and right when v_idlescale is active.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_kickpitch">v_kickpitch&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the distance that the screen should move up or down when 
+the player is shot. Most players set this variable to &quot;0&quot; in order to remove the 
+screen tilting effect when they are injured by a shot. This allows them to keep 
+a perfect aim while being fired upon.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">v_kicktime must be &gt;0 for this to take effect.</p></div><h2 class="variable" id="v_kickroll">v_kickroll&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the distance that the screen should roll clockwise or 
+counter clockwise when the player is shot. Most players set this variable to &quot;0&quot;
+in order to remove the screen tilting effect when they are injured by a shot. 
+This allows them to keep a perfect aim while being fired upon.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">v_kicktime must be &gt;0 for this to take effect.</p></div><h2 class="variable" id="v_kicktime">v_kicktime&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the amount of time v_kickpitch and v_kickroll take effect.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="v_viewheight">v_viewheight&nbsp;</h2>
+<div><h3>Description</h3><p class="description">New variable v_viewheight can be used to get the effect of negative/zero values 
+of cl_bobcycle etc in qw 2.33 . Negative values of v_viewheight = lower viewheight, 
+positive = higher. Can't go below -7 or above 4 because that's the range you can get 
+with qw 2.33 by exploiting the bob cycle bug. Using v_viewheight automatically 
+turns off weapon model bobbing (cl_bob*).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-view-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

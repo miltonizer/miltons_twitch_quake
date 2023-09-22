@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-console-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Console Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Console Settings Variables</h1>
+
+
+<h2 class="variable" id="cl_chatmode">cl_chatmode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Console chat mode.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Text in the console is always treated as a command and in order to chat you have to use messagemode/messagemode2 or use the say/say_team commands.</td></tr><tr><td>1</td><td>Everything typed in the console goes into chat. In order to issue a command, prefix it with a slash (/).</td></tr><tr><td>2</td><td>If the first word in the line is a command, it is executed. Otherwise, the line is sent as chat.</td></tr></tbody></table></div><h2 class="variable" id="cl_savehistory">cl_savehistory&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Save console commands history to .ezquake_history.
+Loads history from this file while starting ezquake.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>save</td></tr><tr><td>0</td><td>don't save</td></tr></tbody></table></div><h2 class="variable" id="con_clearnotify">con_clearnotify&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Messages won't say when you toggle console.</td></tr><tr><td>0</td><td>Messages stay even when you toggle console.</td></tr></tbody></table></div><h2 class="variable" id="con_funchars_mode">con_funchars_mode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Orange text, LEDs and special chars with [Ctrl] key - kind of MQWCL behaviour when set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>MQWCL behaviour - [Ctrl] + [Y] turns on yellow number input</td></tr><tr><td>0</td><td>FuhQuake behaviour - [Ctrl] + key for yellow numbers and LEDs</td></tr></tbody></table></div><h2 class="variable" id="con_highlight">con_highlight&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Console highlighting mode. Will highlight a line in the console which contains your nickname.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>No highlighting</td></tr><tr><td>1</td><td>Highlighted line will be all white.</td></tr><tr><td>2</td><td>Highlighted line will start with the text given in con_highlight_mark</td></tr><tr><td>3</td><td>Both 1 and 2: highlighted line will be white and start with special text</td></tr></tbody></table>
+<p class="remarks">See con_highlight_mark.</p></div><h2 class="variable" id="con_highlight_mark">con_highlight_mark&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Specifies the text that will be used to highlight lines with con_highlight 2 and 3.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>string</strong>.<br />This text will be used on the beginning of the highlighted line</p></div><h2 class="variable" id="con_notify">con_notify&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggles the display of the notification area</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table>
+<p class="remarks">Notification area is the place where chat and game messages are displayed</p></div><h2 class="variable" id="con_notifylines">con_notifylines&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets the number of notify lines (default 4, max 20) to be used at the top of the screen.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Use no notify lines at all.</td></tr><tr><td>1</td><td>Use one notify line.</td></tr><tr><td>20</td><td>Use 20 notify lines.</td></tr></tbody></table>
+<p class="remarks">...</p></div><h2 class="variable" id="con_notifytime">con_notifytime&nbsp;</h2>
+<div><h3>Description</h3><p class="description">How long console messages stay on screen.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_particles_alpha">con_particles_alpha&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the transparency of con_particles_images.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br />From 0....1. 0 is invisible, 1 is completely solid.</p></div><h2 class="variable" id="con_particles_images">con_particles_images&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Set the number of images you have in /textures/conpart.png.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>3</span></p>
+<p>Variable is <strong>integer</strong>.<br />Each image should take up 64x64 pixels.</p></div><h2 class="variable" id="con_shift">con_shift&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adjusts vertical offset of background of the console.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_mm1_file">con_sound_mm1_file&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_mm1_file</p><h3>Description</h3><p class="description">You can specify notification sound for messagemode1 (/messagemode or /say foo) messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_mm1_volume">con_sound_mm1_volume&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_mm1_volume</p><h3>Description</h3><p class="description">You can specify volume of notification sound for messagemode1 (/messagemode or /say foo) messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_mm2_file">con_sound_mm2_file&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_mm2_file</p><h3>Description</h3><p class="description">You can specify notification sound for messagemode2 (/messagemode2 or /say_team foo) messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_mm2_volume">con_sound_mm2_volume&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_mm2_volume</p><h3>Description</h3><p class="description">You can specify volume of notification sound for messagemode2 (/messagemode2 or /say_team foo) messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_other_file">con_sound_other_file&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_other_file</p><h3>Description</h3><p class="description">You can specify notification sound for other messages (than messagemode, messagemode2 and from spectators).</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_other_volume">con_sound_other_volume&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_otherchat_volume</p><h3>Description</h3><p class="description">You can specify volume of notification sound for other messages (than messagemode, messagemode2 and from spectators).</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_spec_file">con_sound_spec_file&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_spec_file</p><h3>Description</h3><p class="description">You can specify notification sound for spectator messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_sound_spec_volume">con_sound_spec_volume&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_spec_volume</p><h3>Description</h3><p class="description">You can specify volume of notification sound for spectator messages.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="con_tilde_mode">con_tilde_mode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When enabled, allows you to use the tilde key also in the console and when typing messages.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Treat tilde as a key leading to type a character associated to it</td></tr><tr><td>0</td><td>Always use tilde to toggle the console</td></tr></tbody></table>
+<p class="remarks">To exit the console with con_tilde_mode 1, use Escape</p></div><h2 class="variable" id="con_timestamps">con_timestamps&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>will enable timestamps for chat text in
+            console, every chat message will begin with timestamp
+            (hour:minute) followed by a message</td></tr><tr><td>0</td><td>Console timesptamps turned OFF</td></tr></tbody></table></div><h2 class="variable" id="con_wordwrap">con_wordwrap&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable word wrapping.</td></tr><tr><td>0</td><td>Disable word wrapping.</td></tr></tbody></table></div><h2 class="variable" id="cvar_viewdefault">cvar_viewdefault&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When you type a cvar name into console (like 'gl_gamma' or 'r_rocketlight'), the client will tell you the default value of the cvar.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="cvar_viewhelp">cvar_viewhelp&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Automatically prints manual page when a variable name is typed in the console.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Print help automatically</td></tr><tr><td>0</td><td>Do not print help</td></tr></tbody></table></div><h2 class="variable" id="cvar_viewlatched">cvar_viewlatched&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When you type a variable name in the console, you'll be able to see it's latched value if this is turned on.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Display latched value (if any)</td></tr><tr><td>0</td><td>Don't display latched value</td></tr></tbody></table>
+<p class="remarks">Latched values are used for example for renderer settings. Variable value is latched until the renderer is restarted, in that moment the latched value becomes the actuall value of the variable.</p></div><h2 class="variable" id="gl_alphafont">gl_alphafont&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When turned on allows the alpha transparency layer support for the console font.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Use full 256 levels of transparency for console font</td></tr><tr><td>0</td><td>Use only 2 levels of transparency for console font</td></tr></tbody></table></div><h2 class="variable" id="gl_consolefont">gl_consolefont&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes your console font.
+Put all your charset images in qw/textures/charsets/*.png (and *.tga) and use /loadcharset XXX to load XXX.png (or tga). &quot;/gl_consolefont original&quot; will restore the 8bit font in your gfx.wad (this is default).
+Note: loadcharset is an alias for gl_consolefont.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>povo5</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="gl_smoothfont">gl_smoothfont&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Smoothens out the font (which = good). But in some cases the font wasn't designed to be smoothened (sometimes the case of custom console fonts etc).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="log_dir">log_dir&nbsp;</h2>
+<div><h3>Description</h3><p class="description">The logging dir.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="log_readable">log_readable&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Will convert all non printable characters to printable characters in your log. This makes your log readable because all the weird ascii characters that usually occur because of different coloured text in the client (and because of weird symbols - ocrana led's etc) are converted into printable characters.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="scr_conalpha">scr_conalpha&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.8</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Normal.</td></tr><tr><td>0</td><td>Transparent.</td></tr></tbody></table></div><h2 class="variable" id="scr_conback">scr_conback&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows display of map preview as a console background</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Never display map preview.</td></tr><tr><td>1</td><td>Display map preview on level loading process.</td></tr><tr><td>2</td><td>Always display map preview as a console background.</td></tr></tbody></table></div><h2 class="variable" id="scr_consize">scr_consize&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.5</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Maximum console height.</td></tr><tr><td>0</td><td>Minimal console height.</td></tr></tbody></table></div><h2 class="variable" id="scr_conspeed">scr_conspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls the speed at which the console screen scrolls up and down.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="scr_printspeed">scr_printspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable controls how fast the text is displayed at the end of the single 
+player episodes.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>8</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-console-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

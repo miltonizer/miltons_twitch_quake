@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-chat-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Chat Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Chat Settings Variables</h1>
+
+
+<h2 class="variable" id="allow_f_cmdline">allow_f_cmdline&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Your client will respond to f_cmdline checks with your current command line used to run current ezQuake instance.</td></tr><tr><td>0</td><td>Your client will not respond to f_cmdline checks.</td></tr></tbody></table></div><h2 class="variable" id="allow_f_system">allow_f_system&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Your client will respond to f_system checks displaying your PC configuration.</td></tr><tr><td>0</td><td>Your client will not respond to f_system checks.</td></tr></tbody></table></div><h2 class="variable" id="auth_viewcrc">auth_viewcrc&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>the client shows you the authentication CRC in f_version responses.</td></tr><tr><td>0</td><td>the client hides the authentication CRC in f_version responses.</td></tr></tbody></table></div><h2 class="variable" id="cl_chatsound">cl_chatsound&nbsp;</h2>
+<div class="inactive"><p class="reason">This variable has been renamed to s_chat_custom</p><h3>Description</h3><p class="description">Controls usage of con_sound_* variables.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Do not use con_sound_* variables settings.</td></tr><tr><td>1</td><td>Use settings from con_sound_* for char sounds.</td></tr><tr><td>2</td><td>Only play sounds in mm2.</td></tr></tbody></table></div><h2 class="variable" id="cl_fakename">cl_fakename&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Automatically prefixes all team messages with a shorter version of your nick unless the message has a &quot;fake&quot; part already (so no configs are broken).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>string</strong>.<br />prefix for team messages</p>
+<p class="remarks">Applies for say_team and messagemode2</p></div><h2 class="variable" id="cl_floodprot">cl_floodprot&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable floodprot.</td></tr><tr><td>0</td><td>Disable floodprot.</td></tr></tbody></table></div><h2 class="variable" id="cl_fp_messages">cl_fp_messages&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable is used in conjunction with the variable &quot;cl_fp_persecond&quot; to
+define when the floodprot protection should be triggered (if &quot;cl_floodprot&quot;
+is set to &quot;1&quot;).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_fp_persecond">cl_fp_persecond&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable is used in conjunction with the variable &quot;cl_fp_messages&quot; to
+define when the floodprot protection should be triggered (if &quot;cl_floodprot&quot;
+is set to &quot;1&quot;).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_nofake">cl_nofake&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This command effects name faking using $/ or cl_fakename used by players.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>No unfaking.</td></tr><tr><td>1</td><td>Unfake all messages.</td></tr><tr><td>2</td><td>Unfake messages from enemies only.</td></tr></tbody></table></div><h2 class="variable" id="cl_parseFunChars">cl_parseFunChars&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>You can use Ocrana LED's by hand right out of the console and chat anonymously through &quot;$\&quot; without showing your name (chat messages that are seen without your name at the beginning).</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table>
+<p class="remarks">Full list:
+$R - red lamp
+$G - green lamp
+$B - blue lamp
+$Y - yellow lamp
+$\ - carridge return
+$( - big left bracket
+$= - big equal sign
+$) - big right bracket
+$. - red middle dot
+$, - white dot (names only)
+$&lt; - small left bracket
+$- - small equal sign
+$&gt; - small right bracket
+$a - big grey block
+$: - line feed
+$b - filled red block
+$d - right pointing red arrow
+$[ - gold left square bracket
+$] - gold right square bracket
+$^ - white ^ (names only)
+^x - red x (names only)
+$0-9 - yellow number
+$xyy - char with hex code yy
+(In order to use the lamps, you'll need the Ocrana pak).</p></div><h2 class="variable" id="cl_parseSay">cl_parseSay&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>You can use macros such as %a %h %l (like in Qizmo).</td></tr><tr><td>0</td><td>Disable %-macros (%a %h %b etc...)</td></tr></tbody></table></div><h2 class="variable" id="cl_parseWhiteText">cl_parseWhiteText&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Convert text between { and } to white or not in chat/team chat.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Convert none.</td></tr><tr><td>1</td><td>Convert all (chat and team chat).</td></tr><tr><td>2</td><td>Convert team chat only.</td></tr></tbody></table></div><h2 class="variable" id="cl_restrictions">cl_restrictions&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Triggers and re/msg trigger restrictions for spectator and demoplay modes</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Disallow triggers and huds</td></tr><tr><td>0</td><td>Allow triggersand huds</td></tr></tbody></table>
+<p class="remarks">FuhQuake always behave as cl_restrictions 1.
+QW262 by default it have cl_restrictions 1.</p></div><h2 class="variable" id="ignore_flood">ignore_flood&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Off.</td></tr><tr><td>1</td><td>Ignores repeated 'say' and spectator messages.</td></tr><tr><td>2</td><td>Ignores repeated 'say', 'say_team' and spectator messages.</td></tr></tbody></table></div><h2 class="variable" id="ignore_flood_duration">ignore_flood_duration&nbsp;</h2>
+<div><h3>Description</h3><p class="description">You can change the 4 second cooldown with the 'ignore_flood_duration' variable.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>4</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="ignore_mode">ignore_mode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Someone is on your ignore list, you won't see any messagemode (/say hello) messages from them 
+(even if they are a spec).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Ignore say_team too.</td></tr><tr><td>0</td><td>Ignore say only.</td></tr></tbody></table></div><h2 class="variable" id="ignore_opponents">ignore_opponents&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Do not ignore opponent team.</td></tr><tr><td>1</td><td>Alway ignore opponent team.</td></tr><tr><td>2</td><td>Only ignore opponent team during the match.</td></tr></tbody></table></div><h2 class="variable" id="ignore_qizmo_spec">ignore_qizmo_spec&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Ignores all Qizmo spectators (= observers). Very useful on big matches with 100 and more spectators.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Ignoring ON.</td></tr><tr><td>0</td><td>Ignoring OFF.</td></tr></tbody></table></div><h2 class="variable" id="ignore_spec">ignore_spec&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Off</td></tr><tr><td>1</td><td>Ignore spec chat unless you are a spectator.</td></tr><tr><td>2</td><td>Ignore spec chat even if you are a spectator.</td></tr></tbody></table></div><h2 class="variable" id="msg_filter">msg_filter&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Filters nothing (default)</td></tr><tr><td>1</td><td>Filters mm1 and spec messages</td></tr><tr><td>2</td><td>Filters mm2 messages</td></tr><tr><td>3</td><td>Filters mm1, mm2, and spec messages</td></tr></tbody></table></div><h2 class="variable" id="s_chat_custom">s_chat_custom&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Controls usage of con_sound_* variables.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody></tbody></table></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-chat-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

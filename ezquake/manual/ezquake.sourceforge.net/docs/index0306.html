@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelogs-old by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Old Changelogs</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Old Changelogs</h1>
+
+
+<dl class="changelog">
+
+<dt>Build 1754, 2006-12-17 [1.7]</dt>
+<dd><dl>
+<dt>Teamplay observing</dt><dd><ul>
+<li><a href="../gallery/teamplay_hud_features.jpg">frags &amp; teamfrags extra info</a>: show players' best weapons, health and armors amount within the frags HUD element (cokeman)</li>
+<li>players' <a href="index9908.html?scr_autoid">health, armor &amp; bestweapon over their heads</a> for Multiview demos and QTV in future (cokeman)</li>
+<li><a href="index50b7.html?radar">Radar</a> - watch the overall action in the map in Multiview demos and for QTV in future (cokeman)</li>
+<li><a href="../gallery/teamplay_hud_features.jpg">Items possession overview</a>, <a href="index13ad.html?teamholdinfo">teamholdinfo</a>, what area is "held" by what team (cokeman)</li>
+<li><a href="../gallery/teamplay_observing_features_2.png">Percentage bar</a> of area held by teams, <a href="index8845.html?teamholdbar">teamholdbar</a> (cokeman)</li>
+</ul></dd>
+
+<dt>
+Teamplay
+</dt><dd><ul>
+<li><a href="index650b.html?cl_fakename">Teamplay prefix</a> - you can choose a prefix which will replace your nick in teamplay messages, won't break good old config messages (tonik)</li>
+<li><a href="indexfd44.html?weapon-handling">weapon auto-hiding</a>, known as shotgun/boomstick script (johnnycz)</li>
+<li>Time info visible for spectators in scoreboard (qqshka)</li>
+<li>pointing priorities (tp_pointpriorities, johnnycz)</li>
+</ul></dd>
+
+<dt>
+Multiview
+</dt><dd><ul>
+<li>Fixed multiview and newhud issues (Cokeman)</li>
+<li>Fixed contrast issues (Cokeman)</li>
+<li>Fixed player colors/skins issues (Cokeman)</li>
+<li><a href="index56c7.html?mvd_autohud">Autoload</a> screen configuration for comfortable multiview demos observing (johnnycz)</li>
+<li>Tracking element views names of tracked players (Cokeman)</li>
+<li>New minihud styles - <a href="index704f.html?cl_mvhudpos">cl_mvhudpos</a>, <a href="index456c.html?cl_mvhudvertical">cl_mvhudvertical</a>, <a href="index1cfa.html?cl_mvhudflip">cl_mvhudflip</a> (Cokeman)</li>
+</ul></dd>
+
+<dt>
+Demos
+</dt><dd><ul>
+<li>Playback of .dem / Quake1 / NetQuake demos (tonik)</li>
+</ul></dd>
+
+<dt>
+Movie recording
+</dt><dd><ul>
+<li><a href="indexa400.html?camera-scripting">Advanced camera control</a> (tonik)</li>
+</ul></dd>
+
+<dt>
+Ruleset
+</dt><dd><ul>
+<li><a href="index86c0.html?cl_fakeshaft">Fakeshaft</a> prohibition removed; it's up to leagues if they still disallow it explicitly in the rules; use <code>f_fakeshaft</code> to check it's usage (johnnycz)</li>
+<li>TCL limited in Smackdown ruleset (disconnect)</li>
+<li>allowed critical particle effects for demoplay &amp; observing only (johnnycz)</li>
+</ul></dd>
+
+<dt>
+HUD
+</dt><dd><ul>
+<li><a href="index5934.html?tracker-stats">Separated frag messages</a> (qqshka)</li>
+<li>Group elements background images (Cokeman)</li>
+<li>Elements background color (*_frame_color; Cokeman)</li>
+<li>Elements can be drawn <a href="index01bb.html?hud_offscreen">partially off screen</a> (cokeman)</li>
+<li>ezHud script - visually customize the HUD using your keyboard, <code>/exec cfg/ezhud</code> (johnnycz)</li>
+<li>new <a href="indexce4e.html?speed">speed element</a> properties - opacity, colors, vertical, height/width, align, ... (cokeman)</li>
+<li><a href="index7045.html?speed2">speed2 HUD element</a> - coolish rounded speed-o-meter (cokeman)</li>
+<li>gun, ammo, iammo elements take <a href="indexfd44.html?weapon-handling">cl_weaponpreselect</a> settings in count (johnnycz)</li>
+<li>Ability to change large numbers format <a href="indexb837.html?hud_digits_trim">hud_digits_trim</a> (VVD)</li>
+<li>democlock as an element of a new HUD (johnnycz)</li>
+</ul></dd>
+
+<dt>
+Linux
+</dt><dd><ul>
+<li>s_bits, s_stereo, s_khz, s_noalsa, s_restart (disconnect)</li>
+</ul></dd>
+
+<dt>
+Windows sound
+</dt><dd><ul>
+<li>s_khz, s_restart (disconnect)</li>
+</ul></dd>
+
+<dt>
+OpenGL
+</dt><dd><ul>
+<li>Fixed MD3 models rendering (qqshka)</li>
+<li>Shaft origin particle bug fixed (qqshka)</li>
+<li>reset gamma to default on exit, as MQWCL does; can fix broken gamma after game crashed (VVD)</li>
+<li><a href="indexcbb6.html?vid_forcerestoregamma">vid_forcerestoregamma</a> - force restore gamma after returning to minimized application; might be usefull if you have ATI card (VVD)</li>
+<li><a href="indexbe6f.html?gl_anisostropy">Anisotropy</a> control from in-game (moodles)</li>
+<li>Broken coronas on slow demo speed fixed (Cokeman)</li>
+</ul></dd>
+
+<dt>
+Software
+</dt><dd><ul>
+<li>solid color walls - <a href="index05bd.html?r_drawflat">r_drawflat</a> (hetman)</li>
+</ul></dd>
+
+<dt>
+Gameclock
+</dt><dd><ul>
+<li>Fixed synchronization on overtime, connection in the middle of the match, match end small desync., and on demo jumps. (johnnycz)</li>
+</ul></dd>
+
+<dt>
+Server Browser
+</dt><dd><ul>
+<li>Better spectator display (qqshka)</li>
+<li>Team column, server has to support this (qqshka)</li>
+<li>Default mark and autoupdate; added list from quakeservers.net (johnnycz)</li>
+</ul></dd>
+
+
+<dt>
+Networking
+</dt><dd><ul>
+<li>Chat icon - shows an icon over player's head when he's typing a message (qqshka)</li>
+<li>some of FTE code, e.g. <a href="index3db6.html?tcpconnect">tcpconnect</a> (disconnect)</li>
+</ul></dd>
+
+<dt>
+Locs
+</dt><dd><ul>
+<li>location files edited from within the client - <a href="index67e4.html?addloc">addloc</a>, <a href="indexe08e.html?removeloc">removeloc</a>, <a href="index5c8c.html?clearlocs">clearlocs</a> (cokeman)</li>
+</ul></dd>
+
+<dt>
+VWEP
+</dt><dd><ul>
+<li>initial support (oldmanuk)</li>
+</ul></dd>
+
+<dt>
+Scripting
+</dt><dd><ul>
+<li>Triggers and <a href="indexfe10.html?cl_hud">HUD strings</a> allowed for demos and spectators. Use cl_restrictions 0 to disable it there too. (disconnect)</li>
+<li>Fixed mp3_volume issues. Use mp3_volume +0.1 to increase your media player volume. Removed -nomp3ctrlvolume and mp3_grabvolume. (johnnycz)</li>
+<li>$rand, $conwidth, $conheight macros (johnnycz)</li>
+<li>Added triggers f_freeflyspectate and f_trackspectate that triggers when going into frefly/tracking mode when spectating. (Cokeman)</li>
+</ul></dd>
+
+<dt>
+Config
+</dt><dd><ul>
+<li>Floodprot saved in config (johnnycz)</li>
+</ul></dd>
+
+<dt>
+Compiling
+</dt><dd><ul>
+<li>static linking, you don't need any addition libraries to run all Linux and Windows builds (disconnect, t3st), all libraries downloadable from our web for compiling</li>
+</ul></dd>
+
+<dt>
+Fix
+</dt><dd><ul>
+<li>upload safety (disconnect)</li>
+<li>match logs readable in Windows (johnnycz)</li>
+<li>Video capturing with -nosound crash (johnnycz)</li>
+</ul></dd>
+
+</dl></dd>
+
+
+<dt>Build 1517, 2006-04-22 [1.6]</dt>
+<dd><dl>
+  <dt>Security Module: <a href="http://ezquake.sourceforge.net/security/">Reloaded</a></dt>
+    <dd>made by disconnect</dd>
+  <dt>Mac OS X: <a href="http://ezquake.sourceforge.net/build/">Supported</a></dt>
+  <dd>by disconnect and oldman</dd>
+  <dt><a href="indexec01.html?coloured-text">Coloured text</a></dt>
+    <dd>made by jogi</dd>
+  <dt>Independent physics &amp; smartjump</dt>
+    <dd>Jump issue fixed. <a href="index4f08.html?cl_smartjump">Smartjump</a> default ON. (tonik)</dd>
+  <dt>Window caption</dt>
+    <dd>You can see what's going on on the server in the task bar if your client is minimized by setting <a href="indexe535.html?cl_window_caption">cl_window_caption 1</a>.(johnnycz)</dd>
+  <dt>MVD Features</dt>
+  <dd>Powerup cams - In multiview you can bind all the Points of View to powerups, made by jogi | <a href="index9665.html?mvd_moreinfo">mvd_moreinfo</a> - like moreinfo from ktpro. "Nabbe picked up Quad". (jogi)</dd>
+  <dt>Gameclock HUD element</dt>
+    <dd>Added scale property to both clock and gameclock HUD elements. Now you can fully customize its style and size. (johnnycz)</dd>
+  <dt><a href="indexdd5b.html?tcl">TCL Support</a></dt>
+    <dd>by disconnect</dd>
+  <dt>Auto demo conversion</dt>
+    <dd>Set <a href="index7d25.html?demo_format">demo_format</a> to qwz/mvd/qwd, see <a href="index1dd1.html?qwdtools_dir">qwdtools_dir</a>. (johnnycz)</dd>
+  <dt>Scripting options</dt>
+  <dd>New commands <a href="index5d08.html?if_exists">if_exists</a>, <a href="indexc019.html?set_ex">set_ex</a>, <a href="indexec2b.html?set_alias_str">set_alias_str</a>, <a href="index80b3.html?set_bind_str">set_bind_str</a>; (disconnect), more commands allowed for <a href="index50ab.html?triggers">triggers</a> (disconnect)</dd>
+  <dt><a href="index15fe.html?userdir">userdir</a>, <a href="index4e9d.html?custom-paks">paks.lst</a>, <a href="index3483.html?link-files">.link</a>, <a href="indexdd5b.html?tcl">TCL</a> for configs</dt>
+    <dd>ported by disconnect</dd>
+  <dt>Console improvements</dt>
+    <dd><a href="indexd132.html?con_funchars_mode">con_funchars_mode</a> 0/1 - orange text, LEDs and special chars with [Ctrl] key - kind of MQWCL behaviour when set to 1 (disconnect); <a 
+
+href="index87ea.html?cvar_viewhelp">cvar_viewhelp</a> manual page displayed automatically. (johnnycz)</dd>
+  <dt>Menu modernisation</dt>
+    <dd>Removed Lookstrafe and CD Music Volume, replaced with Field of View and Autoswitch Weapons (johnnycz)</dd>
+  <dt>minor changes and fixes</dt>
+  <dd><ul>
+    <li>QTV command - give it IP of the broadcasting proxy and it will start your local proxy and setup the correct connection (as <a 
+
+href="http://cqe.rytir.com/quake-tv/">described here</a>) (johnnycz)</li>
+    <li>Added <a href="index50ab.html?triggers">f_system</a> for linux (disconnect)</li>
+    <li>Silent <a href="index50ab.html?triggers">f_modified</a> reply when security module is not initialized (johnnycz)</li>
+    <li>HUD: Added styles 3 and 4 for GunX HUD elements (johnnycz)</li>
+    <li>HUD: Added FPS decimals (johnnycz)</li>
+    <li>More readable logs (Windows newlines fixed) (johnnycz)</li>
+    <li><a href="index0125.html?r_fullbright">r_fullbright</a> works in GL now (tonik).</li>
+    <li>Noaim is back. Default 1 = disable autoaim on old servers.(johnnycz)</li>
+    <li>Trigger <a href="index50ab.html?triggers">f_bonusflash</a> (not in ruleset smackdown).(vvd)</li>
+    <li><a href="index97b6.html?cl_rollalpha">cl_rollalpha</a> - You can see the effect of <a href="index10c2.html?cl_rollangle">cl_rollangle</a> on enemies but you are not affected by it. Disabled in ruleset smackdown. 
+
+(vvd)</li>
+    <li>new cvar <a href="index516b.html?r_shiftbeam">r_shiftbeam</a> - shift start of the shaft lights, don't work with -ruleset smackdown (for movie making) (vvd)</li>
+    <li>Modern defaults: m_filter off, forwardspeed 350, sensitivity 12 (tonik)</li>
+    <li>renamed cl_truelightning to <a href="index86c0.html?cl_fakeshaft">cl_fakeshaft</a></li>
+    <li>Added triggers Triggers f_demostart and f_demoend. (johnnycz)</li>
+    <li>"orange characters" input mode fixed (tonik)</li>
+    <li>Client upload security fix (disconnect)</li>
+    <li>Winamp new song crash (johnnycz)</li>
+    <li>A <strong>lot of</strong> bugfixes (disconnect, tonik, vvd).</li>
+  </ul></dd>
+</dl></dd>
+
+
+
+<dt>Build 1318, 2005-10-05 [1.5]</dt>
+<dd><dl>
+  <dt>Autotrack</dt>
+    <dd><code>mvd_autotrack</code> with customizable algorithm for POV switching (jogihoogi)</dd>
+  <dt>AMF Tracker messages</dt>
+    <dd>Fixed code so it works now (made by disconnect). See <a href="indexa741.html?vars-graphics#r_tracker_flags">r_tracker* variables</a>. Shows 
+
+messages of how many frags in a row you've perfomed and others.</dd>
+  <dt>Changed defaults to current standards</dt>
+    <dd>Fullbright skins default on, Always run default on, v_kick* and cl_bob* default 0, "Customize controls" menu updated. 
+
+(johnnycz)</dd>
+  <dt>Demo playlist</dt>
+    <dd>Use <kbd>[Ctrl]+[Enter]</kbd> in demo browser to add demo into playlist, access playlist on second tab of 'Demos' menu section. 
+
+Looping of playlist supported. See <a href="index1708.html?demo-player">Demo Player documentation</a>.</dd>
+  <dt>Ruleset checks scripts</dt>
+    <dd>Reply of f_ruleset now contains info when movement scripts are off (allow_scripts 0) and when not using independent physics 
+
+(cl_independentPhysics 0) (requested by NQR crew); (johnnycz)</dd>
+  <dt>set_calc</dt>
+    <dd>Usage: set_calc &lt;cvar&gt; &lt;command&gt; &lt;command arguments&gt; | set_calc &lt;cvar&gt; &lt;argument1&gt; 
+
+&lt;operator&gt; &lt;argument2&gt;<br />valid commands: strlen int substr set_substr pos<br />valid operators: + - * / div %% and or 
+
+xor<br />See <a href="index6c9a.html?scripting#advanced">Advanced scripting</a> documentation page.<br />(ported by disconnect from QW262 by 
+
+BorisU)</dd>
+  <dt>Aliases with parameters</dt>
+    <dd>Example: <code>alias cool_zoom "fov %1;sensitivity %2;v_viewheight %3;crosshaircolor %5";  cool_zoom 30 3.2 -6 79</code>; See 
+
+<a href="index6c9a.html?scripting#advanced">Advanced scripting</a> documentation page. (ported by disconnect from QW262 by BorisU)</dd>
+  <dt>$lastip macro</dt>
+    <dd>Example use: <code>connect $lastip</code><br />Will connect you to the latest server someone pasted in the chat. Note: address 
+
+must contain port part too (x.y.z.w:port).</dd>
+  <dt>FuhQuake 650 - 675 patches</dt>
+    <dd>Better gameclock, teamplay macros handling (simmilar to FuhQuake now), rocketlight with gl_flashblend 1 fixed; pasting text in 
+
+dedicated server fixed; match_auto_sshot problems fixed; loading libraries in Linux fixed; buggy eyes pointing fixed; scoreboard - 
+
+thick line and time update fixed; f_death issues fixed; skin forcing in QWD demos recorded by spectator fixed; lits can be loaded from 
+
+maps/lits/ too; gl_colorlights - turns lightning of quad, teamfortress flags, etc. on/off, updates and protocol extensions in 
+
+singleplayer / cooperative; (disconnect)</dd>
+  <dt>ALSA support</dt>
+    <dd>Linux sound; (ported by disconnect from ZQuake by Tonik)</dd>
+  <dt>Advanced scripting</dt>
+    <dd>multiple params &amp; regexp match support for 'viewalias, unalias_re, toggle_re, cvar_reset_re'; regexp match support for 
+
+'aliaslist, cvarlist, cmdlist, macrolist'. Examples:
+      <pre><code>unalias_re alias1 alias2 ^\.took(.+)$
+cvar_reset_re gl_part_.+
+toggle_re gl_part_.+
+cvarlist gl_</code></pre>
+    </dd>
+  <dt>Head Up Display changes</dt>
+    <dd>
+      <ul>
+        <li>New HUD elements "healthdamage" and "armordamage" shows amount of damage done to your health or armor during given period. 
+
+(r_damagestats moved to new HUD; johnnycz)</li>
+        <li>New HUD element "tracking" shows the name of tracked player. (johnnycz)</li>
+        <li>New HUD element "teamfrags" lists frags per team like HUD element "frags" does for players. (johnnycz)</li>
+        <li>New HUD elements "mp3_title" and "mp3_time" shows title and time of currently played song (cokeman)</li>
+        <li>Ported MQWCL 0.96 oldhud customizations (scr_sbar_draw*; scr_scoreboard_*; disconnect).</li>
+        <li><code>scr_centershift</code> <kbd>[-999..999]</kbd> adjusts placement of centerprint messages (+wp_stats, +scores, ...) 
+
+(ported by disconnect from QW262)</li>
+        <li><code>frags teamsort 1</code> fixed; golden brackets around current player/team fixed (johnnycz)</li>
+        <li>fixed bad hud gun &amp; ammo text sizes (1077945 &amp; 1072110 &amp; 1048608, made by disconnect); </li>
+      </ul>
+    </dd>
+  <dt>Improved loading Half-life maps</dt>
+    <dd>Specific halflife/cs wad-files are now not needed (made by VVD).</dd>
+  <dt>ZQuake protocol extensions</dt> 
+    <dd>Will be used only if both client &amp; server support it (disconnect)</dd>
+  <dt>MTFL Ruleset</dt>
+    <dd>Moscow TF League (disconnect)</dd>
+  <dt>minor changes and fixes</dt>
+    <dd>
+      <ul>
+        <li>scr_scalemenu fixed</li>
+        <li>Alternative particle shaft beam disabled in ruleset Smackdown (johnnycz)</li>
+        <li>MD3 models enabled in ruleset smackdown (still detected by f_modified of course);</li>
+        <li>r_telesplash (disconnect)</li>
+        <li>TF: cl_demoplay_flash [0..1] - reduces flash grenade effect when watching demos; (ported by disconnect from QW262);</li>
+        <li>TF: can't change FOV while concussioned (TF with oldgrens) (ported by disconnect from QW262 by BorisU)</li>
+        <li>TF: f_modified checks more TF models (gren1, gren2, detpack; made by disconnect)</li>
+        <li>Support for fractional values of watervis; e.g.: serverinfo watervis 0.85 -&gt; maximal possible water transparency is 15%; 
+
+(disconnect)</li>
+        <li>Bugfix for tab completion (cl_newcompletion 1, #1031189 &amp; #1031262; jogihoogi)</li>
+        <li>-no24bit -ruleset smackdown QMB particle crash fixed (disconnect)</li>
+        <li>bugfix #1066267: blank lines in sources.txt > startup freeze (fixed by VVD);</li>
+        <li>auto_grabmouse default 1 - added auto_grabmouse, when ezquake gets focus it will autograb the mouse (made by 
+
+jogihoogi);</li>
+        <li>fixed 1030884 - ignore_qizmo_spec 1 doesn't appear in ignorelist (fixed by johnnycz)</li>
+        <li>Wall color changes disabled during the match. (johnnycz)</li>
+        <li>New command <code>hud_export &lt;filename&gt;</code> exports HUD configuration into external configuration file 
+
+(johnnycz)</li>
+        <li>New triggers: f_cfgload - triggered when cfg_load command finishes, f_exit - triggered on quit command (johnnycz)</li>
+        <li>Third person camera customization: cl_camera_tpp_height &amp; cl_camera_tpp_distance (johnnycz)</li>
+        <li>New variables: sb_starttab - default tab in Server Browser; sb_autoupdate - turns automatic update of server list when user 
+
+enters it on/off (johnnycz)</li>
+        <li>Macro $serverip contains ip:port of server connected to (johnnycz)</li>
+        <li>cl_savehistory: on - saves commands history to .ezquake_history and loads it on next start-up (VVD)</li>
+        <li>ignore_opponents 2 - ignores opponents only during the match (johnnycz)</li>
+        <li>XP mouse acceleration fix - This makes non-DirectInput mouse two times less responsive (tonik)</li>
+        <li>sv_aim and noaim removed (disconnect, johnnycz)</li>
+        <li>a lot of bugfixes, code cleanup, etc. (disconnect, tonik)</li>
+      </ul>
+    </dd>
+  </dl>
+</dd>
+  
+<dt>Build 1144, 2005-04-21 [1.4]</dt>
+<dd><dl>
+  <dt>Gameclock</dt>
+    <dd>Clock with seconds started when match starts. <code>cl_gameclock 1</code> counts down, <code>cl_gameclock 2</code> counts up. 
+
+<code>cl_gameclock_x/y</code> adjusts it's placement. (1022494, hexum)</dd>
+  <dt>Limited usage of teamplay $macros</dt>
+    <dd>Usage of teamplay $macros can lead only to execute <code>say_team</code> command. Still can be used in combination with 
+
+<code>if...then...else...</code> constructs. Hurray to legal tp configs, bye bye to cheaty ones. (idea by Fuh; made by hexum)</dd>
+  <dt>Packet disabled during the match</dt>
+    <dd>While in ktpro server is in match status, you cannot use <code>packet</code> command. (jogihoogi)</dd>
+  <dt>Players info table</dt>
+    <dd><code>/scr_mvdinfo*</code>; when playing .mvd demo you can watch stats (powerup, frags, armor, health, weapon, location) of all 
+
+players altogether! (jogihoogi)</dd>
+  <dt>Fixed flame0.mdl demo bug</dt>
+    <dd>From now you do not have to have flame0.mdl to play demos recorded with ezQuake. (1084619, BorisU)</dd>
+  <dt>Realtime clock &amp; Multithreaded mouse in linux</dt>
+    <dd><abbr title="Real Time Clock"><span title="Real Time Clock">RTC</span></abbr> (1025018, made by James Ravn, ported by 
+
+disconnect, <a href="index6815.html?rtc">documentation</a>) and EVDEV support (made by Strider, ported by hexum, <a 
+
+href="index127a.html?evdev">documentation</a>).</dd>
+  <dt>Initial .md3 support</dt>
+    <dd>Ported by hdworak.</dd>
+  <dt>Disabled cl_c2spps with independent physics</dt>
+    <dd>This was causing jerky movement of the player on the server. (1106332, jogihoogi)</dd>
+  <dt>Intelligent pinging</dt>
+    <dd>Two methods of pinging servers in Server Browser - accurate that requires root access and not so much accurate but not 
+
+requiring root access. (hdworak)</dd>
+  <dt>Rain splashes fix</dt>
+    <dd>Rain splashes on water surfaces fix. (BorisU)</dd>
+  <dt>Multiple clients disabled</dt>
+    <dd>Disabled usage of multiple clients in public builds. Enabled for development purposes only. (1084664, VVD)</dd>
+  <dt>Limited eyecandy variables</dt>
+    <dd>Some eyecandy variables are now limited to very low values when using <code>-ruleset smackdown</code>. (1035361, 
+
+jogihoogi)</dd>
+  <dt>Minor bugfixes</dt><dd> 
+    Ignore pnglib/jpeglib loading errors (1038437, VVD), 
+    fixed: mouse not free on window mode &amp; focus on other app. (tei), 
+    re-enabled condbug on dedicated for debug purposes (tei), 
+    fixed: linux compilation errors (1146426, vvd, disconnect), 
+    fixed: if a = b then $qtcommand$qt dont work (1156022, disconnect), 
+    hud_recalculate is now saved with cfg_save (1157227, johnnycz)
+  </dd>
+</dl></dd>
+<dt>Build 1010, 2004-12-01 [1.3]</dt>
+<dd><dl>
+	<dt>AVI capturing</dt><dd>Direct .avi capturing with sound with mp3 compression</dd>
+	<dt>MQWCL help+describe system</dt><dd><kbd>/help</kbd> enters QW-related rich (XML) manual section, <kbd>/describe 
+
+[command|variable]</kbd> lists info for stated command or variable.</dd>
+	<dt>MQWCL custom HUD</dt><dd>ported from MQWCL 0.97b, ability to display this new hud or old one or both of them: 
+
+<code>/scr_newhud 0|1|2</code></dd>
+  <dt>Simple textures</dt><dd>new variable <code>/r_drawflat</code> sets solid colors for walls. Colors can be changed with 
+
+<code>r_wallcolor, r_floorcolor</code>. No need for download simpletextures.</dd>
+	<dt>GFX mode switching</dt><dd>New switch <em>Graphics settings</em> in <strong>Options</strong> menu: You can choose from four 
+
+preset settings for OpenGL version and two for Software rendering. Removed menu_fps.</dd>
+	<dt>Demo deleting</dt><dd>Added possibility to remove demos in demo-browser by pressing <kbd>DEL</kbd> button (with ask   
+
+confirmation) and <kbd>SHIFT+DEL</kbd> (quiet)</dd>
+	<dt>No root/admin for Serverbrowser</dt><dd>No more root/admin privs required (ping times might be a bit lower than you might 
+
+expect in game)</dd>
+	<dt>Best player tracking</dt><dd><code>/cl_hightrack</code> is back</dd>
+	<dt>Seeing through water</dt><dd>You can always see through water (cheat?!) <em>as a spectator</em> (ahhh!)</dd>
+	<dt>Multiple QW clients</dt><dd>Added command line option <code>-allowmultiple</code> for allow multiple client instances (from 
+
+ZQuake)</dd>
+	<dt>Better scripting control</dt><dd>Disabled KTPro's <code>/krjump</code> and <code>/kfjump</code> aliases when client-side 
+
+movement scripting is disabled. (RFE 1030281)</dd>
+	<dt>Graphics customizations</dt><dd>Graphics variables have default values same as in FuhQuake, default is 'faithful' in 
+
+Options menu, New flame model, Lightning-blood in GL more visible, Eyecandy - cheaty (2nd) (#1041604), completely changed vsync code 
+
+for linux, fog fixes + variables customization</dd>
+  <dt>Included keymaps</dt><dd>National keyboard layouts (<code>/keymap_load</code>) for default, polish, finnish, german, hungarian, 
+
+uk and environment</dd>
+	<dt>Renamed variables</dt><dd><code>cl_camera_chase</code> &gt; <code>cl_camera_tpp</code>, <code>r_wateralpha</code> &gt; 
+
+<code>gl_turbalpha</code>, <code>gl_waterripple</code> &gt; <code>gl_turbripple</code></dd>
+	<dt>Predefined $loc_name_mh</dt><dd>Set to "mega". No more ugly teamplay messages.</dd>
+  <dt>Pushlatency</dt><dd>Some players were requesting it, so old well known <code>/pushlatency</code> is back</dd>
+	<dt>Bugfixes</dt><dd>#1030146 (players in <abbr title="Server Browser">SB</abbr>), no_group variables are saved now, multiview 
+
+sound problems, -no24bit crashes, fog fixes #1032756 and #1032143, #1030652: FrikBot Fix (from ZQuake)</dd>
+</dl></dd>
+<dt>Build 938, 2004-09-21 [1.2]</dt>
+<dd><dl>
+  <dt>Bugfix for security</dt><dd>Urgent. (f_version, f_modified, validate_clients)</dd>
+	<dt>gl_corones_tele</dt><dd>Added.</dd>
+	<dt>aliasedit</dt><dd>editalias was renamed to aliasedit (easier to find with <kbd>alias[tab]</kbd>)</dd>
+	<dt>v_quadcshift</dt><dd>quad, pent, suit, ring color shift working (bug #1030927).</dd>
+</dl></dd>
+<dt>Build 937, 2004-09-19 [1.1]</dt>
+<dd><dl>
+  <dt>Security Module</dt><dd>f_modified, f_version, validate_clients now works, no place for cheaters here.</dd>
+	<dt>Eyecandy variables</dt><dd>amf_* variables have been adjusted, fixed and renamed. See <a href="index73b0.html?graphics">Graphic 
+
+settings</a> manual section.</dd> 
+	<dt>r_*color</dt><dd>"water", "slime", "tele", "lava" - changes colours of liquids with r_fastturb 1.</dd>
+  <dt>scr_tracking</dt><dd>Changes text "Tracking lAmEnIcK" to anything you want.</dd>
+	<dt>cl_confirmquit</dt><dd>No need for another command line switch.</dd>
+  <dt>skygroup</dt><dd>e.g.: /skygroup marscity dm3 dm2 - sets skybox textures for group of maps</dd>
+	<dt>vid_vsync</dt><dd>(linux, glx) Possible to turn on vertical synchronization without restarting game. For turning off vsync 
+
+you need to restart client (linux).</dd>
+	<dt>msg_trigger</dt><dd>Changed a little</dd>
+  <dt>msg_filter</dt><dd>0 - filters nothing (default)<br />
+1 - filters mm1 and spec messages<br />
+2 - filters mm2 messages<br />
+3 - filters mm1, mm2, and spec messages
+</dd>
+	<dt>Bugfixes</dt><dd>r_rockettrail, scr_conalpha bug (glx), editalias, #1026806, #1026106, #1025583, #1025184, #1024198, 
+
+#1023288, #1022481, #1022476, #1022461, #1020663, and a lot of others.</dd>  
+</dl></dd>
+<dt>Build 922 and lower [1.0]</dt>
+<dd><dl>
+  <dt>cl_physfps</dt><dd>patch by Anton Gavrilov (Tonik)</dd>
+  <dt>cl_multiview</dt><dd>from fuhquakemv-gl client by James Chaney (oppy)</dd>
+  <dt>ignore_qizmo_spec</dt><dd>patch by James Chaney (oppy) and Perttu Lahtinen (luny)</dd>
+  <dt>gl_waterfog</dt><dd>from FuhQuake 0.28 source code</dd>
+  <dt>no screensaver</dt><dd>patch by Perttu Lahtinen (luny)</dd>
+  <dt>keymap</dt><dd>patch by Matthias Mohr (Massa)</dd>
+  <dt>AMFQuake particles</dt><dd>from AMFQuake 0.39 Final by Vultwah (vultwah@iinet.net.au)</dd>
+  <dt>gl_fogenable</dt><dd>patch by Tomas Jakobsson (Tomaz)</dd>
+  <dt>sb info extension</dt><dd>patch by VVD (vvd@quakeworld.ru)</dd>
+  <dt>-noshadows</dt>
+  <dt>+set cl_independentPhysics</dt>
+  <dt>con_shift</dt>
+  <dt>gl_lumatextures</dt>
+	<dt>vid_flashonactivity</dt>
+</dl></dd>
+</dl>
+
+
+<p id="last-update">Last update: 26.05.2007 11:03 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelogs-old by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

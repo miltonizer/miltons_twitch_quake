@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?config by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Configuration manager</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Configuration manager</h1>
+
+
+<p>This client loads it's configuration on startup from config.cfg file which must be placed either in &lt;home&gt;/ezquake/config.cfg or in &lt;quake&gt;/ezquake/configs dirs (home = My Documents on Windows OS, ~ on linux).</p>
+<p>This config is generated with cfg_save command. It is not recommended to create this config manually.</p>
+
+<h2>Commands</h2>
+
+<dl>
+<dt>cfg_save [&lt;filename&gt;]</dt>
+
+<dd><p>This command will dump all aliases, bindings, plus commands,
+msg_triggers, teamplay settings and variables to filename.cfg .
+User made variables (created with set/seta) are saved as well.</p>
+
+<p>This command can also be called without any arguments. In such case it will create a file "config.cfg" either in quake/ezquake/configs or in ezquake subdirectory of your profile (home) directory. In windows such directory usually is in C:\documents and settings\yourname\my documents\ezquake\. In linux such directory is referred to as "~". Variable affecting this is <a href="index8c0d.html?cfg_use_home">cfg_use_home</a>.</p>
+
+<p>Note : configs saved with cfg_save are saved in quake/ezquake/configs/*.cfg</p>
+</dd>
+
+<dt>cfg_reset</dt>
+
+<dd><p>This command will unbind all keys, delete all aliases, delete all msg_triggers,
+reset all plus commands, reset all teamplay settings and reset all variables.
+User made variables (created with set/seta) are deleted.</p>
+
+<p>After resetting all the above, it executes default.cfg and then autoexec.cfg.</p>
+</dd>
+
+<dt>cfg_load &lt;filename&gt;</dt>
+
+<dd>This will firstly do a cfg_reset and then execute filename.cfg.<br />
+When called without arguments it will attempt to read "config.cfg" first from ezquake directory in your profile directory or if it's not found in there, it will try to read it from quake/ezquake/configs directory (see cfg_save description).</dd>
+</dl>
+
+
+<h2>Variables</h2>
+
+<dl>
+<dt>cfg_use_home</dt><dd>Affects the behavior of cfg_save and cfg_load commands. When set to 0, it will load and save configs from/into quake/ezquake/configs. When set to 1, it will load and save configs from/into your home/ezquake/, where home is your profile dir (My Documents on Windows, ~ in linux).</dd>
+<dt>cfg_save_unchanged</dt>
+<dd><ul>
+  <li>'cfg_save_unchanged 1' makes cfg_save write all variables to the config file.</li>
+  <li>'cfg_save_unchanged 0' makes cfg_save only write variables that are not default valued to the config file.</li>
+</ul></dd>
+
+<dt>cfg_save_userinfo</dt>
+<dd><ul>
+  <li>'cfg_save_userinfo 2' makes cfg_save save all userinfo variables like name/team/teamcolor/rate/msg/skin/w_switch/b_switch/... .</li>
+  <li>'cfg_save_userinfo 1' makes cfg_save save all userinfo variables except spectator/name/topcolor/bottomcolor/skin/team .</li>
+  <li>'cfg_save_userinfo 0' makes cfg_save not save userinfo variables.</li>
+  </ul>
+  <p>Note : 'cfg_save_userinfo 1' is best for teamfortress so you dont get kicked for changing bottom color.</p>
+  <p>Note : cfg_save will never save the password variable, even though technically it is a userinfo variable.</p>
+</dd>
+
+<dt>cfg_save_aliases</dt>
+
+<dd>Toggles whether cfg_save saves aliases.</dd>
+
+
+<dt>cfg_save_binds (default is 1)</dt>
+<dd>Toggles whether cfg_save saves binds.</dd>
+
+<dt>cfg_save_cmds (default is 1)</dt>
+<dd>Toggles whether cfg_save saves commands.</dd>
+
+<dt>cfg_save_cvars (default is 1)</dt>
+<dd>Toggles whether cfg_save saves variables.</dd>
+
+<dt>cfg_legacy_write (default 0)</dt>
+<dd><ul>
+  <li>'cfg_legacy_write 1' will write a small config.cfg to your gamedir when quitting just like qw 2.33.</li>
+  <li>'cfg_legacy_write 0' will not write config.cfg.</li>
+</ul></dd>
+
+<dt>cfg_legacy_exec (default 1)</dt>
+<dd><ul>
+<li>'cfg_legacy_exec 0' = 	Do not execute config.cfg and frontend.cfg in gamedir ever.</li>
+<li>'cfg_legacy_exec 1' = 	Execute config.cfg and frontend.cfg in gamedir (unless gamedir = qw) like qw 2.33.</li>
+<li>'cfg_legacy_exec 2' = 	Execute config.cfg and frontend.cfg even if gamedir = qw.</li>
+<li>'cfg_legacy_exec 3' = 	Execute config.cfg and frontend.cfg even if gamedir = qw.<br />
+						If there is no config.cfg or frontend.cfg in gamedir, and gamedir != qw
+						then try executing config.cfg and frontend.cfg in qw.</li>
+</ul></dd>
+
+<dt>cfg_save_cmdline (default 1)</dt>
+<dd>Writes your command line in configs made with cfg_save (commented out of course).</dd>
+
+<dt>cfg_save_sysinfo</dt>
+<dd>Not implemented yet.</dd>
+
+<dt>cfg_backup (default 0)</dt>
+<dd>Backs up your old config before overwriting it with cfg_save.<br />
+For example, 'cfg_save foo' will backup foo.cfg to foo.bak and then update foo.cfg .</dd>
+</dl>
+
+
+
+<p id="last-update">Last update: 20.09.2007 13:47 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?config by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

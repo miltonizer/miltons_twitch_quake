@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?video-capture by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Video stream capture</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Video stream capture</h1>
+
+
+<p><em>Note that to capture encoded audio/video streams you have to have
+proper codecs installed.</em></p>
+
+<p>Most of the demo_caputure_* commands are self-explainable. You may wish to
+check <a href="indexee64.html?multiview">Multiview</a> options and <a href="index73b0.html?graphics">Graphics</a>
+eyecandy settings for some nice scene setup.</p>
+
+<h3>Capture an avi file</h3>
+
+<p><code>demo_capture start 10 video.avi</code><br />
+This will start capture a video file video.avi and the capture will take 10 seconds at most.<br />
+If you omit the last parameter (name of an AVI file) then set of .tga screenshots will be taken.
+<br /><code>demo_capture stop</code><br />
+This will end the capture.</p>
+
+<h3>Settings</h3>
+
+<dl>
+  <dt>demo_capture_codec</dt>
+  <dd>Determines which codec will be used as a video codec. E.g. "xvid" or "divx"
+  should give good results.<br />
+  <em>Note that to capture encoded audio/video streams you have to have
+  proper codecs installed.</em></dd>
+  
+  <dt>demo_capture_mp3</dt>
+  <dd>When set to 1 then mp3 codec is used for sound track.</dd>
+    
+  <dt>demo_capture_mp3_kbps</dt>
+  <dd>Determines quality of sound track when mp3 codec is used. Default is 128.</dd>
+    
+  <dt>demo_capture_steadycam</dt>
+  <dd>Changes behaviour of keyboard and mouse input during video capture. Default OFF.</dd>
+  
+  <dt>demo_capture_dir</dt>
+  <dd>Sets target dir for your captured files.</dd>
+  
+  <dt>demo_capture_fps</dt>
+  <dd>Amount of frames captured per second. Default is 30.</dd>
+</dl>
+
+<h3>Video settings</h3>
+<p>We recommend using following command-line options: <code>-particles 4096 -detailtrails +exec cfg/gfx_gl_movies.cfg</code></p>
+
+<p id="last-update">Last update: 03.05.2006 06:11 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?video-capture by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,190 @@
+/**** LINK-tag style sheet style.css ****/
+
+html {
+  background-color: #e5e2b5;
+  color: #FFF7BF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body { margin: 1em 1em 1em 4em; 
+	background-color: #e5e2b5;
+	color: Black;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 1em 1em 1em 4em;
+}
+a { color: #A0522D; }
+a:hover { color: #FF4400; }
+dt { font-weight: bold; }
+
+h1, h2, h3, h4 { margin-left: -1.5em; }
+h1, h2, h3 {
+	background-color: #FFE6BF;
+	color: Black;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+	color: Black;
+}
+
+p#last-update { border-top: 1px dashed #FFD0BF; }
+
+/* VARIABLES --------------------- */
+
+h4.cvar span.default {
+  background-color: #B39B00;
+  padding: 0 1em 0 1em;
+  font-family: "Courier New", Courier, monospace;
+}
+h4.cvar span.pv {
+  background-color: #FFA280;
+  color: #000;
+  padding: 0 1em 0 1em;
+  font-family: "Courier New", Courier, monospace;
+}
+h3 span { 
+  padding-left: 1em; 
+  font-size: small;
+  line-height: 0.2em;
+  vertical-align: middle;
+}
+h3 span a { text-decoration: none; }
+p.support {
+	font-size: 0.8em;
+	margin: 0;
+}
+p.support span {
+	border: 1px;
+	padding: 0.08em 0.13em;
+}
+p.support span.supported {
+	background-color: #FFD700;
+} /* supported: green */
+p.support span.unsupported {
+	background-color: #D9EDF2;
+	text-decoration: none;
+	color: Silver;
+} /* unsupported: gray */
+p.default span {
+	background-color: #BDB76B;
+	padding: 0.08em 0.13em;
+	border: thin double;
+}
+p.default {
+	margin: 0.3em 0;
+	font-size: 0.8em;
+}
+table.values thead {
+	font-weight: bold;
+	border-collapse: collapse;
+	border-bottom: 1px solid #FFA280;
+}
+table.values td { padding: 0.33em; }
+table.values {
+	border-top: 1px solid #FFA280;
+	border-bottom: 1px solid #FFA280;
+	margin-top: 0.5em;
+}
+table.values caption {
+  	font-weight: bold;
+  	font-size: 1em;
+}
+
+/* variabled END ----------------- */
+
+/* changelog */
+
+dl.changelog dd ul { margin: 0 auto; }
+
+/* command-line option */
+
+div.option h3 {
+
+    background-color: transparent;
+    color: #FFF7BF;
+}
+
+/* commands */
+
+h2.command code {
+    font-weight: bold;
+    color: #FFA280;
+    font-size: 0.8em;
+}
+
+/* ALPHABET INDEX ----------- */
+
+p#index {
+	border-bottom: 1px solid #FFA280;
+	border-top: 1px solid #FFA280;
+    text-align: center;
+    font-size: 1.4em;
+    text-indent: 0;
+    margin: 1em 0;
+}
+p#index a { text-decoration: none; }
+
+/* alphabet index END ------ */
+
+/* INDEX ------------------- */
+
+table#index td.var span, td.cmd span, td.opt span {
+	font-size: medium;
+	font-family: monospace;
+	font: bold;
+	color: White;
+}
+table#index td.cmd span {
+	background-color: #FF4500;
+	font-size: medium;
+}
+table#index td.var span {
+	background-color: #228B22;
+	font-size: medium;
+}
+table#index td.opt span {
+	background-color: #1E90FF;
+	font: bold medium;
+	color: White;
+}
+table#index tr.section {
+	background-color: transparent;
+	font-size: 3em;
+}
+/* index END -------------- */
+
+/* SEARCH FORM ------------ */
+
+div#search {
+	float: right;
+	width: 20em;
+}
+div#search input { 
+  width: 15em;
+  float: left;
+}
+div#search button { width: 4em; }
+div#search fieldset { padding: 1em; }
+input:hover { background-color: #ddd; }
+
+/* search form END ----------------- */
+
+/* TRASH ----------------------------
+legend {
+  color: #FFF7BF;
+  font-weight: bold;
+}
+label:hover { color: #FFDE00; }
+label:active { text-decoration: underline; }
+p.range {
+	margin: 0.3em 0;
+	font-size: 0.8em;
+}
+p.range span {
+	background-color: #FFA280;
+  padding: 0.08em 0.13em;
+}
+
+trash end ----------------------- */
+
+
+
+
+

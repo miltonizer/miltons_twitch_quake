@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?player-skins by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Player skins</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Player skins</h1>
+
+
+<p>Textures used on the players in the game are called skins. This page explains how skins are handled in our client.</p>
+
+<p>You can also skip directly to the <a href="#teammates">new skin forcing</a> feature description</p>
+
+<p>Each player has own "skin" setting represented by the variable in every QuakeWorld client. Also each player has own set of textures stored in Quake/qw/skins directory (usually pcx or png format). From this directory the client reads the textures that it will apply on players according to skin rules.<br />
+Our client uses very wide range of skin rules and this page should explain how the skin for each player is chosen.</p>
+
+<h2>General settings and commands</h2>
+<dl>
+<dt><a href="index1330.html?showskins">showskins</a></dt>
+  <dd>Lists skins assigned to each player</dd>
+<dt><a href="indexada1.html?skins">skins</a></dt>
+  <dd>Free the skins cache, load or download them again</dd>
+<dt><a href="indexe862.html?baseskin">baseskin</a></dt>
+  <dd>Skin that will be used on the player if no rules are found</dd>
+<dt><a href="index37c2.html?skin">skin</a></dt>
+  <dd>The name of your own skin</dd>
+<dt><a href="index5e5c.html?noskins">noskins</a></dt>
+  <dd>Allows you to turn off skins rules completely or when set to 2, disallow downloading of skins from the server</dd>
+<dt><a href="indexb907.html?allskins">allskins</a></dt>
+  <dd>Sets one skin to all the players</dd>
+</dl>
+
+<h2>Basic Skin Forcing</h2>
+<p>The client allows you to force one universal skin to be used for all your teammates or one universal skin to be used for all the enemies. You do that with <var>teamskin</var> and <var>enemyskin</var> variables.</p>
+
+<p>You can also distinguish players that carry Quad or Pent powerup. For this, use <var>enemyquadskin</var>, <var>enemypentskin</var>, <var>teamquadskin</var> and <var>teampentskin</var>. Also special case is a player that carries both powerups at the same time. For that case use <var>enemybothskin</var> and <var>teambothskin</var> settings.</p>
+
+<p>All these settings can be also found in the Options menu at the Player tab.</p>
+
+<h2>Color forcing</h2>
+<p>You can also use variables r_enemyskincolor r_teamskincolor r_skincolormode teamcolor and enemycolor to force colors on your team/enemy players.</p>
+
+<h2>Special Skin Forcing</h2>
+<p>There were two important moments in QuakeWorld history that changed how skins were used.</p>
+<p>In the beginning those players who used empty "skin" setting couldn't be recognized by their skin from other players and those who used their own skin name could be recognized by all other players on the server (if they had the appropriate texture installed in their client).</p>
+<p>The Qizmo proxy however introduced a special feature that allows you to artificially set different colors (not skins, but the effect is the same) on each player. However for very long time (until the year 2006) players weren't much aware of this feature.</p>
+<p>When basic skin forcing feature (see above) came, most players used it and had one skin for all teammates and one skin for all enemies.</p>
+<p>But it shows that for teamplay games clans prefer to use special name of skin for each player and turning off basic skin forcing for teammates, making it possible for your teammates to recognize you. However this will make you recognizable also for the enemies - if they have proper skin textures installed in their Quake directory.</p>
+<p>The issue of "being recognizable also for the enemies" is still undecided rule in QuakeWorld. Some players suggest disabling this possibility, some use the Qizmo feature to distinguish enemy players, some players put skin textures to their skins directory so that they distinguish enemy players too.</p>
+
+<h3 id="teammates">Teammates skin forcing</h3>
+<p>As stated above, using different skin for different players in your team has become a habit in QuakeWorld.<br />
+This client offers you a feature to <strong>set different skin for each teammate even if they do not have different skin names set.</strong> To do that, use <var><a href="index1d59.html?teamforceskins">teamforceskins</a></var> variable (follow the link for more info).</p>
+
+<h3 id="enemies">Enemies skin forcing</h3>
+<p>Because using different skin for every enemy is a subject of current QuakeWorld discussions, the possibility to use <strong>different skin on each enemy is limited and controled</strong>.<br />
+<em>Limitation:</em> This feature will only work if the very same Qizmo feature works - that is - only if server allows it in it's FPD setting.<br />
+<em>Control:</em> If you use this feature, it will be reported in f_skins response and also auto-announced every time you change it.</p>
+<p>This feature can be enabled using the <var><a href="index237e.html?enemyforceskins">enemyforceskins</a></var> variable.</p>
+
+<p>For example by setting "teamforceskins 1" and your teammate is ". ParadokS", he will get "_ ParadokS" skin name assigned since the algorithm replaces some characters with underscore so that you get proper file name.<br />
+By setting "enemyforceskin 3", your enemies in a 4on4 game will have skins "e1", "e2", "e3", "e4". That means you need to have e1.pcx, e2.pcx, ... (or png) files in your skins directory. Your teammates will get the same skins assignments if they use "enemyforceskins 3", so you can share "red guy has RL!" info in your team. However if you play the very same team another time on another server, it's players will get different permutation of "e1", ..., "e4" skins assigned, so "the red guy" can be someone else the next time.</p>
+
+<p>These rules have lower priority then basic skin forcing. Therefore you need to turn "teamskin" and "enemyskin" off if you want to use those.</p>
+
+<p id="last-update">Last update: 12.09.2007 11:54 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?player-skins by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

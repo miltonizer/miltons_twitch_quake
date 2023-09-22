@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?fakeshaft by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Fakeshaft</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Fakeshaft</h1>
+
+
+<p>This page describes the Fakeshaft feature.</p>
+
+<p>The Lightning Gun fires 10 shots per second with 30 damage points each (300 damage points per second) in QuakeWorld.<br />
+In original QuakeWorld the rendered beam position was also updated only 10 times per second, according to where the last damage hit went.</p>
+<p>By enabling fakeshaft feature, the shaft beam will not stay on the same position for the whole 100 miliseconds. If you move your crosshair away from where the last shaft hit went, the shaft will try to come back to your current crosshair position by a small stepsm, made by linear interpolation. If you use full fakeshaft, shaft beam will always point straight to the crosshair.</p>
+<p>That means, by using this feature, you are less distracted by the old shaft beam position and you can concentrate to where you are actually aiming. However you will kind of loose the visual information of where the last damage of your Lightning gun was done.</p>
+<p>Good compromise might be using some value in between 0 and 100%.</p>
+<p>To disable fakeshaft use <code>cl_fakeshaft 0</code><br />
+To enable 50% fakeshaft use <code>cl_fakeshaft 0.5</code><br />
+To make your beam always point straight to crosshair use <code>cl_fakeshaft 1</code></p>
+
+<p>Fakeshaft usage of other users can be controled by typing "f_fakeshaft" into the game chat.</p>
+<p><strong>Q: Why has fakeshaft been allowed?</strong><br />
+A: Fakeshaft hasn't been allowed. We've only removed it's auto-prohibition but leagues can now still disallow it explicitly in rules and players can use "f_fakeshaft" to check opponent's settings. We've done this step because all leagues that used smackdown ruleset in that time voted for this change, it wasn't ezQuake team's decision.</p>
+
+<p><strong>Q: Fakeshaft or truelightning?</strong><br />
+This feature was also once called "truelightning". If you have understood how fakeshaft works, it should be clear to you now that truelightning is inappropriate name for such feature. Fakeshaft gives you visual illusion of where the shaft really is. What you see on your screen is not true, it's a fake.</p>
+
+<p id="last-update">Last update: 26.01.2007 07:09 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?fakeshaft by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

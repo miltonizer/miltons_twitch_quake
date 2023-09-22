@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-skin-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Skin Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Skin Settings Variables</h1>
+
+
+<h2 class="variable" id="baseskin">baseskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Defines what skin u see other people using if you don't have their skin and don't have skin forcing on.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>base</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_name_as_skin">cl_name_as_skin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to override user skin settings and use player's name or ID as a his (her) skin</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Use player's skin setting</td></tr><tr><td>1</td><td>Use player's name as his skin</td></tr><tr><td>2</td><td>Use player's ID as his skin</td></tr></tbody></table>
+<p class="remarks">There are many other skin settings that can override, e.g. all enemy*skin, team*skin settings override this setting.</p></div><h2 class="variable" id="enemybothskin">enemybothskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the enemy quad pent skin so you can define the skin which applies to enemy quads pents.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="enemybottomcolor">enemybottomcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the color of the pants of the enemies you see. Overrides player's skin settings.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>-1</span></p>
+<p>Variable is <strong>integer</strong>.<br />-1 to turn this off, values from 0 to 13 for standard Quake colors</p>
+<p class="remarks">To be able to use RGB 24bit colors, look for r_enemyskincolor variable.</p></div><h2 class="variable" id="enemyforceskins">enemyforceskins&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to set different skin for every enemy player even if they all have same skin names set or use names of skins that you do not have in your Quake dir</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Disabled</td></tr><tr><td>1</td><td>Use player's name as the name of the skin to be used</td></tr><tr><td>2</td><td>Use player's userid number (only useful for video capturing)</td></tr><tr><td>3</td><td>Assign skins &quot;e1&quot;, &quot;e2&quot;, &quot;e3&quot;, etc. to the enemies.</td></tr></tbody></table>
+<p class="remarks">Read &quot;Player skins&quot; manual page for more info on skin rules.</p></div><h2 class="variable" id="enemypentskin">enemypentskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the enemy pent skin so you can define the skin which applies to enemy pents.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="enemyquadskin">enemyquadskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the enemy quad skin so you can define the skin which applies to enemy quads.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="enemyskin">enemyskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the enemies skin so you can define the skin which applies to enemies.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="enemytopcolor">enemytopcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the color of the shirt of the enemies you see. Overrides player's skin settings.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>-1</span></p>
+<p>Variable is <strong>integer</strong>.<br />-1 to turn this off, values from 0 to 13 for standard Quake colors</p>
+<p class="remarks">To be able to use RGB 24bit colors, look for r_enemyskincolor variable.</p></div><h2 class="variable" id="noskins">noskins&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Enable skins.</td></tr><tr><td>1</td><td>Disable skins.</td></tr><tr><td>2</td><td>Enable skins but do not download new skins.</td></tr></tbody></table></div><h2 class="variable" id="r_enemyskincolor">r_enemyskincolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to set color for enemies you see in RGB format</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">See r_skincolormode for more info</p></div><h2 class="variable" id="r_fullbrightSkins">r_fullbrightSkins&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the fullbright percentage of skins. Fullbright skins can always be used during demo playback. 
+The f_skins response will indicate the brightness level being used as a percentage.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Being 0% fullbright.</td></tr><tr><td>0.5</td><td>Being 50% fullbright.</td></tr><tr><td>1</td><td>Being 100% fullbright.</td></tr></tbody></table></div><h2 class="variable" id="r_skincolormode">r_skincolormode&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggles different modes of how colors from r_enemyskincolor and r_teamskincolor are applied to players.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Makes skin solid.</td></tr><tr><td>1</td><td>?</td></tr><tr><td>2</td><td>Makes skin sort of topographic with r_enemy/team skincolor color.</td></tr><tr><td>3</td><td>?</td></tr><tr><td>4</td><td>Same as 5 but fullbright.</td></tr><tr><td>5</td><td>Applies r_enemy/team skincolor hue to skin.</td></tr></tbody></table></div><h2 class="variable" id="r_teamskincolor">r_teamskincolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to set color for teammates you see in RGB format</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>string</strong>.<br /></p>
+<p class="remarks">See r_skincolormode for more info</p></div><h2 class="variable" id="teambothskin">teambothskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the team quad pent skin so you can define the skin which applies to team quads pents.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="teambottomcolor">teambottomcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the color of the pants of the teammates you see. Overrides player's skin settings.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>-1</span></p>
+<p>Variable is <strong>integer</strong>.<br />-1 to turn this off, values from 0 to 13 for standard Quake colors</p>
+<p class="remarks">To be able to use RGB 24bit colors, look for r_teamskincolor variable.</p></div><h2 class="variable" id="teamforceskins">teamforceskins&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to set different skin for every team player even if they all have same skin names set or use names of skins that you do not have in your Quake dir</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Disabled</td></tr><tr><td>1</td><td>Use player's name as the name of the skin to be used</td></tr><tr><td>2</td><td>Use player's userid number (only useful for video capturing)</td></tr><tr><td>3</td><td>Assign skins &quot;t1&quot;, &quot;t2&quot;, &quot;t3&quot;, etc. to your teammates.</td></tr></tbody></table>
+<p class="remarks">Read &quot;Player skins&quot; manual page for more info on skin rules.</p></div><h2 class="variable" id="teampentskin">teampentskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the team pent skin so you can define the skin which applies to team pents.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="teamquadskin">teamquadskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the team quad skin so you can define the skin which applies to team quads.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="teamskin">teamskin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Overrides the team skin so you can define the skin which applies to team mates.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="teamtopcolor">teamtopcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Determines the color of the shirt of the teammates you see. Overrides player's skin settings.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>-1</span></p>
+<p>Variable is <strong>integer</strong>.<br />-1 to turn this off, values from 0 to 13 for standard Quake colors</p>
+<p class="remarks">To be able to use RGB 24bit colors, look for r_teamskincolor variable.</p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-skin-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

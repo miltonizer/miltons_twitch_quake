@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?tracker-stats by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Tracker Stats</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Tracker Stats</h1>
+
+
+<p>Since version 1727 we allow you to use new way to display frag messages. Since version 1517 you were able to view brief info about 'hot' fragging action going on in game, for example 'Foobar is on killing spree, 10 frags in a row!'</p>
+
+<p>Now you can also move frag messages out of usual notification area (and console) and view them in a more friendly readable way in a different place.</p>
+<p>To enable it you have to have fragfile.dat in your &lt;quake&gt;/ezquake/ dir and
+have following variables set (type them into the console or into your qw config):</p>
+
+<pre><code>cl_parsefrags 1
+cl_loadfragfiles 1
+r_tracker_frags 2</code></pre>
+
+<p>First two variables are ON (1) by default, the last one is up to you to decide. r_tracker_frags values description follows.</p>
+<dl><dt>0 - Off</dt><dd>Disable both streaks and custom frag messages</dd>
+<dt>1 - Default</dt><dd>Enable brief frag info (who is on killing spree).</dd>
+<dt>2 - Custom frags</dt><dd>Enable both brief frag info and custom frag messages.</dd>
+</dl>
+
+<p>You can turn off standard frag messages in console with:<br />
+<code>con_fragmessages 0</code></p>
+
+<p>Other customization can be done with these variables.</p>
+<dl><dt>r_tracker_messages</dt><dd>Changes total ammount of messages drawn in the extra window</dd>
+<dt>r_tracker_scale</dt><dd>Sets the font size for the messages</dd>
+<dt>r_tracker_align_right</dt><dd>Controls the alignment of the window</dd>
+<dt>r_tracker_x, r_tracker_y</dt><dd>Sets the placement of the extra frag messages window</dd>
+<dt>r_tracker_frame_color</dt><dd>Sets the background color in "R G B A" (red, green, blue, alpha) format.</dd>
+<dt>r_tracker_time</dt><dd>Timeout for each message to disappear</dd>
+<dt>r_tracker_streaks</dt><dd>Controls if <em>hot</em> action info should be displayed</dd>
+<dt>r_tracker_flags</dt><dd>Controls if actions related to the Capture The Flag mod should be displayed</dd>
+</dl>
+
+
+<p id="last-update">Last update: 25.04.2008 04:09 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?tracker-stats by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?macros by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Macros</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Macros</h1>
+
+
+<p>Macros allow you to read and use some game specific data, like your health, status of your connection, your mp3 player volume, console width and other info you can then use for example in your scripts.</p>
+
+<p>There are two types of macros: protected and unprotected.<br />
+<strong>Protected macros</strong> can be used only to format you (team)messages. That means you can only use them in combination with say/say_team/echo/if and some other commands. Macros from that group contain some of your game status.<br /><strong>Unprotected macros</strong> can be used in combination with any command you like.</p>
+
+<p>Example of use:</p>
+<pre><code>if $conwidth &lt; 640 health scale 3 else health scale 1
+if $matchtype = 4on4 exec 4on4 else exec mix
+set volume $mp3_volume</code></pre>
+
+<h3>List of macros</h3>
+
+<dl>
+<dt>$ammo</dt><dd>Amount of ammo for the current weapon</dd>
+<dt>$armor</dt><dd></dd>
+<dt>$armortype</dt><dd></dd>
+<dt>$bestammo</dt><dd>Amount of ammo for the best weapon you carry</dd>
+<dt>$bestweapon</dt><dd>Best weapon you have according to tp_weapon_order settings</dd>
+<dt>$cam_angles</dt><dd>Camera looking direction</dd>
+<dt>$cam_angles_pitch</dt><dd></dd>
+<dt>$cam_angles_roll</dt><dd></dd>
+<dt>$cam_angles_yaw</dt><dd></dd>
+<dt>$cam_pos</dt><dd>Camera position</dd>
+<dt>$cam_pos_x</dt><dd></dd>
+<dt>$cam_pos_y</dt><dd></dd>
+<dt>$cam_pos_z</dt><dd></dd>
+<dt>$cells</dt><dd></dd>
+<dt>$colored_armor</dt><dd></dd>Displays your armor in its respective color (red/yellow/green).
+<dt>$colored_powerups</dt><dd></dd>Displays the powerups you have in color.
+<dt>$colored_short_powerups</dt><dd></dd>Displays the powerups you have in color, but displays them in "qrp" format instead of "quad ring pent".
+<dt>$conheight</dt><dd></dd>
+<dt>$connectiontype</dt><dd>player/spectator</dd>
+<dt>$conwidth</dt><dd></dd>
+<dt>$date</dt><dd></dd>
+<dt>$deathloc</dt><dd></dd>
+<dt>$demoplayback</dt><dd>0/qwdplayback/mvdplayback</dd>
+<dt>$demotime</dt><dd>Position in currently played demo</dd>
+<dt>$droploc</dt><dd></dd>
+<dt>$droptime</dt><dd></dd>
+<dt>$health</dt><dd></dd>
+<dt>$lastip</dt><dd>Last IP address seen in console. Useful for <code>connect $lastip</code> when someone pastes an IP.</dd>
+<dt>$latency</dt><dd>Your ping time</dd>
+<dt>$ledpoint</dt><dd></dd>
+<dt>$ledstatus</dt><dd></dd>
+<dt>$location</dt><dd></dd>
+<dt>$matchname</dt><dd>See <a href="index6a33.html?match-tool">Match Tools</a></dd>
+<dt>$matchstatus</dt><dd>normal/standby/disconnected</dd>
+<dt>$matchtype</dt><dd>1on1/2on2/ffa/duel/ctf/...</dd>
+<dt>$mp3_volume</dt><dd>Volume of your media player</dd>
+<dt>$mp3info</dt><dd>Status of your media player, usualy contains name of the song it's playing</dd>
+<dt>$nails</dt><dd>Ammount of nail you carry</dd>
+<dt>$need</dt><dd></dd>
+<dt>$point</dt><dd></dd>
+<dt>$pointatloc</dt><dd></dd>
+<dt>$pointloc</dt><dd></dd>
+<dt>$powerups</dt><dd></dd>
+<dt>$qt</dt><dd></dd>
+<dt>$rand</dt><dd>Random number in range &lt;0,...1) (0 inclusive, 1 exclusive)</dd>
+<dt>$rockets</dt><dd></dd>
+<dt>$serverip</dt><dd>Address of the server you are connected to.</dd>
+<dt>$shells</dt><dd></dd>
+<dt>$tf_skin</dt><dd></dd>
+<dt>$time</dt><dd></dd>
+<dt>$took</dt><dd></dd>
+<dt>$tookatloc</dt><dd></dd>
+<dt>$tookloc</dt><dd></dd>
+<dt>$triggermatch</dt><dd></dd>
+<dt>$weapon</dt><dd></dd>
+<dt>$weaponnum</dt><dd></dd>
+<dt>$weapons</dt><dd></dd>
+</dl>
+
+<p id="last-update">Last update: 27.10.2007 11:26 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?macros by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

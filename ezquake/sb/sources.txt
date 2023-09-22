@@ -1,0 +1,15 @@
+url "QuakeServers URL" http://www.quakeservers.net/lists/servers/global.txt
+master "QuakeServers" master.quakeservers.net:27000
+master "FodQuake" qwmaster.fodquake.net:27000
+master "Ocrana" qwmaster.ocrana.de:27000
+master "Asgaard" 85.10.201.75:27000
+master "Poland" 217.153.59.106:27000
+file "Global" global.txt
+file "European Servers" eu-sv.txt
+file "Europe 4on4" eu-4on4.txt
+file "Australian Servers" au-sv.txt
+file "Capture The Flag" ctf.txt
+file "North America Servers" na-sv.txt
+file "South America Servers" sa-sv.txt
+file "Team Fortress" tf.txt
+file "World Qizmos" qizmo.txt

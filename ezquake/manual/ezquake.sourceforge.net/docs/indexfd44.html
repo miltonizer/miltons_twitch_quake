@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?weapon-handling by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Weapon handling</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Weapon handling</h1>
+
+
+<p>This manual page describes a feature known among QuakeWorld players as "Boomstick script" or "Shotgun script" or "Weapon script".<br />
+<em>You can use this feature since version 1650.</em></p>
+
+<p>In older QuakeWorld clients you had to write a script (longer series of bind and alias commands) that automatically hides a weapon when you don't use it. Players do this because they don't want to give their best weapon to the enemy easily if they get killed.<br />That means when you press a button to select a weapon, it doesn't get immediately switched. That happens right before the moment you want to shoot it - your current weapon gets switched with the desired weapon and you immediately shoot from it without any delay.<br />Also after the moment you shoot the weapon (and a delay for the kickback of the weapon to disappear) the script would instantly hide your weapon and switch to some unimportant one - like Boomstick.</p>
+
+<p>In this client you don't need such scripts. Those two things described above can be done using two variables:</p>
+<pre><code>cl_weaponpreselect 1
+cl_weaponhide 1</code></pre>
+
+<p>The first command will make your weapon selections be done "virtually". The second will hide the weapon after you shoot it and select an unimportant one (the shotgun or the axe)<br />Example:</p>
+
+<pre><code>bind q "weapon 7"
+bind mouse1 +attack</code></pre>
+
+<p>After you press [Q] button, your weapon doesn't get switched to rocket launcher (weapon number 7 in QuakeWorld). But after you press mouse1 (the left mouse button), your weapon gets switched to rocketlauncher, a rocket gets fired and after the knockback disappears, your weapon will be switched back to the shotgun or axe.</p>
+
+<p>The "weapon" command also allows you to make a "best available weapon" selection for you.<br />Example:</p>
+<pre><code>bind q "weapon 7 5 3 2 1"</code></pre>
+<p>This will select best available weapon according to the order you denoted here. The first number is the number of the best weapon, the last is the number of the worse weapon for you in that bind. That means, if you don't have rocket launcher (weapon no. 7) or you don't have any ammo for it (rockets, surprisingly), the client will try the Super-Nailgun (weapon no. 5). Also if you don't have it or you don't have the ammo, it will try Super-Shotgun, Shotgun (called also Boomstick) and in the end it will try the Axe. In QuakeWorld you usually have at least the Axe, so some selection will be made here. But if the command would have been like <code>weapon 7 6</code> then Rocket Launcher and Grenade Launcher would be tried out and if none of those are present, no weapon selection will be made.</p>
+
+<p>This is also possible with the "impulse" command, but "impulse" command doesn't support weapon pre-selection! So users of older versions of the client might want to change their bindings to weapon instead of old "impulse" command.</p>
+
+<p><strong>Important!</strong> Advanced weapon handling will never fully work if you keep using impulse commands in some places of your keyboard bindings configuration. You have to replace them with weapon command everywhere.</p>
+
+<p id="last-update">Last update: 23.11.2006 09:32 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?weapon-handling by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

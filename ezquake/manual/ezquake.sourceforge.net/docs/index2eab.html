@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-player-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Player Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Player Settings Variables</h1>
+
+
+<h2 class="variable" id="bottomcolor">bottomcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the pants color.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="b_switch">b_switch&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable allows you to define the highest weapon that the client should switch 
+to upon a backpack pickup. The possible arguments of &quot;b_switch&quot; refer to the 
+impulse that is used to switch to a certain weapon:</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Axe</td></tr><tr><td>2</td><td>Shotgun</td></tr><tr><td>3</td><td>Double-Barreled Shotgun</td></tr><tr><td>4</td><td>Nailgun</td></tr><tr><td>5</td><td>Super Nailgun</td></tr><tr><td>6</td><td>Grenade Launcher</td></tr><tr><td>7</td><td>Rocket Launcher</td></tr><tr><td>8</td><td>ThunderBolt</td></tr></tbody></table></div><h2 class="variable" id="msg">msg&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Maximum reporting of messages.</td></tr><tr><td>1</td><td>Parsed reporting of messages.</td></tr><tr><td>2</td><td>Limited reporting of messages.</td></tr><tr><td>3</td><td>Minimal reporting of messages.</td></tr><tr><td>4</td><td>No reporting of messages.</td></tr></tbody></table></div><h2 class="variable" id="name">name&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Player's name.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>player</span></p>
+<p>Variable is <strong>string</strong>.<br /></p></div><h2 class="variable" id="noaim">noaim&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable toggles whether a server-sided aiming-help should be used when 
+shooting rockets (not possible when the server variable &quot;sv_aim&quot; is set to &quot;0&quot;).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Disable server-side aiming help for rockets.</td></tr><tr><td>0</td><td>Enable server-side aiming help for rockets (if allowed by the server).</td></tr></tbody></table></div><h2 class="variable" id="rate">rate&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the maximum amount of bytes per second that the server should send to the client.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>5760</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="skin">skin&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the skin name for the player.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="spectator">spectator&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Join to server as spectator.</td></tr><tr><td>0</td><td>Join to server as player.</td></tr></tbody></table></div><h2 class="variable" id="team">team&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Set the team name.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="topcolor">topcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets the shirt color.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="w_switch">w_switch&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable allows you to define the highest weapon that the client should switch 
+to when picking it up. The possible arguments of &quot;w_switch&quot; refer to the impulse 
+that is used to switch to a certain weapon:</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Axe</td></tr><tr><td>2</td><td>Shotgun</td></tr><tr><td>3</td><td>Double-Barreled Shotgun</td></tr><tr><td>4</td><td>Nailgun</td></tr><tr><td>5</td><td>Super Nailgun</td></tr><tr><td>6</td><td>Grenade Launcher</td></tr><tr><td>7</td><td>Rocket Launcher</td></tr><tr><td>8</td><td>ThunderBolt</td></tr></tbody></table></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-player-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-turbulency-and-sky-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Turbulency and Sky Settings Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Turbulency and Sky Settings Variables</h1>
+
+
+<h2 class="variable" id="gl_caustics">gl_caustics&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Turns reflections on walls covered with liquids (water, lava, slime) when set to 1.
+Multi-texturing is required for this variable.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>On.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="gl_fog">gl_fog&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Turns fog effect on and off (GL-Only). See /gl_fogstart /gl_fogend /gl_fogsky and /fog too.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_fogblue">gl_fogblue&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Blue factor in the color of the fog</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.4</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_fogend">gl_fogend&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets ending distance for rendering the fog. When fog is turned on, you cannot see behind this distance limit. See /gl_fog and /gl_fogstart too.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>800.0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_foggreen">gl_foggreen&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Green factor in the color of the fog</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.5</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_fogred">gl_fogred&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Red factor in the color of the fog</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0.6</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_fogsky">gl_fogsky&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When turned on, fog effect affects sky too. We suggest turning this on otherwise fog looks ridiculous and unrealistic.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_fogstart">gl_fogstart&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Sets starting distance for rendering the fog. The greater the number is, the better visibility in game is and the fog is &quot;thinner&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>50.0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_surface_lava">gl_surface_lava&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adds boiling bubbles over the lava.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_surface_slime">gl_surface_slime&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adds bubbles and fumes of slime over the slime.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_turbalpha">gl_turbalpha&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable determines the level of opacity for liquids, which requires
+the use of maps that were VISed with transparent water. When using maps that
+have not been VISed in such a way, you have to use &quot;r_novis 1&quot;. If &quot;r_novis&quot; is
+set to &quot;1&quot; or when using a map VISed with transparent water and using setting
+&quot;gl_turbalpha&quot; to a value lower than &quot;1&quot;, the player will be able to see objects 
+and walls through liquids if the server allows that. This is a very nice feature 
+to have in the game, for more information refer to the &quot;r_novis&quot; command. You 
+can use any value between &quot;0&quot; and &quot;1&quot; for &quot;gl_turbalpha&quot;, here are some 
+Examples:</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0.00</td><td>Transparent.</td></tr><tr><td>0.25</td><td>Low opacity.</td></tr><tr><td>0.50</td><td>Medium opacity.</td></tr><tr><td>0.75</td><td>High opacity.</td></tr><tr><td>1.00</td><td>Solid.</td></tr></tbody></table></div><h2 class="variable" id="gl_turbfog">gl_turbfog&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Controls amount of fog when inside liquid (water, lava, slime).
+Density is controlled by choosing a value from 0 to 1 and from 1 to 2.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Fog in liquids is turned OFF</td></tr><tr><td>1</td><td>Linear fog in liquids.</td></tr><tr><td>2</td><td>Logarithmic fog in liquids.</td></tr></tbody></table>
+<p class="remarks">Works only when multitexturing is enabled.</p></div><h2 class="variable" id="gl_turbfogDensity">gl_turbfogDensity&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Control of density of liquid (water, lava, slime...) fog</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p>
+<p>Variable is <strong>float</strong>.<br />[0...1] = [minimum...maximum] liquid fog density</p></div><h2 class="variable" id="gl_turbripple">gl_turbripple&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Put your life vests on, waves are coming! Creates an effect of waves on liquids.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p>
+<p class="remarks">Enabled only for viewing demos and observing games.</p></div><h2 class="variable" id="gl_turb_trails">gl_turb_trails&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This gives rockets/grenades/nails and other things an alternate underwater trail.
+Very nice to have nailgun fights underwater...</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_weather_rain">gl_weather_rain&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Turns on rain out of doors, the density of rain is equal to whatever gl_weather_rain is set to.
+If you set gl_weather_rain_fast to 1, you can turn off all splashes, if you set it to 2, you will turn off only the water splashes.
+Works on all non-iD maps except death32c, dakyne and some others.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_weather_rain_fast">gl_weather_rain_fast&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Adjusts speed of rain.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_fastsky">r_fastsky&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable fastsky, helps fps a bit on maps with large sky areas.</td></tr><tr><td>0</td><td>Disable fastsky.</td></tr></tbody></table></div><h2 class="variable" id="r_fastturb">r_fastturb&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>All turbulences will be replaced by single-coloured surfaces.</td></tr><tr><td>0</td><td>All turbulences will be displayed normally.</td></tr></tbody></table></div><h2 class="variable" id="r_lavacolor">r_lavacolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes colour of lava when r_fastturb set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>80 0 0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_novis">r_novis&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable toggles the use of VIS information from the map data. When this 
+variable is set to &quot;1&quot; the game will calculate it's own VIS information on the 
+fly instead of using the information stored in the map data, this will cause 
+a severe performance penalty in the game. When &quot;r_novis&quot; is set to &quot;1&quot;, the 
+variable &quot;gl_turbalpha&quot; has a value lower than &quot;1&quot; and the server allows the
+client to display liquid transparently the player will be able to see through 
+liquids. This is a nice effect to see but it is not recommended to keep this 
+variable set to &quot;1&quot; because of the huge performance penalty. 
+It is possible to enable transparent liquids and still keep this variable set to
+&quot;0&quot; (and thus not experience such a severe performance drop) by using maps that
+are VISed accordingly. You can visit the official Water VIS site at 
+&quot;http://www.sod.net/&quot; and download the vispatch program along with the patch 
+data files which you would use to update the VIS data for all of your game maps.
+There are also map packs available that contain VISed versions of the original
+ID maps.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Calculate VIS information for unVISed maps.</td></tr><tr><td>0</td><td>Do not calculate VIS information for unVISed maps.</td></tr></tbody></table></div><h2 class="variable" id="r_skycolor">r_skycolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes colour of sky when r_fastsky set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>40 80 150</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_skyname">r_skyname&nbsp;</h2>
+<div><h3>Description</h3><p class="description">If you wan't to use skybox name snow type r_skyname snow, disable skybox with r_skyname &quot;&quot;</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_slimecolor">r_slimecolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes colour of slime when r_fastturb set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>10 60 10</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_telecolor">r_telecolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes colour of teleport when r_fastturb set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>255 60 60</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_turbwarp">r_turbwarp&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Enable warping of surfaces.</td></tr><tr><td>0</td><td>Disable warping of surfaces.</td></tr></tbody></table></div><h2 class="variable" id="r_watercolor">r_watercolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Changes color of water when r_fastturb set to 1</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>10 50 80</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-turbulency-and-sky-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

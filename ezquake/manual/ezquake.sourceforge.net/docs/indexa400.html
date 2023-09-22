@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?camera-scripting by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Camera scripting</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Camera scripting</h1>
+
+
+<p>Advanced spectator/demo camera control.</p>
+
+<p>This client allows you to script camera behaviour by changing it's position and angles via QuakeWorld scripting.<br />
+We have made for you <a href="http://ezquake.cvs.sourceforge.net/*checkout*/ezquake/ezquake/misc/cfg/cams.cfg">cams.cfg</a>. How to use this script:</p>
+<ol><li>Download it and save it into &lt;quake&gt;/ezquake/cfg directory</li>
+<li>Go to the client and type<br />
+<code>/exec cfg/cams</code></li>
+<li>Now use keys <kbd>0, 1, ... 9</kbd> in combination with [Shift] and [Ctrl] to load, save and move through camera bookmarks. Each key of 0, 1, ..., 9 serves as a bookmark slot where exact camera position is stored. More detailed info will be printed on your screen when you exec the config (step 2).<br />
+<strong>Note: Shift+[num] causes camera movement only when you are capturing</strong></li></ol>
+
+<p>In case you want to script something for you own, detailed description of camera scripting commands, variables and macros follows. However you don't need to know them to use cams.cfg from above.</p>
+
+<h3>Variables</h3>
+<pre>cam_thirdperson - in track mode, we look at the person being tracked rather than through his eyes
+cam_dist - for use with cam_thirdperson. Use +forward/+back to adjust it smoothly
+cam_lockdir - JSS wanted this (use with thirdperson OFF)
+cam_lockpos - experimental (use with thirdperson OFF)
+cam_zoomspeed, cam_zoomaccel - to control how fast you zoom in onto the target with +forward/+back in cam_thirdperson mode</pre>
+
+<h3>Commands</h3>
+<pre>cam_pos - show current position
+cam_pos x y z or cam_pos "x y z" - set new position
+cam_angles - show angles
+cam_angles pitch yaw or cam_angles "pitch yaw" - set new angles</pre>
+
+<p>cam_pos and cam_angles can be used to set your position and angles both during demo playback and in spectator mode.</p>
+
+<h3>Macros to get current values</h3>
+<ul>
+<li>$cam_pos</li>
+<li>$cam_pos_x</li>
+<li>$cam_pos_y</li>
+<li>$cam_pos_z</li>
+<li>$cam_angles</li>
+<li>$cam_angles_pitch</li>
+<li>$cam_angles_yaw</li>
+<li>$cam_angles_roll -- (always zero, someone may want to make it work one day)</li>
+</ul>
+
+<h3>Triggers</h3>
+<p><strong>f_captureframe</strong> will get executed on the beginning of each new captured frame.</p>
+
+<p id="last-update">Last update: 16.12.2007 03:29 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?camera-scripting by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

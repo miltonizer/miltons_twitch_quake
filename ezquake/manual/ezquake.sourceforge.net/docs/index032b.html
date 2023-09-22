@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-software-rendering by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Software Rendering Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Software Rendering Variables</h1>
+
+
+<h2 class="variable" id="r_aliastransadj">r_aliastransadj&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Not much is known about this variable except for that increasing the value will
+cause the player models to be displayed smaller.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>100</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_aliastransbase">r_aliastransbase&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Not much is known about this variable except for that increasing the value will
+cause the player models to be displayed smaller.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>200</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_clearcolor">r_clearcolor&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable can be used to change the color for the areas which are not part 
+of the map when free floating outside of the map as spectator.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_draworder">r_draworder&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows you to see through object - for development purposes only.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>First draws closest object, then the more distanced ones.</td></tr><tr><td>0</td><td>Standard behaviour - first draws object far from you then closer to you.</td></tr></tbody></table>
+<p class="remarks">Not allowed in multiplayer. See 'developer 1' too.</p></div><h2 class="variable" id="r_dspeeds">r_dspeeds&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Display renderer speed statistics.</td></tr><tr><td>0</td><td>Do not display renderer speed statistics.</td></tr></tbody></table></div><h2 class="variable" id="r_graphheight">r_graphheight&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable used to set the number of lines displayed in the &quot;r_timegraph&quot; command.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>15</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_maxedges">r_maxedges&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets the maximum number of plane surface edges to be rendered.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_maxsurfs">r_maxsurfs&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets the maximum number of plane surfaces to be rendered.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1000</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_numedges">r_numedges&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Print information about the number of edges.</td></tr><tr><td>0</td><td>Do not print information about the number of edges.</td></tr></tbody></table></div><h2 class="variable" id="r_numsurfs">r_numsurfs&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Print information about the number of surfaces.</td></tr><tr><td>0</td><td>Do not print information about the number of surfaces.</td></tr></tbody></table></div><h2 class="variable" id="r_polymodelstats">r_polymodelstats&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Print polygon model statistics.</td></tr><tr><td>0</td><td>Do not print polygon model statistics.</td></tr></tbody></table></div><h2 class="variable" id="r_reportedgeout">r_reportedgeout&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Report when running out of edges.</td></tr><tr><td>0</td><td>Do not report when running out of edges.</td></tr></tbody></table></div><h2 class="variable" id="r_reportsurfout">r_reportsurfout&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Toggle the display of how many surfaces where not displayed. This
+shouldn't happen during normal game play, only when in noclip mode.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="r_timegraph">r_timegraph&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Display the timegraph.</td></tr><tr><td>0</td><td>Do not display the timegraph.</td></tr></tbody></table></div><h2 class="variable" id="r_zgraph">r_zgraph&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Display the z-graph.</td></tr><tr><td>0</td><td>Do not display the z-graph.</td></tr></tbody></table></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-software-rendering by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

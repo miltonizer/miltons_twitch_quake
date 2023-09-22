@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-input---keyboard by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Input - Keyboard Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Input - Keyboard Variables</h1>
+
+
+<h2 class="variable" id="allow_scripts">allow_scripts&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Possibility to prove, that you do NOT use scripts. Of course, values 0 and 1 will block 'rotate' command.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Same as 1, but also block fast +lookdown/+lookup, so even simple rjump will be impossible. Blocks KTPro /kfjump and /krjump aliases.</td></tr><tr><td>1</td><td>Allow only simple scripts - it will block left/right turning, so fjump (for example) will be impossible, but normal rjump (+lookdown;+attack;+jump) will be possible. Blocks KTPro alias /kfjump too.</td></tr><tr><td>2</td><td>Allow scripts (default)</td></tr></tbody></table>
+<p class="remarks">Your current 'allow_scripts' setting will be reported to 'f_scripts' query and anyone will be able to check it. If anyone said 'f_scripts' since last mapchange, the client will also autoreport any change of allow_scripts. So if you don't use scripts, turn them off to prove you don't use them. And remember - scripts _are allowed_, so don't call ppl who use them 'cheaters'.
+
+This variable will be set to 0 on startup if a command line switches -norjscripts or -noscripts are used</p></div><h2 class="variable" id="cl_anglespeedkey">cl_anglespeedkey&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable sets multiplier by which your &quot;cl_yawspeed&quot; (how fast you turn) is
+multiplied when running (+speed).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1.5</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_backspeed">cl_backspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This allows you to set your backward speed. Obviously this is also limited by
+the server, usually to &quot;320&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>400</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_forwardspeed">cl_forwardspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This allows you to set your forward speed. Obviously this is also limited by the
+server, usually to &quot;320&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>400</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_keypad">cl_keypad&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>You will be able to bind such keys as capslock, numlock, and all numpad keys.</td></tr><tr><td>0</td><td>QW compatibility where the keypad keys act the same key name, eg KP_8 acts like uparrow would.</td></tr></tbody></table></div><h2 class="variable" id="cl_movespeedkey">cl_movespeedkey&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable is the multiplier for how fast you move when running (+speed) in
+relation to when walking (-speed).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>2.0</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_pitchspeed">cl_pitchspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable determines how fast you you turn up/down when using &quot;+lookup&quot; and
+&quot;+lookdown&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>150</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_showkeycodes">cl_showkeycodes&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable enables/disables the output of informations to the currently pressed and/or released keys.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Switch off output of scancode/keymapping information (Default)</td></tr><tr><td>1</td><td>information about keys will be printed when the keys are pressed.</td></tr><tr><td>2</td><td>information about keys will be printed when releasing the keys.</td></tr><tr><td>3</td><td>information about keys will be printed when the keys are pressed and also when they are released.</td></tr></tbody></table></div><h2 class="variable" id="cl_sidespeed">cl_sidespeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This allows you to set your strafe speed. Obviously this is also limited by the
+server, usually to &quot;320&quot;.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>400</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_smartjump">cl_smartjump&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>1</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Will convert +jump commands to +moveup commands when in liquid (water, lava, slime) and in spectator mode.</td></tr><tr><td>0</td><td>Off.</td></tr></tbody></table></div><h2 class="variable" id="cl_upspeed">cl_upspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This allows you to set the speed with which you move up and down in liquids or in spectator mode.
+Obviously this is also limited by the server, usually to 320*0.7 = 224 when being in liquid and to 500 in spectator mode.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>200</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="cl_weaponhide">cl_weaponhide&nbsp;</h2>
+<div><h3>Description</h3><p class="description">On -attack will cause your weapon to be automatically switched back to the shotgun or axe.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Weapon will not be automatically hidden</td></tr><tr><td>1</td><td>After you fire your a weapon, it will get switched to shotgun or axe</td></tr><tr><td>2</td><td>Like option 1, but only for deathmatch mode 1.</td></tr></tbody></table>
+<p class="remarks">This is used in majority of teamplay games. If you don't have ammo for shotgun the axe gets selected.</p></div><h2 class="variable" id="cl_weaponpreselect">cl_weaponpreselect&nbsp;</h2>
+<div><h3>Description</h3><p class="description">When using the weapon command, this variable allows weapon preselection instead of standard immediate weapon selection. Preselection means that the preselected weapon will be switch right before +attack command, that is right before you shoot from your weapon.</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>0</span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>0</td><td>Immediate weapon selection</td></tr><tr><td>1</td><td>Weapon preselection</td></tr><tr><td>2</td><td>Weapon preselection when not holding +attack. When holding +attack, select weapon immediately.</td></tr><tr><td>3</td><td>Like option 1, but only for deathmatch mode 1, otherwise like 0.</td></tr><tr><td>4</td><td>Like option 2, but only for deathmatch mode 1, otherwise like 0.</td></tr></tbody></table>
+<p class="remarks">Usefull in most teamplay games where you don't want to carry your best weapon in your hands but want to be ready to instantly shoot from it. Note: Doesn't work for impulse command, you have to use new weapon command.</p></div><h2 class="variable" id="cl_yawspeed">cl_yawspeed&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This variable defines how quickly you turn left (+left) or right (+right).</p><p class="support">Support: <span class="W-GL supported">Windows: OpenGL</span> <span class="W-SW supported">Windows: Software</span> <span class="GLX supported">Linux: GLX</span> <span class="X11 supported">Linux: X11</span> <span class="SVGA supported">Linux: SVGA</span> <span class="MAC supported">Mac OS X</span> <span class="BSD supported">FreeBSD</span> </p>
+  <p class="default">Default: <span>140</span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-input---keyboard by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

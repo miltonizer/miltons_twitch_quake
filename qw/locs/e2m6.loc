@@ -1,0 +1,17 @@
+4851 -1057 -3903 quad
+4690 3917 -4031 4way
+8575 4035 -3903 corridor to towers
+13177 3208 -4671 corridor [to water]
+15488 1 -3263 tunnel [over water]
+16512 -63 -6335 water
+17179 2783 -6335 water
+20839 1285 -2239 gl [right tower]
+21215 4880 -3135 rl [left tower]
+21887 2303 -5406 bottom [right tower]
+23935 4424 -3135 rl [left tower]
+23559 6392 -4927 bottom [left tower]
+8932 7776 -8383 pentagram
+911 4040 -3967 100health
+9926 11086 -7999 ssg
+4921 11953 -4415 lg
+-742 4021 -3967 sng [100h]

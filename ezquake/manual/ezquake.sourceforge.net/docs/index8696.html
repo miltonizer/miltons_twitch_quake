@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-unsorted-variables by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Unsorted Variables Variables</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Unsorted Variables Variables</h1>
+
+
+<h2 class="variable" id="auth_validate">auth_validate&nbsp;</h2>
+<div><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>which performs the validation (but you need to use 'validate_clients'</td></tr><tr><td>0</td><td>If you don't want your client to validate other ezQuake clients.</td></tr></tbody></table>
+<p class="remarks">If you have 
+'auth_warninvalid 1' and someone gives a dirty hash in a version response 
+(because they are using a hacked client that can't work out the right 
+response), the client will print something like 
+'Warning Invalid Client: playername (userid)' in your console ('auth_warninvalid 0' is default).</p></div><h2 class="variable" id="auth_warninvalid">auth_warninvalid&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Check auth_validate.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="gl_maxtmu2">gl_maxtmu2&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allow only two texturing units. Sometimes usefull for buggy ATI cards. If you don't need this, don't use it. Lowers the performance.</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="gl_particle_fulldetail">gl_particle_fulldetail&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Allows full detail depth for gl_particle_* effects</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td></td></tr><tr><td>0</td><td></td></tr></tbody></table></div><h2 class="variable" id="keymap_name">keymap_name&nbsp;</h2>
+<div><h3>Description</h3><p class="description">This holds the name of the current keymappings; it has (currently) only informational purposes. If no keymapping is active, it will contain the name &quot;Default&quot;. If a keymapping will be active and no name has been set, &quot;Custom&quot; will be used as name. It can easily be set with &quot;keymap_name &lt;layoutname&gt;&quot;</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p>
+<p>Variable is <strong>float</strong>.<br /></p></div><h2 class="variable" id="menu_advanced">menu_advanced&nbsp;</h2>
+<div><h3>Description</h3><p class="description">Shows/hides advanced options entries in the Options menu</p><p class="support">Support: <span class="W-GL unsupported">Windows: OpenGL</span> <span class="W-SW unsupported">Windows: Software</span> <span class="GLX unsupported">Linux: GLX</span> <span class="X11 unsupported">Linux: X11</span> <span class="SVGA unsupported">Linux: SVGA</span> <span class="MAC unsupported">Mac OS X</span> <span class="BSD unsupported">FreeBSD</span> </p>
+  <p class="default">Default: <span></span></p><h3>Values</h3>
+<table class="values"><thead><tr><td>value</td><td>description</td></tr></thead>
+<tbody><tr><td>1</td><td>Show advanced options</td></tr><tr><td>0</td><td>Hide advanced options</td></tr></tbody></table></div>
+
+<p id="last-update">Last update: 09.11.2005 02:15 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?vars-unsorted-variables by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

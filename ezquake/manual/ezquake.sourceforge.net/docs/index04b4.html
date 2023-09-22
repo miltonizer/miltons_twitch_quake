@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?independent-physics by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Independent physics</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Independent physics</h1>
+
+
+<p>Amount of rendered frames per second (FPS) used to be in majority QuakeWorld clients
+given by the server settings.
+For example most QuakeWorld servers are limited to 77 FPS so you couldn't have
+more than 77 FPS in your game.<br />
+In modern QuakeWorld clients this was changed by Tonik in his 
+<a href="http://zquake.frag.ru/">ZQuake</a> client
+and by Spike in <a href="http://fteqw.sf.net/">FTE QuakeWorld</a>.
+In these clients your FPS can be independent on 
+server settings and this is usually called <strong>independent physics</strong>
+(<a href="#physics">see below</a>).<br />
+We've ported Tonik's patch for independent physics because our client
+is originated from his ZQuake client and so is more close to ours.</p>
+
+<h2>Enabling independent physics</h2>
+<p>To enable independent physics use <br /><code>+set cl_independentPhysics 1</code><br />
+option in your command-line.</p>
+
+<p>Then you can change the amount of rendered FPS by cl_maxfps where e.g.<br />
+<code>cl_maxfps 0</code> = no limit (use as high FPS as your hardware performance allows),<br />
+<code>cl_maxfps 300</code> = limit the engine to 300 frames per second.</p>
+
+<p>Because independent physics can use full performance potential of your hardware, you might need to change client's priority so you don't get lags caused by lack of CPU time for reading mouse and keyboard states. Either do this in menu in "client priority" or by typing:<br />
+sys_highpriority -1</p>
+
+<p>In case of any problem check the following variables:</p>
+<ul><li><a href="indexb4ac.html?cl_nopred">cl_nopred</a> - make sure it's 0 (default)</li>
+<li><a href="index10cb.html?cl_nolerp">cl_nolerp</a> - shoud be set to 0 (default). Most users get jerky gameplay when this is set to 1.</li>
+<li><a href="index9e51.html?cl_maxfps">cl_maxfps</a> - use a high value or 0. For LCD you might want to use a number that is not a multiplication of your screen refresh rate. E.g. 313.</li>
+<li><a href="index78ea.html?cl_physfps">cl_physfps</a> - leave it at 0 (default).  ezQuake will use the maximum amount of 'physics' fps allowed on the server.</li></ul>
+
+<p>While the engine keeps rendering the game at (preferably) high FPS
+it communicates with the server like it would have been using "standard" amount of FPS.
+You can change this amount of fps using cl_physfps variable, e.g.<br />
+<code>cl_physfps 0</code> = the client will use highest possible framerate that the server allows<br />
+<code>cl_physfps 77</code> = the client will communicate with the server with 77 FPS.</p>
+
+<h2 id="physics">Changed physics</h2>
+<p>One can think that the only advantage is smoother gameplay. It is certainly
+the main reason why many people use independent physics but there is also another aspect why
+independent physics were made.<br />
+If you cannot achieve standard 77 FPS, your physics will be a little different.
+You may notice that if you try playing with cl_physfps 30 (or cl_maxfps 30 when
+not using independent physics). Your jumps (and rocket-jumps) won't be that fast and high
+as with 77 FPS.<br />
+At least, don't forget that even independent physics don't bring you 
+absolutely equal physics as if you'd have been using cl_maxfps 77.</p>
+
+
+<p id="last-update">Last update: 16.09.2007 08:25 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?independent-physics by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelog-18 by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: 1.8 Changelog</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: 1.8 Changelog</h1>
+
+
+<h2>ezQuake 1.8 stable, 27th May 2007</h2>
+<dl>
+  <dt>Making QuakeWorld Easier To Setup And Use</dt>
+  <dd>
+  <ul>
+    <li>Supporting 24bit player skins - <span class="author">feature by qqshka, based on the code by jogi</span></li>
+	<li>Switching video modes on-the-fly in GL - <span class="author">feature by qqshka</span></li>
+	<li>Switching Fullscreen vs. Windowed Mode on-the-fly in GL - <span class="author">feature by qqshka</span></li>
+	<li>Client can be associated with demo files to play them directly from Windows - <span class="author">feature by qqshka</span></li>
+	<li>Equivalents for most of the command-line options <span class="author">feature by qqshka and johnnycz</span></li>
+	<li>Mouse driven menus - <span class="author">feature by johnnycz, cokeman</span></li>
+	<li>Better Options menu - <span class="author">feature by johnnycz</span></li>
+	<li>Ability to set RGB colors on any player skin: <a href="indexe7e6.html?r_enemyskincolor">r_enemyskincolor</a>, <a href="index545c.html?r_teamskincolor">r_teamskincolor</a>, <a href="index942b.html?r_skincolormode">r_skincolormode</a> - <span class="author">feature by qqshka, based on the code by jogi</span></li>
+	<li>Smooth observing thanks to native TCP QTV connection; qtvplay, qtvlist - <span class="author">feature by qqshka, ported from FTEQW by Spike</span></li>
+	<li>Use OS keyboard layout - <span class="author">feature by tonik</span></li>
+	<li>Launching .qtv file with the client established observing connection - <span class="author">feature by qqshka</span></li>
+	<li>Help text in menu options - <span class="author">feature by johnnycz</span></li>
+	<li>Better demo browser - <span class="author">feature by johnnycz</span></li>
+	<li>Creating a demo playlist from zip archive - <span class="author">feature by cokeman</span></li>
+	<li>Inbuilt teamplay messages (tp_msg*) - <span class="author">feature by Up2nOgOoD[ROCK], johnnycz</span></li>
+	<li>$colored_armor, $colored_powerups, $colored_short_powerups (displays qrp instead of quad ring pent) - <span class="author">feature by Up2nOgOoD[ROCK], qqshka</span></li>
+	<li>HUD editor - <span class="author">feature by cokeman, jogi</span></li>
+	<li>Possibility to use TCL for teamplay scripting - <span class="author">feature by disconnect</span></li>
+	<li>Ruleset can be changed on-the-fly; you have to be disconnected - <span class="author">feature by disconnect</span></li>
+	<li>Browsing zip archives in demo browser - <span class="author">feature by cokeman</span></li>
+	<li>Demo de/compression from within the demo browser; alt+c, alt+d - <span class="author">feature by cokeman</span></li>
+	<li>Inbuilt qizmo proxy menu navigation support; bind x toggleproxymenu - <span class="author">feature by johnnycz</span></li>
+	<li>Chatting in unicode support, cyrillic support, charset - <span class="author">feature by tonik</span></li>
+	<li>Text layer width (conwidth) changing on-the-fly - <span class="author">feature by qqshka</span></li>
+	<li>Ability to save demos, screenshots and logs not only to Quake dir; cl_mediaroot - <span class="author">feature by qqshka</span></li>
+	<li>Ability to save configuration into the user's home dir <a href="index8c0d.html?cfg_use_home">cfg_use_home</a> - <span class="author">feature by qqshka</span></li>
+	<li>Alpha transparency support for console font; gl_alphafont - <span class="author">feature by qqshka</span></li>
+	<li>Client loads even if not started from it's directory - <span class="author">feature by qqshka</span></li>
+	<li>Team overlay table; scr_teaminfo* - <span class="author">feature by qqshka</span></li>
+  </ul>
+  </dd>
+  <dt>Special Thanks To</dt>
+  <dd><ul>
+    <li>qqshka: implementing every single thing anyone asked him to do and for separated renderer; special thanks from johnnycz for native TCP QTV connection support</li>
+    <li>AquaShark, vegetous, Drugs-Bunny, tom|3tk, Trumad, Faustov, Torch - testing, bug reporting, suggestions</li>
+	<li>Up2nOgOoD: adjusting menus, maintaining game graphics, suggestions and lots of small jobs around</li>
+           <li>VVD - FreeBSD support</li>
+  <li>Povohat for new nice charset</li>
+  </ul></dd>
+  <dt>Other Major Changes</dt>
+  <dd>
+  <ul>
+	<li><a href="index2231.html?in_restart">in_restart</a>, <a href="indexa7b3.html?in_mouse">in_mouse</a>, <a href="indexc0a4.html?in_m_smooth">in_m_smooth</a>, <a href="index6dd8.html?in_m_mwhook">in_m_mwhook</a>, <a href="index793e.html?in_m_os_parameters">in_m_os_parameters</a> - <span class="author">changed by qqshka</span></li>
+	<li>Gun model position; r_viewmodeloffset - <span class="author">feature by qqshka</span></li>
+	<li>HUD elements Z-ordering; order command - <span class="author">feature by cokeman</span></li>
+	<li>Linux input variables in_mouse 1/2/3, in_mmt 0/1, in_evdevide /dev/input/event0-1 - <span class="author">feature by qqshka</span></li>
+	<li>Playback of demos from zip and gz archives - <span class="author">feature by cokeman</span></li>
+	<li>Possibility to use player name or player id as skin; cl_name_as_skin - <span class="author">feature by qqshka</span></li>
+	<li>All modules (renderer, sound, input) can be restarted now - <span class="author">feature by qqshka</span></li>
+	<li>Turned off auto HUD reconfiguration for MultiView Demos - <span class="author">fixed by cokeman</span></li>
+	<li>r_viewmodelsize works with md3 models - <span class="author">feature by qqshka</span></li>
+	<li>Better frags extra_spec_info customization - <span class="author">feature by cokeman</span></li>
+	<li>Console background with level preview while loading the level; scr_conback - <span class="author">feature by qqshka</span></li>
+	<li>Console falling particles; con_particles_* - <span class="author">feature by qqshka</span></li>
+	<li>Demo browser colors - <span class="author">feature by cokeman</span></li>
+	<li>Frags and teamfrags numbers size support, transparency support - <span class="author">feature by cokeman</span></li>
+	<li>Framebuffer support - <span class="author">feature by jogi, cokeman</span></li>
+	<li>Full acceleration on the first frame after move button is pressed - <span class="author">feature by Tonik</span></li>
+	<li>Menu marked entry background color and fading variables; menu_marked_* - <span class="author">feature by qqshka</span></li>
+	<li>Minihud "name only" drawing cl_mvdisplayhud 2 - <span class="author">feature by cokeman</span></li>
+	<li>New particle setting: gl_particle_firecolor - <span class="author">feature by qqshka</span></li>
+	<li>New sky rendering - <span class="author">feature by tonik</span></li>
+	<li>On-screen tips how to use server browser, demo browser, demo playlist - <span class="author">feature by johnnycz, cokeman</span></li>
+	<li>r_rocketlight supports small values for better look with gl_flashblend 2 - <span class="author">feature by qqshka</span></li>
+	<li>RGB colors support for rocketlightcolor, explosionlightcolor and flagcolor - <span class="author">feature by qqshka</span></li>
+	<li>Shaft beam transparency; r_shaftalpha, disabled in smackdown ruleset - <span class="author">feature by tonik</span></li>
+	<li>sys_yieldcpu in linux - <span class="author">feature by qqshka</span></li>
+	<li>Ability to adjust where to go after client startup - menu/console/browser; cl_onload - <span class="author">feature by johnnycz</span></li>
+	<li>Windows-1251 decoding support - <span class="author">feature by tonik</span></li>
+            <li>Manual redesign - <span class="author">by cuky</span></li>
+	<li>Allow use of 4 texture units - <span class="author">fixed by qqshka</span></li>
+	<li>Better button handling doesn't require wait command in places like +attack;-attack - <span class="author">fixed by tonik</span></li>
+	<li>Block mouse in spectator tracking mode - <span class="author">fixed by qqshka</span></li>
+	<li>Cl_chasecam 0 with independent physics - <span class="author">fixed by qqshka</span></li>
+	<li>Correct gamma on screenshots in multiview - <span class="author">fixed by cokeman</span></li>
+	<li>Correct vsync behaviour - <span class="author">fixed by disconnect</span></li>
+	<li>Easyrecord respects demo_format - <span class="author">fixed by johnnycz</span></li>
+	<li>Frags extra_spec_info vertical rendering - <span class="author">fixed by cokeman</span></li>
+	<li>Player model visible in MVD; cl_fix_mvd - <span class="author">fixed by qqshka</span></li>
+	<li>Teamsort in HUD fixed - <span class="author">fixed by cokeman</span></li>
+	<li>Tracking after player disconnected - <span class="author">fixed by cokeman</span></li>
+	<li>Water rendering same as in software - <span class="author">fixed by tonik</span></li>
+	<li>Better demo browser search behaviour - <span class="author">fixed by cokeman</span></li>
+	<li>Demo browser shortcuts changed, ctrl+num show/hide col, alt+num sort, letters start search - <span class="author">fixed by johnnycz</span></li>
+  </ul>
+  </dd>
+  <dt>Minor Changes</dt>
+  <dd>
+  <ul>
+    <li>Frags tracker updates: supports images (textures/tracker) - <span class="author">by qqshka</span></li>
+	<li>Better width of initialization text - <span class="author">feature by qqshka</span></li>
+	<li>Center status bar by default - <span class="author">feature by tonik</span></li>
+	<li>Demo browser names scrolling - <span class="author">feature by cokeman</span></li>
+	<li>Fixed some bugs in autotrack - <span class="author">johnnycz</span></li>
+	<li>Display latched value of a cvar; cvar_viewlatched - <span class="author">feature by qqshka</span></li>
+	<li>Help files stored in .pak - <span class="author">feature by johnnycz</span></li>
+	<li>New $ping macro, alias for $latency - <span class="author">feature by johnnycz</span></li>
+	<li>Possibility to view preselected gun; r_viewpreselgun - <span class="author">feature by johnnycz</span></li>
+	<li>Radar size supports percentage values - <span class="author">feature by johnnycz</span></li>
+	<li>Crosshair images caching - <span class="author">fixed by johnnycz</span></li>
+	<li>Don't crash on empty MVD - <span class="author">fixed by qqshka</span></li>
+	<li>Issue snd_restart after s_khz changed - <span class="author">fixed by johnnycz</span></li>
+	<li>Linux SVGA compiling fixes - <span class="author">fixed by rhagelstrom</span></li>
+	<li>m_forcewheel removed - <span class="author">fixed by Tonik, qqshka</span></li>
+	<li>Reenabled frags showself 1 - <span class="author">fixed by cokeman</span></li>
+	<li>Removed help browser crash - <span class="author">fixed by johnnycz</span></li>
+	<li>scr_coloredfrags 1 to get scr_coloredtext 2 functionality - <span class="author">fixed by johnnycz</span></li>
+	<li>Server browser: servers from different ports all in the same source fixed - <span class="author">fixed by johnnycz</span></li>
+	<li>Silent pushlatency upgrade (easter egg warning) - <span class="author">fixed by tonik</span></li>
+	<li>Small bug with auto-screenshot numbering - <span class="author">fixed by johnnycz</span></li>
+	<li>Tracker stats killer vs. victim - <span class="author">fixed by qqshka</span></li>
+	<li>Zero demo speed fixed - <span class="author">fixed by cokeman</span></li>
+	<li>FreeBSD patches - <span class="author">VVD</span></li>
+	<li>Mac OS X fixes - <span class="author">oldman</span></li>
+	<li>Manual version numbering - <span class="author">johnnycz</span></li>
+	<li>MFC headers not required to compile in Windows - <span class="author">johnnycz</span></li>
+	<li>PF_argc, PM_NudgePosition, ZQ_QC_TOKENIZE, ZQ_CLIENTCOMMAND - <span class="author">Tonik</span></li>
+	<li>CModel initial support - <span class="author">disconnect</span></li>
+	<li>Returned cache_print, cache_report commands - <span class="author">disconnect</span></li>
+	<li>More verbose error messages - <span class="author">disconnect</span></li>
+	<li>Linux command <a href="index1a84.html?in_evdevlist">in_evdevlist</a> - <span class="author">feature by qqshka</span></li>
+	<li>Default memory cache 32 MB - <span class="author">disconnect</span></li>
+	<li>New command <a href="index71b2.html?cmdlist_re">cmdlist_re</a> - <span class="author">disconnect</span></li>
+  </ul>
+  </dd>
+</dl>
+
+
+<p id="last-update">Last update: 16.11.2007 09:52 PST, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?changelog-18 by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

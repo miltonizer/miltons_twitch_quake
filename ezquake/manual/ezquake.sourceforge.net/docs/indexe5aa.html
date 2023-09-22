@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?display-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta name="keywords" content="ezQuake, manual, guide, tutorial, how-to, howto, setting, quake, quakeworld, client, help, readme, install" />
+  <meta name="description" content="The Complete guide to using QuakeWorld &trade; client ezQuake" />
+  <meta name="author" content="http://sourceforge.net/users/johnnycz/" />
+  <meta name="generator" content="about.txt" />
+  <title>ezQuake Manual: Display settings</title>
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
+</head>
+<body>
+<h1><a href="index.html">ezQuake Manual</a>: Display settings</h1>
+
+
+<p>This page discusses screen resolution changing in this client.</p>
+
+<p>Most OpenGL QuakeWorld clients used command-line options to set screen resolution and the user wasn't able to change the resolution without starting the client again with different options. This client allows you to set OpenGL screen resolution without command-line options and also allows you to change screen resolution, color depth, display frequency on-the-fly and also toggle between windowed and full-screen mode on-the-fly.</p>
+
+<h2>Basic settings</h2>
+
+<p>The easiest way to change your display settings is to visit the Options menu and switch to the Video tab. There you can pick desired resolution from a list, enter display horizontal frequency, color depth and choose fullscreen or windowed mode. After that you need to select "Apply changes" so that the client restart the video system with the new settings. Don't forget to save your settings using the "Config" tab in the Options.</p>
+
+<p>From now on you should not need any command-line options. Also see the <a href="indexb170.html?upgrading">upgrading guide</a> which tells you how to make your client start without any command-line options.</p>
+
+<h2>Custom settings</h2>
+
+<p>If the list of available screen resolutions in the menu doesn't contain your desired resolution, this client offers you to use custom screen settings. Those are done in the console.<br />
+To list all the video system settings, type <code>/cvarlist_re vid_.</code> in the console.</p>
+
+<p>To set custom screen resolution, type this:<br />
+<code>/vid_mode -1</code><br />
+Now you need to set <var>vid_customwidth</var> and <var>vid_customheight</var> variables. Say you want to use 1280x960 screen resolution. In such case type following:<br />
+<code>/vid_customwidth 1280<br />
+/vid_customheight 960<br />
+/vid_restart</code></p>
+
+<p>After this you might wish to customize also your console resolution, so that the text you see is not deformed. Set <var>vid_conwidth</var> and <var>vid_conheight</var> variables in the same ration as you screen width and height settings are.</p>
+
+<p id="last-update">Last update: 03.11.2007 04:41 PDT, made by <a href="http://sourceforge.net/users/johnnycz/">JohnNy_cz</a> | <a href="about.txt">ezQDocs</a></p>
+<p><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
+</body>
+
+<!-- Mirrored from ezquake.sourceforge.net/docs/?display-settings by HTTrack Website Copier/3.x [XR&CO'2005], Sun, 27 Apr 2008 20:59:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>
