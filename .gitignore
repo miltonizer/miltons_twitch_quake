@@ -218,6 +218,7 @@ qw/logs
 qw/maps
 qw/screenshots
 qw/screenshots2
+qw/screenshots3
 qw/textures2
 qw/textures_backup_26_01_2022
 qw/textures_backup_28_02_2021
